@@ -103,6 +103,13 @@ class BayesNet:
         """
         return [n for n in self.structure.nodes]
 
+    def get_all_edges(self) -> List[str]:
+        """
+        Returns a list of all edges in the structure.
+        :return: list of all edges.
+        """
+        return [n for n in self.structure.edges]
+
     def get_all_cpts(self) -> Dict[str, pd.DataFrame]:
         """
         Returns a dictionary of all cps in the network indexed by the variable they belong to.

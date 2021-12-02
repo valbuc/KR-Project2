@@ -1,5 +1,7 @@
 from typing import Union
 from BayesNet import BayesNet
+import networkx as nx
+import copy
 
 
 class BNReasoner:
@@ -23,4 +25,40 @@ class BNReasoner:
         given stes of variables x, y, and z, returns wether x is independent
         of y given z
         """
-        return
+        bn = copy.deepcopy(self.bn)
+        bn.draw_structure()
+        continueiter = True
+        while continueiter == True:
+            continueiter = False
+            for variable in self.bn.get_all_variables():
+                print(variable)
+                children = [1]
+                try:
+                    children = bn.get_children(variable)
+                except:
+                    pass
+                print(children)
+                if len(children) == 0:
+                    if variable not in xyz:
+                        try:
+                            bn.del_var(variable)
+                        except:
+                            pass
+                        for edge in bn.get_all_edges():
+                            if variable in edge:
+                                bn.del_edge(edge)
+                        continueiter = True
+            for variable in z:
+                print(variable)
+                for edge in bn.get_all_edges():
+                    if edge[0] == variable:
+                        bn.del_edge(edge)
+
+        bn.draw_structure()
+
+        connected = []
+        for X in x:
+            for Y in y:
+                connected.append(nx.has_path(bn.get_interaction_graph(),X,Y))
+
+        return sum(connected) == 0
