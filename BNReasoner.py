@@ -2,6 +2,7 @@ from typing import Union
 from BayesNet import BayesNet
 import networkx as nx
 import copy
+from collections import Counter
 
 
 class BNReasoner:
@@ -63,3 +64,53 @@ class BNReasoner:
                     return False
 
         return True
+
+
+
+    def ordering_mindegree(self):
+
+        bn = copy.deepcopy(self.bn)
+        var_neighbor = {}
+        order=[]
+        edges = bn.get_all_edges()
+
+        for variable in bn.get_all_variables():
+
+            # when final variable, returns list
+            if len(edges) == 0:
+                order.append(variable)
+                return(self.order)
+            else:
+                pass
+
+            # makes dict which holds variables and amount of edges they have                
+            first = Counter(elem[0] for elem in edges)
+            second = Counter(elem[1] for elem in edges)
+            firstdict = dict(first)
+            seconddict = dict(second)
+            var_neighbor = {k: firstdict.get(k, 0) + seconddict.get(k, 0) for k in set(firstdict) | set(seconddict)}
+                
+            # selects variable with least amount of edges/neighbors
+            least = str(min(var_neighbor, key=var_neighbor.get)) 
+            order.append(least)
+            new_edges_list=[]
+
+            # if variable has non-adjacdent neighbors, add edges between them
+            if var_neighbor[least] != 1:
+                for tuple in edges:
+                    if least in tuple:
+                        for i in tuple:
+                            if i != least:
+                                new_edges_list.append(i)                            
+                                for var1 in new_edges_list:                               
+                                    for var2 in new_edges_list:
+                                        var2=new_edges_list[-1]                                      
+                                        if (var1, var2) in edges:
+                                            pass
+                                            try:
+                                                bn.add_edge((var1, var2))
+                                            except: 
+                                                pass
+                    
+            del var_neighbor[least] # deletes variable from dict
+            bn.del_var(least) # deletes variablefrom bn
