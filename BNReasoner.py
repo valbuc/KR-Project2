@@ -1,4 +1,4 @@
-from typing import Union
+from typing import List, Union
 from BayesNet import BayesNet
 import networkx as nx
 import copy
@@ -67,18 +67,25 @@ class BNReasoner:
 
 
 
-    def ordering_mindegree(self):
+    def ordering_mindegree(self) -> List[str]:
+
+        """
+        returns ordering of elimination list
+        """
 
         bn = copy.deepcopy(self.bn)
-        var_neighbor = {}
-        order=[]
-        edges = bn.get_all_edges()
+        self.order=[]
 
+        count = 1
         for variable in bn.get_all_variables():
+            edges = bn.get_all_edges()
+            print("this is iteration:---", count)
+            print("the current variable:---", variable)
 
-            # when final variable, returns list
+            # when at final variable, returns list
             if len(edges) == 0:
-                order.append(variable)
+                self.order.append(variable)
+                print("this is the ordering:---", self.order)
                 return(self.order)
             else:
                 pass
@@ -89,13 +96,16 @@ class BNReasoner:
             firstdict = dict(first)
             seconddict = dict(second)
             var_neighbor = {k: firstdict.get(k, 0) + seconddict.get(k, 0) for k in set(firstdict) | set(seconddict)}
+            print("variables and amount edges at start of iteration:---", var_neighbor)
                 
-            # selects variable with least amount of edges/neighbors
+            # selects variable with least amount of edges/neighbor
             least = str(min(var_neighbor, key=var_neighbor.get)) 
-            order.append(least)
+            print("the variable with the least edges is:---", least)
+            self.order.append(least)
             new_edges_list=[]
 
-            # if variable has non-adjacdent neighbors, add edges between them
+            # if variable has non-adjacdent neighbors (more than one edge connection), add edges between them
+            # if only has one connection, continue
             if var_neighbor[least] != 1:
                 for tuple in edges:
                     if least in tuple:
@@ -111,6 +121,10 @@ class BNReasoner:
                                                 bn.add_edge((var1, var2))
                                             except: 
                                                 pass
-                    
+
+
+            bn.draw_structure()                              
             del var_neighbor[least] # deletes variable from dict
-            bn.del_var(least) # deletes variablefrom bn
+            bn.del_var(least) # deletes variable from bn
+            count += 1
+            print("updated dict:---", var_neighbor)
