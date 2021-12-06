@@ -79,6 +79,7 @@ class BNReasoner:
 
         count = 1
         for variable in bn.get_all_variables():
+            bn.draw_structure() 
             edges = bn.get_all_edges()
             print("this is iteration:---", count)
             print("the current variable:---", variable)
@@ -107,6 +108,7 @@ class BNReasoner:
 
             # if variable has non-adjacdent neighbors (more than one edge connection), add edges between them
             # if only has one connection, continue
+            # going to work on making this more efficient   
             if var_neighbor[least] != 1:
                 for tuple in edges:
                     if least in tuple:
@@ -121,10 +123,7 @@ class BNReasoner:
                                             try:
                                                 bn.add_edge((var1, var2))
                                             except: 
-                                                pass
-
-
-            bn.draw_structure()                              
+                                                pass                            
             del var_neighbor[least] # deletes variable from dict
             bn.del_var(least) # deletes variable from bn
             count += 1
@@ -144,6 +143,7 @@ class BNReasoner:
 
         count = 1
         for variable in bn.get_all_variables():
+            bn.draw_structure() 
             edges = bn.get_all_edges()
             print("this is iteration:---", count)
             print("the current variable:---", variable)
@@ -156,7 +156,7 @@ class BNReasoner:
             else:
                 pass
 
-            # makes dict which holds variables and amount of edges they have                
+            # makes dict which holds variables and amount of edges they have             
             first = Counter(elem[0] for elem in edges)
             second = Counter(elem[1] for elem in edges)
             firstdict = dict(first)
@@ -198,8 +198,7 @@ class BNReasoner:
                 del edges_to_add[least]
             else:
                 del var_neighbor[least]
-
-            bn.draw_structure()                              
+                             
             bn.del_var(least) # deletes variable from bn
             count += 1
             print("updated dict:---", var_neighbor)
