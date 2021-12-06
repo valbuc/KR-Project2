@@ -194,10 +194,12 @@ class BNReasoner:
                                             except: 
                                                 pass
 
-                least = str(min(edges_to_add, key=edges_to_add.get)) 
+                least = str(min(edges_to_add, key=edges_to_add.get))
+                del edges_to_add[least]
+            else:
+                del var_neighbor[least]
 
             bn.draw_structure()                              
-            del var_neighbor[least] # deletes variable from dict
             bn.del_var(least) # deletes variable from bn
             count += 1
             print("updated dict:---", var_neighbor)
