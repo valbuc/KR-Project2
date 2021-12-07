@@ -30,26 +30,31 @@ class BNReasoner:
         '''
         qe = q + e
         cp_bn = copy.deepcopy(self.bn)
-        # cp_bn.draw_structure()
-            
-        # gets the variables and put them in a set   
-        sett = cp_bn.get_all_variables()
-        print(sett)
 
+        cp_bn.draw_structure()
+        
+        # delete the leaf nodes not in qe until there are no more lead nodes to delete
         while True:
+            sett = cp_bn.get_all_variables() # a 'sett' to act as place to stores variables to be deleted
+    
+            # here I get rid of the variables that are not leaf nodes from sett
             for variable, _ in cp_bn.get_all_edges():
                 if variable in sett:
                     sett.remove(variable)
-                    print(sett)
 
+            # here I remove any leaf nodes that are part of qe
             for var in qe:
                 if var in sett:
                     sett.remove(var)
+
+            if len(sett) == 0:
+                break
             
+            # here I delete what ever is left in sett from the BN
             for item in sett:
                 cp_bn.del_var(item)
-            
-            break
+                print(cp_bn.get_all_variables())
+           
 
         # delete the edge outgoing from evidence variable e
         for variable in e:
@@ -59,20 +64,10 @@ class BNReasoner:
         cp_bn.draw_structure()
         
     
-q = ['bowel-problem', 'dog-out', 'light-on']
+q = ['bowel-problem', 'dog-out']
 e = ['family-out']
 
 dogproblem = BayesNet()
 dogproblem.load_from_bifxml('testing/dog_problem.BIFXML')
 reasoner = BNReasoner(dogproblem)
 reasoner.prune(q, e)
-
-# if variable == edge[0]
-#                 if variable not in qe:
-#                     for edge in bn.get_all_edges():
-#                         print(edge)
-#                         if variable != edge[0]:
-#                             try:
-#                                 bn.del_var(variable)
-#                             except:
-#                                 pass
