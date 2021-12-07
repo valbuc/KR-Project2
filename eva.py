@@ -31,28 +31,23 @@ class BNReasoner:
         qe = q + e
         cp_bn = copy.deepcopy(self.bn)
         # cp_bn.draw_structure()
-
-        # deletes the leaf nodes
             
         # gets the variables and put them in a set   
         sett = cp_bn.get_all_variables()
         print(sett)
 
-        while True:
-            for variable, _ in cp_bn.get_all_edges():
-                if variable in sett:
-                    sett.remove(variable)
+        # while True:
+        for variable, _ in cp_bn.get_all_edges():
+            if variable in sett:
+                sett.remove(variable)
+                print(sett)
 
-            if len(sett) == 0:
-                break
-
-            for var in qe:
-                if var in sett:
-                    sett.remove(var)
-
-            for item in sett:
-                cp_bn.del_var(item)
-
+        for var in qe:
+            if var in sett:
+                sett.remove(var)
+        
+        for item in sett:
+            cp_bn.del_var(item)
 
         # delete the edge outgoing from evidence variable e
         for variable in e:
