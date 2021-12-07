@@ -36,18 +36,20 @@ class BNReasoner:
         sett = cp_bn.get_all_variables()
         print(sett)
 
-        # while True:
-        for variable, _ in cp_bn.get_all_edges():
-            if variable in sett:
-                sett.remove(variable)
-                print(sett)
+        while True:
+            for variable, _ in cp_bn.get_all_edges():
+                if variable in sett:
+                    sett.remove(variable)
+                    print(sett)
 
-        for var in qe:
-            if var in sett:
-                sett.remove(var)
-        
-        for item in sett:
-            cp_bn.del_var(item)
+            for var in qe:
+                if var in sett:
+                    sett.remove(var)
+            
+            for item in sett:
+                cp_bn.del_var(item)
+            
+            break
 
         # delete the edge outgoing from evidence variable e
         for variable in e:
