@@ -2,6 +2,7 @@ from typing import List, Union
 from BayesNet import BayesNet
 import networkx as nx
 import copy
+import pandas as pd
 from collections import Counter
 
 
@@ -215,3 +216,29 @@ class BNReasoner:
             bn.del_var(least)  # deletes variable from bn
             count += 1
             print("updated dict:---", var_neighbor)
+
+    def sum_out(self, factor: pd.DataFrame, variables: list):
+        """
+        takes a cpt(factor) and a set of variables
+        returns a cpt with the goven variables summed out
+        """
+
+        # getting all variables in the factpr
+        x = list(factor.columns)
+        x.pop()
+
+        # get a list of variables which should remain
+        y = [X for X in x if X not in variables]
+
+        # sum out variable
+        summed_out = factor.groupby(y).agg("sum").reset_index()
+
+        # remove variables in z from dataframe
+        for variable in variables:
+            delete = []
+            if variable in summed_out.columns:
+                delete.append(variable)
+            for var in delete:
+                summed_out = summed_out.drop(var, 1)
+
+        return summed_out
