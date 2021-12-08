@@ -77,69 +77,54 @@ class BNReasoner:
         return True
 
     def ordering_mindegree(self) -> List[str]:
-
         """
         returns ordering of elimination list
         the min-degree heuristic creates the order based on first eliminating the nodes with the least amount of neighbors
         """
-
         bn = copy.deepcopy(self.bn)
         self.order = []
-
         count = 1
+        
         for variable in bn.get_all_variables():
+            G = bn.get_structure().to_undirected()
             bn.draw_structure()
             edges = bn.get_all_edges()
-            print("this is iteration:---", count)
-            print("the current variable:---", variable)
+            var_neighbor = {}
 
             # when at final variable, returns list
             if len(edges) == 0:
                 self.order.append(variable)
-                print("this is the ordering:---", self.order)
                 return self.order
             else:
                 pass
 
             # makes dict which holds variables and amount of edges they have
-            first = Counter(elem[0] for elem in edges)
-            second = Counter(elem[1] for elem in edges)
-            firstdict = dict(first)
-            seconddict = dict(second)
-            var_neighbor = {
-                k: firstdict.get(k, 0) + seconddict.get(k, 0)
-                for k in set(firstdict) | set(seconddict)
-            }
-            print("variables and amount edges at start of iteration:---", var_neighbor)
+            for i in bn.get_all_variables():
+                num = len(list(nx.neighbors(G, n=i)))
+                var_neighbor[i] = num
 
             # selects variable with least amount of edges/neighbor
             least = str(min(var_neighbor, key=var_neighbor.get))
-            print("the variable with the least edges is:---", least)
             self.order.append(least)
-            new_edges_list = []
 
             # if variable has non-adjacdent neighbors (more than one edge connection), add edges between them
             # if only has one connection, continue
-            # going to work on making this more efficient
-            if var_neighbor[least] != 1:
-                for tuple in edges:
-                    if least in tuple:
-                        for i in tuple:
-                            if i != least:
-                                new_edges_list.append(i)
-                                for var1 in new_edges_list:
-                                    for var2 in new_edges_list:
-                                        var2 = new_edges_list[-1]
-                                        if (var1, var2) in edges:
-                                            pass
-                                            try:
-                                                bn.add_edge((var1, var2))
-                                            except:
-                                                pass
+            if var_neighbor[least] != 1: 
+                leasts_neighbors = list(nx.neighbors(G, n=i))
+                print(leasts_neighbors)
+                all = [(leasts_neighbors[i],leasts_neighbors[j]) for i in range(len(leasts_neighbors)) for j in range(i+1, len(leasts_neighbors))]
+                for tuple in all:
+                    if tuple in edges:
+                        pass
+                    else:
+                        try:
+                            bn.add_edge(tuple)
+                        except: 
+                            pass
             del var_neighbor[least]  # deletes variable from dict
             bn.del_var(least)  # deletes variable from bn
             count += 1
-            print("updated dict:---", var_neighbor)
+
 
     def ordering_minfull(self) -> List[str]:
 
