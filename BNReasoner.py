@@ -83,8 +83,8 @@ class BNReasoner:
         """
         bn = copy.deepcopy(self.bn)
         self.order = []
+
         count = 1
-        
         for variable in bn.get_all_variables():
             G = bn.get_structure().to_undirected()
             bn.draw_structure()
@@ -99,18 +99,17 @@ class BNReasoner:
                 pass
 
             # makes dict which holds variables and amount of edges they have
-            for i in bn.get_all_variables():
-                num = len(list(nx.neighbors(G, n=i)))
-                var_neighbor[i] = num
+            for var in bn.get_all_variables():
+                num = len(list(nx.neighbors(G, n=var)))
+                var_neighbor[var] = num
 
             # selects variable with least amount of edges/neighbor
             least = str(min(var_neighbor, key=var_neighbor.get))
             self.order.append(least)
 
             # if variable has non-adjacdent neighbors (more than one edge connection), add edges between them
-            # if only has one connection, continue
             if var_neighbor[least] != 1: 
-                leasts_neighbors = list(nx.neighbors(G, n=i))
+                leasts_neighbors = list(nx.neighbors(G, n=least))
                 print(leasts_neighbors)
                 all = [(leasts_neighbors[i],leasts_neighbors[j]) for i in range(len(leasts_neighbors)) for j in range(i+1, len(leasts_neighbors))]
                 for tuple in all:
@@ -125,15 +124,11 @@ class BNReasoner:
             bn.del_var(least)  # deletes variable from bn
             count += 1
 
-
     def ordering_minfull(self) -> List[str]:
-
         """
-        WORK IN PROGRESS
         returns ordering of elimination list
         the min-full heuristic creates the order based on first eliminating the variables that add the smallest number of edges
         """
-
         bn = copy.deepcopy(self.bn)
         self.order = []
 
@@ -141,66 +136,62 @@ class BNReasoner:
         for variable in bn.get_all_variables():
             bn.draw_structure()
             edges = bn.get_all_edges()
-            print("this is iteration:---", count)
-            print("the current variable:---", variable)
+            var_neighbor = {}
+            G = bn.get_structure().to_undirected()
 
             # when at final variable, returns list
             if len(edges) == 0:
                 self.order.append(variable)
-                print("this is the ordering:---", self.order)
                 return self.order
             else:
                 pass
 
             # makes dict which holds variables and amount of edges they have
-            first = Counter(elem[0] for elem in edges)
-            second = Counter(elem[1] for elem in edges)
-            firstdict = dict(first)
-            seconddict = dict(second)
-            var_neighbor = {
-                k: firstdict.get(k, 0) + seconddict.get(k, 0)
-                for k in set(firstdict) | set(seconddict)
-            }
-            print("variables and amount edges at start of iteration:---", var_neighbor)
-
+            for var in bn.get_all_variables():
+                num = len(list(nx.neighbors(G, n=var)))
+                var_neighbor[var] = num
+               
             # selects variable with least amount of edges/neighbor
             least = str(min(var_neighbor, key=var_neighbor.get))
-            print("the variable with the least edges is:---", least)
             self.order.append(least)
-            new_edges_list = []
 
-            # if variable has non-adjacdent neighbors (more than one edge connection), add edges between them
-            # if only has one connection, continue
+            # if has more than one neighbor, sees how many new edges would have to be made if it was deleted.
+            if var_neighbor[least] != 1: 
+                edges_to_add = 0
+                edges_amount = {}
+                bn_copy = copy.deepcopy(bn)
+                G_copy = bn_copy.get_structure().to_undirected()
+                leasts_neighbors = list(nx.neighbors(G_copy, n=least))
+                
+                all = [(leasts_neighbors[i],leasts_neighbors[j]) for i in range(len(leasts_neighbors)) for j in range(i+1, len(leasts_neighbors))]
+                for tuple in all:
+                    if tuple in edges:
+                        pass
+                    else:
+                        try:
+                            bn_copy.add_edge(tuple) 
+                            edges_to_add += 1  
+                            edges_amount[least] = edges_to_add 
+                        except: 
+                            pass
+                least = str(min(edges_amount, key=edges_amount.get))
 
-            # stairway to literal hell
-            edges_to_add = 0
-            connect_dict = {}
-            if var_neighbor[least] != 1:
-                for tuple in edges:
-                    if least in tuple:
-                        for i in tuple:
-                            if i != least:
-                                new_edges_list.append(i)
-                                for var1 in new_edges_list:
-                                    for var2 in new_edges_list:
-                                        var2 = new_edges_list[-1]
-                                        if (var1, var2) in edges:
-                                            pass
-                                            try:
-                                                bn.add_edge((var1, var2))
-                                                edges_to_add += 1
-                                                connect_dict.append[var1] = edges_to_add
-                                            except:
-                                                pass
+                # the actual creation of the new edges
+                leasts_neighbors = list(nx.neighbors(G, n=least))
+                print(leasts_neighbors)
+                all = [(leasts_neighbors[i],leasts_neighbors[j]) for i in range(len(leasts_neighbors)) for j in range(i+1, len(leasts_neighbors))]
+                for tuple in all:
+                    if tuple in edges:
+                        pass
+                    else:
+                        try:
+                            bn.add_edge(tuple)
+                        except: 
+                            pass
 
-                least = str(min(edges_to_add, key=edges_to_add.get))
-                del edges_to_add[least]
-            else:
-                del var_neighbor[least]
-
-            bn.del_var(least)  # deletes variable from bn
+            del var_neighbor[least]
+            bn.del_var(least)  
             count += 1
-            print("updated dict:---", var_neighbor)
 
     def sum_out(self, factor: pd.DataFrame, variables: list):
         """
