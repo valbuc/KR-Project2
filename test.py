@@ -1,5 +1,5 @@
 from BayesNet import BayesNet
-from BNReasoner import BNReasoner
+from taylor import BNReasoner
 import networkx as nx
 import copy
 
@@ -14,10 +14,5 @@ dogproblem = BayesNet()
 dogproblem.load_from_bifxml('testing/dog_problem.BIFXML')
 
 reasoner = BNReasoner(dogproblem)
-
-x = ['bowel-problem']
-y = ['family-out']
-z = ['dog-out']
-reasoner.d_separation(x, y, z)
 
 reasoner.ordering_mindegree()
