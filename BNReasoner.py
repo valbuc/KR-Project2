@@ -27,8 +27,9 @@ class BNReasoner:
         """
         xyz = x + y + z
         bn = copy.deepcopy(self.bn)
-        bn.draw_structure()
+        #bn.draw_structure()
         continueiter = True
+        # first save all items to be delted in list and then iterate over that list to delete 
         while continueiter == True:
             continueiter = False
             for variable in self.bn.get_all_variables():
@@ -52,7 +53,7 @@ class BNReasoner:
                     if edge[0] == variable:
                         bn.del_edge(edge)
 
-        bn.draw_structure()
+        #bn.draw_structure()
         graph = bn.get_structure().to_undirected()
         # graph = bn.get_interaction_graph()
 
