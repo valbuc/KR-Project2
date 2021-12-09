@@ -218,3 +218,20 @@ class BNReasoner:
                 summed_out = summed_out.drop(var, 1)
 
         return summed_out
+
+    def multiply(self, factor: pd.DataFrame, variables: set):
+        """
+        takes a cpt(factor) and a set of variables
+        returns cpt(factor) multiplied by the variables
+        """
+
+        vars = set(factor.columns)
+        vars.remove('p')
+
+        vars_to_keep = vars.difference(variables)
+        vars_to_drop = vars.difference(vars_to_keep)
+
+        multiplied = factor.groupby(list(vars_to_keep), sort=False).prod().reset_index().drop(vars_to_drop, axis=1)
+
+        return multiplied
+
