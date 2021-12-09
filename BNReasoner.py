@@ -4,6 +4,8 @@ import networkx as nx
 import copy
 import pandas as pd
 from collections import Counter
+import itertools
+import numpy as np
 
 
 class BNReasoner:
@@ -219,19 +221,51 @@ class BNReasoner:
 
         return summed_out
 
-    def multiply(self, factor: pd.DataFrame, variables: set):
+    def create_truth_table(self, num_vars):
+        return pd.DataFrame(list(itertools.product([False, True], repeat= num_vars)))
+
+    def multiply(self, factor1: pd.DataFrame, factor2: pd.DataFrame):
         """
-        takes a cpt(factor) and a set of variables
-        returns cpt(factor) multiplied by the variables
+        takes 2 cpt(factors)
+        returns cpt(factor1) multiplied by cpt(factor2)
         """
 
-        vars = set(factor.columns)
-        vars.remove('p')
+        vars1 = list(factor1.columns)
+        vars1.remove('p')
+        vars2 = list(factor2.columns)
+        vars2.remove('p')
 
-        vars_to_keep = vars.difference(variables)
-        vars_to_drop = vars.difference(vars_to_keep)
+        multiplied = copy.deepcopy(factor1)
+        new_in_vars2 = set(vars2).difference(set(vars1))
 
-        multiplied = factor.groupby(list(vars_to_keep), sort=False).prod().reset_index().drop(vars_to_drop, axis=1)
+        # if there is a variable in factor2 that is not in factor1 then factor1 has to be extended by those variable(s)
+        if len(new_in_vars2) > 0:
+            for var in new_in_vars2:
+                multiplied.insert(len(factor1.columns)-1, var, True)
+                multiplied = pd.concat([multiplied, factor1])
+                multiplied = multiplied.fillna(False)
+
+            cols = list(multiplied.columns)
+            multiplied = multiplied.sort_values(by=cols, ascending=False)
+            multiplied = multiplied.reset_index(drop=True)
+
+        # compare the columns included in factor2 (vars2) row by row between factor1 and factor2
+        # if they are the same then the 2 probabilities can be multiplied
+        for r1, row1 in multiplied.iterrows():
+            for r2, row2 in factor2.iterrows():
+                if list(row1[list(vars2)]) == list(row2[list(vars2)]):
+                    multiplied.at[r1, 'p'] *= row2['p']
+                    break
 
         return multiplied
 
+
+
+if __name__ == '__main__':
+    dogproblem = BayesNet()
+    dogproblem.load_from_bifxml('testing/dog_problem.BIFXML')
+    #dogproblem.draw_structure()
+    reasoner = BNReasoner(dogproblem)
+    dog = dogproblem.get_cpt('dog-out')
+    bark = dogproblem.get_cpt('hear-bark')
+    multiplied = reasoner.multiply(dog, bark)
