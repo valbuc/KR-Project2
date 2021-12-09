@@ -241,8 +241,9 @@ class BNReasoner:
         # if there is a variable in factor2 that is not in factor1 then factor1 has to be extended by those variable(s)
         if len(new_in_vars2) > 0:
             for var in new_in_vars2:
+                multiplied_copy = copy.deepcopy(multiplied)
                 multiplied.insert(len(factor1.columns)-1, var, True)
-                multiplied = pd.concat([multiplied, factor1])
+                multiplied = pd.concat([multiplied, multiplied_copy])
                 multiplied = multiplied.fillna(False)
 
             cols = list(multiplied.columns)
@@ -268,4 +269,4 @@ if __name__ == '__main__':
     reasoner = BNReasoner(dogproblem)
     dog = dogproblem.get_cpt('dog-out')
     bark = dogproblem.get_cpt('hear-bark')
-    multiplied = reasoner.multiply(dog, bark)
+    multiplied = reasoner.multiply(bark, dog)
