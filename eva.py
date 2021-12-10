@@ -3,6 +3,7 @@ from BayesNet import BayesNet
 from BNReasoner import BNReasoner
 import networkx as nx
 import copy
+import pandas as pd
 
 class BNReasoner:
     def __init__(self, net: Union[str, BayesNet]):
@@ -62,12 +63,56 @@ class BNReasoner:
                 cp_bn.del_edge((variable, child))
         
         cp_bn.draw_structure()
-        
-    
-q = ['bowel-problem', 'dog-out']
-e = ['family-out']
 
-dogproblem = BayesNet()
-dogproblem.load_from_bifxml('testing/dog_problem.BIFXML')
-reasoner = BNReasoner(dogproblem)
-reasoner.prune(q, e)
+
+   
+
+    def net_prune(self, q: list, e: pd.Series):
+        '''
+        Network Pruning is done in two parts: Node Pruning and Edge Pruning.
+        '''
+        new_e = []
+        for items in e.iteritems():
+            new_e.append(items[0])
+
+        qe = q + new_e
+        cp_bn = copy.deepcopy(self.bn)
+        cp_bn.draw_structure()
+        
+        # Node pruning
+        while True:
+            sett = cp_bn.get_all_variables() 
+    
+            for variable, _ in cp_bn.get_all_edges():
+                if variable in sett:
+                    sett.remove(variable)
+
+            for var in qe:
+                if var in sett:
+                    sett.remove(var)
+
+            if len(sett) == 0:
+                break
+            
+            for item in sett:
+                cp_bn.del_var(item)
+        
+        cp_bn.draw_structure()
+
+        # Edge pruning
+        for variable in new_e:
+            for child in cp_bn.get_children(variable):
+                cp_bn.del_edge((variable, child))
+
+                cpt = cp_bn.get_cpt(child)
+                cp_bn.get_compatible_instantiations_table(e, cpt)
+        
+
+q = ['Wet Grass?']
+e = pd.Series({'Winter?': True, 'Rain?': False})
+
+
+lecture = BayesNet()
+lecture.load_from_bifxml('testing/lecture_example.BIFXML')
+reasoner = BNReasoner(lecture)
+reasoner.net_prune(q, e)
