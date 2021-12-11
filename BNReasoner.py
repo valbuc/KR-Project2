@@ -241,6 +241,7 @@ class BNReasoner:
         # if there is a variable in factor2 that is not in factor1 then factor1 has to be extended by those variable(s)
         if len(new_in_vars2) > 0:
             for var in new_in_vars2:
+                # TODO: only add True and False if it is in factor2
                 multiplied_copy = copy.deepcopy(multiplied)
                 multiplied.insert(len(factor1.columns)-1, var, True)
                 multiplied = pd.concat([multiplied, multiplied_copy])
@@ -261,6 +262,40 @@ class BNReasoner:
         return multiplied
 
 
+    def get_marignal(self, q_vars: list, e_vars: pd.DataFrame):
+        cpts = self.bn.get_all_cpts()
+
+        #make cpts consistent with evidence (delete inconsistent rows)
+        for key in cpts:
+            relevant_evidence = []
+            for var in e_vars:
+                if var in cpts[key]:
+                    relevant_evidence.append(var)
+            to_delete = []
+            if relevant_evidence != []:
+                for r, row in cpts[key].iterrows():
+                    if list(row[relevant_evidence]) != list(e_vars[relevant_evidence].iloc[0]):
+                        to_delete.append(r)
+                cpts[key] = cpts[key].drop(to_delete, axis=0)
+
+        for key1 in cpts:
+            if key1 not in q_vars:
+                for key2 in cpts:
+                    if key2 != key1 and key1 in cpts[key2]:
+                        cpts[key2] = reasoner.multiply(cpts[key2], cpts[key1])
+                        cpts[key2] = reasoner.sum_out(cpts[key2], [key1])
+
+        # delete everything that is not in q_vars
+        to_delete = [key for key in cpts if key not in q_vars]
+        for var in to_delete:
+            cpts.pop(var)
+
+        # normalise results
+        for key in cpts:
+            cpts[key] = cpts[key]['p'] / cpts[key]['p'].sum()
+        return cpts
+
+
 
 if __name__ == '__main__':
     dogproblem = BayesNet()
@@ -270,3 +305,9 @@ if __name__ == '__main__':
     dog = dogproblem.get_cpt('dog-out')
     bark = dogproblem.get_cpt('hear-bark')
     multiplied = reasoner.multiply(bark, dog)
+
+
+    evidence = pd.DataFrame([{'bowel-problem': False, 'family-out': False}])
+    query_vars = ['dog-out', 'light-on']
+
+    reasoner.get_marignal(query_vars, evidence)
