@@ -241,11 +241,17 @@ class BNReasoner:
         # if there is a variable in factor2 that is not in factor1 then factor1 has to be extended by those variable(s)
         if len(new_in_vars2) > 0:
             for var in new_in_vars2:
-                # TODO: only add True and False if it is in factor2
-                multiplied_copy = copy.deepcopy(multiplied)
-                multiplied.insert(len(factor1.columns)-1, var, True)
-                multiplied = pd.concat([multiplied, multiplied_copy])
-                multiplied = multiplied.fillna(False)
+                if True in factor2[var] and False in factor2[var]:
+                    multiplied_copy = copy.deepcopy(multiplied)
+                    multiplied.insert(len(factor1.columns) - 1, var, True)
+                    multiplied = pd.concat([multiplied, multiplied_copy])
+                    multiplied = multiplied.fillna(False)
+                else:
+                    if True in factor2[var]:
+                        multiplied.insert(len(factor1.columns)-1, var, True)
+                    if False in factor2[var]:
+                        multiplied.insert(len(factor1.columns)-1, var, False)
+
 
             cols = list(multiplied.columns)
             multiplied = multiplied.sort_values(by=cols, ascending=False)
