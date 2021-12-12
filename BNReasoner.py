@@ -110,17 +110,21 @@ class BNReasoner:
             self.order.append(least)
 
             # if variable has non-adjacdent neighbors (more than one edge connection), add edges between them
-            if var_neighbor[least] != 1: 
+            if var_neighbor[least] != 1:
                 leasts_neighbors = list(nx.neighbors(G, n=least))
                 print(leasts_neighbors)
-                all = [(leasts_neighbors[i],leasts_neighbors[j]) for i in range(len(leasts_neighbors)) for j in range(i+1, len(leasts_neighbors))]
+                all = [
+                    (leasts_neighbors[i], leasts_neighbors[j])
+                    for i in range(len(leasts_neighbors))
+                    for j in range(i + 1, len(leasts_neighbors))
+                ]
                 for tuple in all:
                     if tuple in edges:
                         pass
                     else:
                         try:
                             bn.add_edge(tuple)
-                        except: 
+                        except:
                             pass
             del var_neighbor[least]  # deletes variable from dict
             bn.del_var(least)  # deletes variable from bn
@@ -152,48 +156,100 @@ class BNReasoner:
             for var in bn.get_all_variables():
                 num = len(list(nx.neighbors(G, n=var)))
                 var_neighbor[var] = num
-               
+
             # selects variable with least amount of edges/neighbor
             least = str(min(var_neighbor, key=var_neighbor.get))
             self.order.append(least)
 
             # if has more than one neighbor, sees how many new edges would have to be made if it was deleted.
-            if var_neighbor[least] != 1: 
+            if var_neighbor[least] != 1:
                 edges_to_add = 0
                 edges_amount = {}
                 bn_copy = copy.deepcopy(bn)
                 G_copy = bn_copy.get_structure().to_undirected()
                 leasts_neighbors = list(nx.neighbors(G_copy, n=least))
-                
-                all = [(leasts_neighbors[i],leasts_neighbors[j]) for i in range(len(leasts_neighbors)) for j in range(i+1, len(leasts_neighbors))]
+
+                all = [
+                    (leasts_neighbors[i], leasts_neighbors[j])
+                    for i in range(len(leasts_neighbors))
+                    for j in range(i + 1, len(leasts_neighbors))
+                ]
                 for tuple in all:
                     if tuple in edges:
                         pass
                     else:
                         try:
-                            bn_copy.add_edge(tuple) 
-                            edges_to_add += 1  
-                            edges_amount[least] = edges_to_add 
-                        except: 
+                            bn_copy.add_edge(tuple)
+                            edges_to_add += 1
+                            edges_amount[least] = edges_to_add
+                        except:
                             pass
                 least = str(min(edges_amount, key=edges_amount.get))
 
                 # the actual creation of the new edges
                 leasts_neighbors = list(nx.neighbors(G, n=least))
                 print(leasts_neighbors)
-                all = [(leasts_neighbors[i],leasts_neighbors[j]) for i in range(len(leasts_neighbors)) for j in range(i+1, len(leasts_neighbors))]
+                all = [
+                    (leasts_neighbors[i], leasts_neighbors[j])
+                    for i in range(len(leasts_neighbors))
+                    for j in range(i + 1, len(leasts_neighbors))
+                ]
                 for tuple in all:
                     if tuple in edges:
                         pass
                     else:
                         try:
                             bn.add_edge(tuple)
-                        except: 
+                        except:
                             pass
 
             del var_neighbor[least]
-            bn.del_var(least)  
+            bn.del_var(least)
             count += 1
+
+    def net_prune(self, q: list, e: pd.Series):
+        """
+        Network Pruning is done in two parts: Node Pruning and Edge Pruning.
+        """
+        new_e = []
+        for items in e.iteritems():
+            new_e.append(items[0])
+
+        qe = q + new_e
+        cp_bn = copy.deepcopy(self.bn)
+        cp_bn.draw_structure()
+
+        # Node pruning
+        while True:
+            sett = cp_bn.get_all_variables()
+
+            for variable, _ in cp_bn.get_all_edges():
+                if variable in sett:
+                    sett.remove(variable)
+
+            for var in qe:
+                if var in sett:
+                    sett.remove(var)
+
+            if len(sett) == 0:
+                break
+
+            for item in sett:
+                cp_bn.del_var(item)
+
+        cp_bn.draw_structure()
+
+        # Edge pruning
+        for variable in new_e:
+            for child in cp_bn.get_children(variable):
+                cp_bn.del_edge((variable, child))
+
+                cpt = cp_bn.get_cpt(child)
+                cp_bn.get_compatible_instantiations_table(e, cpt)
+
+        cp_bn.draw_structure()
+
+        return cp_bn
 
     def sum_out(self, factor: pd.DataFrame, variables: list):
         """
@@ -201,9 +257,9 @@ class BNReasoner:
         returns a cpt with the goven variables summed out
         """
 
-        # getting all variables in the factpr
+        # getting all variables in the factor
         x = list(factor.columns)
-        x.pop()
+        x.remove("p")
 
         # get a list of variables which should remain
         y = [X for X in x if X not in variables]
@@ -222,7 +278,7 @@ class BNReasoner:
         return summed_out
 
     def create_truth_table(self, num_vars):
-        return pd.DataFrame(list(itertools.product([False, True], repeat= num_vars)))
+        return pd.DataFrame(list(itertools.product([False, True], repeat=num_vars)))
 
     def multiply(self, factor1: pd.DataFrame, factor2: pd.DataFrame):
         """
@@ -231,9 +287,9 @@ class BNReasoner:
         """
 
         vars1 = list(factor1.columns)
-        vars1.remove('p')
+        vars1.remove("p")
         vars2 = list(factor2.columns)
-        vars2.remove('p')
+        vars2.remove("p")
 
         multiplied = copy.deepcopy(factor1)
         new_in_vars2 = set(vars2).difference(set(vars1))
@@ -248,10 +304,9 @@ class BNReasoner:
                     multiplied = multiplied.fillna(False)
                 else:
                     if True in factor2[var]:
-                        multiplied.insert(len(factor1.columns)-1, var, True)
+                        multiplied.insert(len(factor1.columns) - 1, var, True)
                     if False in factor2[var]:
-                        multiplied.insert(len(factor1.columns)-1, var, False)
-
+                        multiplied.insert(len(factor1.columns) - 1, var, False)
 
             cols = list(multiplied.columns)
             multiplied = multiplied.sort_values(by=cols, ascending=False)
@@ -262,16 +317,29 @@ class BNReasoner:
         for r1, row1 in multiplied.iterrows():
             for r2, row2 in factor2.iterrows():
                 if list(row1[list(vars2)]) == list(row2[list(vars2)]):
-                    multiplied.at[r1, 'p'] *= row2['p']
+                    multiplied.at[r1, "p"] *= row2["p"]
                     break
 
         return multiplied
 
+    def multiply_multi(self, *args):
+        """
+        multiplies >2 factors 
+        """
 
-    def get_marignal(self, q_vars: list, e_vars: pd.DataFrame):
+        print(list(args))
+
+        multiplied = list(args)[0]
+
+        for factor in list(args)[1:]:
+            multiplied = self.multiply(multiplied, factor)
+
+        return multiplied
+
+    def get_marginal(self, q_vars: list, e_vars: pd.DataFrame):
         cpts = self.bn.get_all_cpts()
 
-        #make cpts consistent with evidence (delete inconsistent rows)
+        # make cpts consistent with evidence (delete inconsistent rows)
         for key in cpts:
             relevant_evidence = []
             for var in e_vars:
@@ -280,7 +348,9 @@ class BNReasoner:
             to_delete = []
             if relevant_evidence != []:
                 for r, row in cpts[key].iterrows():
-                    if list(row[relevant_evidence]) != list(e_vars[relevant_evidence].iloc[0]):
+                    if list(row[relevant_evidence]) != list(
+                        e_vars[relevant_evidence].iloc[0]
+                    ):
                         to_delete.append(r)
                 cpts[key] = cpts[key].drop(to_delete, axis=0)
 
@@ -288,8 +358,8 @@ class BNReasoner:
             if key1 not in q_vars:
                 for key2 in cpts:
                     if key2 != key1 and key1 in cpts[key2]:
-                        cpts[key2] = reasoner.multiply(cpts[key2], cpts[key1])
-                        cpts[key2] = reasoner.sum_out(cpts[key2], [key1])
+                        cpts[key2] = self.multiply(cpts[key2], cpts[key1])
+                        cpts[key2] = self.sum_out(cpts[key2], [key1])
 
         # delete everything that is not in q_vars
         to_delete = [key for key in cpts if key not in q_vars]
@@ -298,22 +368,27 @@ class BNReasoner:
 
         # normalise results
         for key in cpts:
-            cpts[key] = cpts[key]['p'] / cpts[key]['p'].sum()
-        return cpts
+            cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
+            cpts[key] = cpts[key].to_frame()
+            cpts[key][key] = [False, True]
+
+        factors = list(cpts.values())
+
+        marginalpt = self.multiply_multi(*factors)
+
+        return marginalpt
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     dogproblem = BayesNet()
-    dogproblem.load_from_bifxml('testing/dog_problem.BIFXML')
-    #dogproblem.draw_structure()
+    dogproblem.load_from_bifxml("testing/dog_problem.BIFXML")
+    # dogproblem.draw_structure()
     reasoner = BNReasoner(dogproblem)
-    dog = dogproblem.get_cpt('dog-out')
-    bark = dogproblem.get_cpt('hear-bark')
+    dog = dogproblem.get_cpt("dog-out")
+    bark = dogproblem.get_cpt("hear-bark")
     multiplied = reasoner.multiply(bark, dog)
 
+    evidence = pd.DataFrame([{"bowel-problem": False, "family-out": False}])
+    query_vars = ["dog-out", "light-on"]
 
-    evidence = pd.DataFrame([{'bowel-problem': False, 'family-out': False}])
-    query_vars = ['dog-out', 'light-on']
-
-    reasoner.get_marignal(query_vars, evidence)
+    reasoner.get_marginal(query_vars, evidence)
