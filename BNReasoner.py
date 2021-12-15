@@ -245,7 +245,11 @@ class BNReasoner:
                 cp_bn.del_edge((variable, child))
 
                 cpt = cp_bn.get_cpt(child)
-                cp_bn.get_compatible_instantiations_table(e, cpt)
+                new_cpt = cp_bn.get_compatible_instantiations_table(e, cpt)
+                for ev in e.iteritems():
+                    if ev[0] in new_cpt.columns:
+                        new_cpt = new_cpt.drop(ev[0], 1)
+                cp_bn.update_cpt(child, new_cpt)
 
         cp_bn.draw_structure()
 
