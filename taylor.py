@@ -4,6 +4,7 @@ import networkx as nx
 import copy
 from collections import Counter
 import itertools 
+import pandas as pd
 
 
 class BNReasoner:
@@ -198,3 +199,49 @@ class BNReasoner:
             # bn.del_var(least)  # deletes variable from bn
             # count += 1
             # print("updated dict:---", var_neighbor)
+
+
+    def MAP(self, factor: pd.DataFrame, map_vars: list, e: list):
+
+        bn = copy.deepcopy(self.bn)
+        N = self.net_pruning(map_vars, e) # prunes network
+        order = self.ordering_minfull(N)# returns elimination ordering
+        for var in map_vars: # puts MAP variables at end of elimination ordering list
+            temp = var
+            order.pop(temp)
+            order.append(temp) 
+        S = bn.get_all_cpts()
+        for var in order:
+            self.multiply()
+            if var in Q:
+                self.max_out()
+            else:
+                self.sum_out(0)
+        
+
+
+    def max_out(self, factor: pd.DataFrame, variables: list):
+        """
+        takes a cpt(factor) and a set of variables
+        returns a cpt with the goven variables summed out
+        """
+
+        # getting all variables in the factpr
+        x = list(factor.columns)
+        x.pop()
+
+        # get a list of variables which should remain
+        y = [X for X in x if X not in variables]
+
+        # sum out variable
+        maxxed_out = factor.groupby(y).agg("sum").reset_index()
+
+        # remove variables in z from dataframe
+        for variable in variables:
+            delete = []
+            if variable in summed_out.columns:
+                delete.append(variable)
+            for var in delete:
+                summed_out = summed_out.drop(var, 1)
+
+        return summed_out
