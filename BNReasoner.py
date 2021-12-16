@@ -328,6 +328,27 @@ class BNReasoner:
         return marginalpt
 
 
+    
+    def MPE(self, e: pd.series):
+
+        bn = copy.deepcopy(self.bn) # a bayesian network
+
+        N = self.net_prune(bn, e) # prune edges
+
+        vars = N.get_all_variables() #variables in network N'
+
+        ordering = N.ordering_mindegree() # elimination order of variables Q
+
+        S = N.get_all_cpts() # {fe: f is a CPT of network N'}
+
+        for i in range(len(self.N.get_all_variables)):
+            # multiply out?
+            # max out?
+
+    
+    def MAP:
+
+
 if __name__ == "__main__":
     dogproblem = BayesNet()
     dogproblem.load_from_bifxml("testing/dog_problem.BIFXML")
