@@ -327,26 +327,77 @@ class BNReasoner:
 
         return marginalpt
 
+    def maxx_out(self, factor: pd.DataFrame, variables: list):
+        """
+        takes a cpt(factor) and a set of variables
+        returns a cpt with the goven variables maxxed out
+        """
 
+        # getting all variables in the factor
+        x = list(factor.columns)
+        x.remove("p")
+
+        # get a list of variables which should remain
+        y = [X for X in x if X not in variables]
+        maxx = 0
+        
+        sorting = factor.groupby(y)
+        maxx = sorting.max()
+
+        return maxx
     
-    def MPE(self, e: pd.series):
+    def MPE(self, q_vars: list, e_vars: pd.DataFrame):
 
-        bn = copy.deepcopy(self.bn) # a bayesian network
+        N = self.net_prune(q_vars, e_vars) # prune edges
 
-        N = self.net_prune(bn, e) # prune edges
+        q_vars = N.get_all_variables() #variables in network N'
 
-        vars = N.get_all_variables() #variables in network N'
+        order = N.ordering_mindegree() # elimination order of variables Q
 
-        ordering = N.ordering_mindegree() # elimination order of variables Q
+        cpts = N.get_all_cpts() 
 
-        S = N.get_all_cpts() # {fe: f is a CPT of network N'}
+        # make cpts consistent with evidence (delete inconsistent rows
+        for key in cpts:
+            relevant_evidence = []
+            for var in e_vars:
+                if var in cpts[key]:
+                    relevant_evidence.append(var)
+            to_delete = []
+            if relevant_evidence != []:
+                for r, row in cpts[key].iterrows():
+                    if list(row[relevant_evidence]) != list(
+                        e_vars[relevant_evidence].iloc[0]):
+                        to_delete.append(r)
+                cpts[key] = cpts[key].drop(to_delete, axis=0)
 
-        for i in range(len(self.N.get_all_variables)):
-            # multiply out?
-            # max out?
 
-    
-    def MAP:
+        for key1 in cpts:  # for variable
+            if key1 not in q_vars: # if variable NOT in q_vars
+                for key2 in cpts:  # for variable in cpts:
+                    if key2 != key1 and key1 in cpts[key2]:
+                        # if cat != dog and dog in cat cpt table:
+                        cpts[key2] = self.multiply(cpts[key2], cpts[key1])
+                        cpts[key2] = self.max_out(cpts[key2], [key1])
+
+        # delete everything that is not in q_vars
+        #### sorts order of deletion based on order heuristic
+        cpts = sorted(cpts.items(), key=lambda pair: order.index[pair[0]])
+        to_delete = [key for key in cpts if key not in q_vars]
+        for var in to_delete:
+            cpts.pop(var)
+
+        # normalise results
+        for key in cpts:
+            cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
+            cpts[key] = cpts[key].to_frame()
+            cpts[key][key] = [False, True]
+
+        # fix
+        factors = list(cpts.values())
+
+        return factors
+
+
 
 
 if __name__ == "__main__":
