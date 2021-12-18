@@ -126,7 +126,7 @@ class BNReasoner:
 
         for i in range(len(bn.get_all_variables())):
             nodes = list(G.nodes)
-            #nx.draw(G, with_labels=True)
+            # nx.draw(G, with_labels=True)
             plt.show()
 
             edges_to_add = {}
@@ -367,6 +367,7 @@ class BNReasoner:
         cpts = N.get_all_cpts()
 
         # make cpts consistent with evidence (delete inconsistent rows) - can this be replaces by network pruning?
+        ### Valentine: going to check if this is the same as net_prune
         for key in cpts:
             relevant_evidence = []
             for var in e_vars:
@@ -374,7 +375,7 @@ class BNReasoner:
                     relevant_evidence.append(var)
             to_delete = []
             if relevant_evidence != []:
-                for r, row in cpts[key].iterrows():
+                for r, row in cpts[key].iterrows():  # iterates over rows in pandas df
                     if list(row[relevant_evidence]) != list(
                         e_vars[relevant_evidence].iloc[0]
                     ):
@@ -383,11 +384,14 @@ class BNReasoner:
 
         # do this in order of elimination
         # use multiply_multi instead of two for loops
+        # setting up to multiply-out and max-out
+        cpts = sorted(
+            cpts.items(), key=lambda pair: order.index[pair[0]]
+        )  # should sort according to ordering
         for key1 in cpts:  # for variable
             if key1 not in q_vars:  # if variable NOT in q_vars
                 for key2 in cpts:  # for variable in cpts:
                     if key2 != key1 and key1 in cpts[key2]:
-                        # if cat != dog and dog in cat cpt table:
                         cpts[key2] = self.multiply(cpts[key2], cpts[key1])
                         cpts[key2] = self.maxx_out(cpts[key2], [key1])
                         # replace the factors that where multiplied with only the maxed out one
@@ -398,6 +402,7 @@ class BNReasoner:
         to_delete = [
             key for key in cpts if key not in q_vars
         ]  # not used anymore cause we replace in for loop
+        to_delete = [key for key in cpts if key not in q_vars]
         for var in to_delete:
             cpts.pop(var)
 
