@@ -357,32 +357,29 @@ class BNReasoner:
 
         cpts = N.get_all_cpts()
 
-        # make cpts consistent with evidence (delete inconsistent rows
-        for key in cpts:
+        # make cpts consistent with evidence (delete inconsistent rows)
+        ### Valentine: going to check if this is the same as net_prune
+        for key in cpts: 
             relevant_evidence = []
-            for var in e_vars:
+            for var in e_vars: 
                 if var in cpts[key]:
                     relevant_evidence.append(var)
             to_delete = []
             if relevant_evidence != []:
-                for r, row in cpts[key].iterrows():
-                    if list(row[relevant_evidence]) != list(
-                        e_vars[relevant_evidence].iloc[0]
-                    ):
-                        to_delete.append(r)
+                for r, row in cpts[key].iterrows(): #iterates over rows in pandas df
+                    if list(row[relevant_evidence]) != list(e_vars[relevant_evidence].iloc[0]):to_delete.append(r)
                 cpts[key] = cpts[key].drop(to_delete, axis=0)
 
+        # setting up to multiply-out and max-out
+        cpts = sorted(cpts.items(), key=lambda pair: order.index[pair[0]]) #should sort according to ordering
         for key1 in cpts:  # for variable
             if key1 not in q_vars:  # if variable NOT in q_vars
                 for key2 in cpts:  # for variable in cpts:
                     if key2 != key1 and key1 in cpts[key2]:
-                        # if cat != dog and dog in cat cpt table:
                         cpts[key2] = self.multiply(cpts[key2], cpts[key1])
                         cpts[key2] = self.maxx_out(cpts[key2], [key1])
 
         # delete everything that is not in q_vars
-        #### sorts order of deletion based on order heuristic
-        cpts = sorted(cpts.items(), key=lambda pair: order.index[pair[0]])
         to_delete = [key for key in cpts if key not in q_vars]
         for var in to_delete:
             cpts.pop(var)
