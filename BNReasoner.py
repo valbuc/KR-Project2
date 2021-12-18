@@ -7,6 +7,7 @@ from collections import Counter
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 
 
 class BNReasoner:
@@ -79,6 +80,11 @@ class BNReasoner:
 
         return True
 
+    def ordering_random(self):
+        variables = self.bn.get_all_variables()
+        random.shuffle(variables)
+        return variables
+
     def ordering_mindegree(self) -> List[str]:
         """
         returns ordering of elimination list [order]
@@ -120,7 +126,7 @@ class BNReasoner:
 
         for i in range(len(bn.get_all_variables())):
             nodes = list(G.nodes)
-            nx.draw(G, with_labels=True)
+            #nx.draw(G, with_labels=True)
             plt.show()
 
             edges_to_add = {}
@@ -160,7 +166,7 @@ class BNReasoner:
 
         qe = q + new_e
         cp_bn = copy.deepcopy(self.bn)
-        cp_bn.draw_structure()
+        # cp_bn.draw_structure()
 
         # Node pruning
         while True:
@@ -180,7 +186,7 @@ class BNReasoner:
             for item in sett:
                 cp_bn.del_var(item)
 
-        cp_bn.draw_structure()
+        # cp_bn.draw_structure()
 
         # Edge pruning
         for variable in new_e:
@@ -194,7 +200,7 @@ class BNReasoner:
                         new_cpt = new_cpt.drop(ev[0], 1)
                 cp_bn.update_cpt(child, new_cpt)
 
-        cp_bn.draw_structure()
+        # cp_bn.draw_structure()
 
         return cp_bn
 
@@ -274,7 +280,7 @@ class BNReasoner:
         multiplies >2 factors 
         """
 
-        print(list(args))
+        # print(list(args))
 
         multiplied = list(args)[0]
 
@@ -325,9 +331,6 @@ class BNReasoner:
 
         return marginalpt
 
-    def maxxx_out(self):
-        return None
-
     def maxx_out(self, factor: pd.DataFrame, maxoutvariables: list):
         """
         takes a cpt(factor) and a set of variables
@@ -339,7 +342,9 @@ class BNReasoner:
         allvariables.remove("p")
 
         # get a list of variables which should remain
-        stayvariables = [variable for variable in allvariables if variable not in maxoutvariables]
+        stayvariables = [
+            variable for variable in allvariables if variable not in maxoutvariables
+        ]
         maxx = 0
 
         sorting = factor.groupby(stayvariables)
@@ -351,13 +356,17 @@ class BNReasoner:
 
         N = self.net_prune(q_vars, e_vars)  # prune edges
 
-        q_vars = N.get_all_variables()  # variables in network N' #check if we first have to embedd it into a baysian network 
+        q_vars = (
+            N.get_all_variables()
+        )  # variables in network N' #check if we first have to embedd it into a baysian network
 
-        order = N.ordering_mindegree()  # elimination order of variables Q # put this as parameter 
+        order = (
+            N.ordering_mindegree()
+        )  # elimination order of variables Q # put this as parameter
 
         cpts = N.get_all_cpts()
 
-        # make cpts consistent with evidence (delete inconsistent rows) - can this be replaces by network pruning? 
+        # make cpts consistent with evidence (delete inconsistent rows) - can this be replaces by network pruning?
         for key in cpts:
             relevant_evidence = []
             for var in e_vars:
@@ -373,7 +382,7 @@ class BNReasoner:
                 cpts[key] = cpts[key].drop(to_delete, axis=0)
 
         # do this in order of elimination
-        # use multiply_multi instead of two for loops 
+        # use multiply_multi instead of two for loops
         for key1 in cpts:  # for variable
             if key1 not in q_vars:  # if variable NOT in q_vars
                 for key2 in cpts:  # for variable in cpts:
@@ -381,18 +390,19 @@ class BNReasoner:
                         # if cat != dog and dog in cat cpt table:
                         cpts[key2] = self.multiply(cpts[key2], cpts[key1])
                         cpts[key2] = self.maxx_out(cpts[key2], [key1])
-                        # replace the factors that where multiplied with only the maxed out one 
+                        # replace the factors that where multiplied with only the maxed out one
 
         # delete everything that is not in q_vars
         #### sorts order of deletion based on order heuristic
         cpts = sorted(cpts.items(), key=lambda pair: order.index[pair[0]])
-        to_delete = [key for key in cpts if key not in q_vars] # not used anymore cause we replace in for loop
+        to_delete = [
+            key for key in cpts if key not in q_vars
+        ]  # not used anymore cause we replace in for loop
         for var in to_delete:
             cpts.pop(var)
 
-
         #### if ievidence has to be done last, does pruning make sense?
-        #multiply resulting cpts
+        # multiply resulting cpts
         # normalise results
         for key in cpts:
             cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
