@@ -96,7 +96,7 @@ class BNReasoner:
 
         for i in range(len(bn.get_all_variables())):
             nodes = list(G.nodes)
-            nx.draw(G, with_labels=True)
+            # nx.draw(G, with_labels=True)
             plt.show()
 
             # makes dict which holds variables and amount of edges they have
@@ -197,7 +197,7 @@ class BNReasoner:
                 new_cpt = cp_bn.get_compatible_instantiations_table(e, cpt)
                 for ev in e.iteritems():
                     if ev[0] in new_cpt.columns:
-                        new_cpt = new_cpt.drop(ev[0], 1)
+                        new_cpt = new_cpt.drop(ev[0], axis=1)
                 cp_bn.update_cpt(child, new_cpt)
 
         # cp_bn.draw_structure()
@@ -229,6 +229,38 @@ class BNReasoner:
                 summed_out = summed_out.drop(var, 1)
 
         return summed_out
+
+    def mult(self, factors: list):
+        """
+        multiplies multiple factors independent of their variable values 
+        """
+
+        variables = []
+        for factor in factors:
+            for var in factor.columns:
+                if var not in variables:
+                    variables.append(var)
+        variables.remove("p")
+
+        intersect = set(factors[0].columns)
+        for factor in factors[1:]:
+            intersect.intersection_update(factor.columns)
+        intersect = list(intersect)
+        intersect.remove("p")
+
+        # TODO make it possible to multiply factors without overlap
+        if len(intersect) == 0:
+            grand = factors[0]
+            for factor in factors[1:]:
+                pass
+
+        grand = factors[0]
+        for factor in factors[1:]:
+            grand = grand.merge(factor, how="outer", on=intersect)
+            grand["p"] = grand.apply(lambda row: row["p_x"] * row["p_y"], axis=1)
+            grand = grand.drop(["p_x", "p_y"], axis=1)
+
+        return grand
 
     def create_truth_table(self, num_vars):
         return pd.DataFrame(list(itertools.product([False, True], repeat=num_vars)))
@@ -334,7 +366,7 @@ class BNReasoner:
     def maxx_out(self, factor: pd.DataFrame, maxoutvariables: list):
         """
         takes a cpt(factor) and a set of variables
-        returns a cpt with the goven variables maxxed out
+        returns a cpt with the given variables maxxed out
         """
 
         # getting all variables in the factor
@@ -345,79 +377,90 @@ class BNReasoner:
         stayvariables = [
             variable for variable in allvariables if variable not in maxoutvariables
         ]
-        maxx = 0
 
+        if len(stayvariables) == 0:
+            # TODO this should actually only return the row with max p, code for this is at end of MPE function
+            return factor.max()
+        print(factor)
         sorting = factor.groupby(stayvariables)
         maxx = sorting.max()
+        print(maxx)
+        maxx = maxx.drop(maxoutvariables, axis=1)
+
+        maxx = maxx.merge(factor, "left", on=["p", *stayvariables])
+
+        maxx = maxx.drop_duplicates()
+        print(maxx)
 
         return maxx
 
-    def MPE(self, q_vars: list, e_vars: pd.Series):
+    def MPE(self, heuristic: str = "random", e_vars: pd.Series = pd.Series()):
+        """
+        heuristic can be 'random', 'mindegree', 'minfill'
+        
+        """
+
+        heuristics = {
+            "random": self.ordering_random,
+            "mindegree": self.ordering_mindegree,
+            "minfill": self.ordering_minfill,
+        }
+
+        q_vars = self.bn.get_all_variables()
 
         N = self.net_prune(q_vars, e_vars)  # prune edges
 
-        q_vars = (
-            N.get_all_variables()
-        )  # variables in network N' #check if we first have to embedd it into a baysian network
-
-        order = (
-            N.ordering_mindegree()
-        )  # elimination order of variables Q # put this as parameter
+        order = heuristics[
+            heuristic
+        ]()  # elimination order of variables Q # put this as parameter
 
         cpts = N.get_all_cpts()
 
-        # make cpts consistent with evidence (delete inconsistent rows) - can this be replaces by network pruning?
-        ### Valentine: going to check if this is the same as net_prune
-        for key in cpts:
-            relevant_evidence = []
-            for var in e_vars:
-                if var in cpts[key]:
-                    relevant_evidence.append(var)
-            to_delete = []
-            if relevant_evidence != []:
-                for r, row in cpts[key].iterrows():  # iterates over rows in pandas df
-                    if list(row[relevant_evidence]) != list(
-                        e_vars[relevant_evidence].iloc[0]
-                    ):
-                        to_delete.append(r)
-                cpts[key] = cpts[key].drop(to_delete, axis=0)
+        print(order)
 
-        # do this in order of elimination
-        # use multiply_multi instead of two for loops
-        # setting up to multiply-out and max-out
-        cpts = sorted(
-            cpts.items(), key=lambda pair: order.index[pair[0]]
-        )  # should sort according to ordering
-        for key1 in cpts:  # for variable
-            if key1 not in q_vars:  # if variable NOT in q_vars
-                for key2 in cpts:  # for variable in cpts:
-                    if key2 != key1 and key1 in cpts[key2]:
-                        cpts[key2] = self.multiply(cpts[key2], cpts[key1])
-                        cpts[key2] = self.maxx_out(cpts[key2], [key1])
-                        # replace the factors that where multiplied with only the maxed out one
+        # loop over variables in order given
+        for variable in order:
+            # get factors which contain variable
+            factors = []
+            delete = []
+            for key, value in cpts.items():
+                if variable in value.columns:
+                    factors.append(value)
+                    delete.append(key)
+            if len(factors) == 0:
+                continue
 
-        # delete everything that is not in q_vars
-        #### sorts order of deletion based on order heuristic
-        cpts = sorted(cpts.items(), key=lambda pair: order.index[pair[0]])
-        to_delete = [
-            key for key in cpts if key not in q_vars
-        ]  # not used anymore cause we replace in for loop
-        to_delete = [key for key in cpts if key not in q_vars]
-        for var in to_delete:
-            cpts.pop(var)
+            # multiply factors
+            print(factors)
+            factor = self.mult(factors)
 
-        #### if ievidence has to be done last, does pruning make sense?
-        # multiply resulting cpts
-        # normalise results
-        for key in cpts:
-            cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
-            cpts[key] = cpts[key].to_frame()
-            cpts[key][key] = [False, True]
+            print(factor)
 
-        # fix
-        factors = list(cpts.values())
+            # may out variable
+            maxfactor = self.maxx_out(factor, [variable])
 
-        return factors
+            # delete factors from cpts
+            for var in delete:
+                del cpts[var]
+
+            # add new factor to cpts
+            # TODO: can maxxout always return dataframe?
+            print(maxfactor)
+            if type(maxfactor) == pd.DataFrame:
+                cpts[variable] = maxfactor
+            else:
+                cpts[variable] = maxfactor.to_frame().T
+
+        for factor in cpts.values():
+            print(factor)
+            print(type(factor))
+
+        maxx = self.mult(list(cpts.values()))
+        m = maxx["p"].max()
+        print(m)
+        result = maxx.loc[maxx["p"] == m]
+
+        return result
 
 
 if __name__ == "__main__":
