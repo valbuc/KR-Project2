@@ -357,7 +357,7 @@ class BNReasoner:
 
         cpts = N.get_all_cpts()
 
-        # make cpts consistent with evidence (delete inconsistent rows
+        # make cpts consistent with evidence (delete inconsistent rows) - can this be replaces by network pruning? 
         for key in cpts:
             relevant_evidence = []
             for var in e_vars:
@@ -372,6 +372,8 @@ class BNReasoner:
                         to_delete.append(r)
                 cpts[key] = cpts[key].drop(to_delete, axis=0)
 
+        # do this in order of elimination
+        # use multiply_multi instead of two for loops 
         for key1 in cpts:  # for variable
             if key1 not in q_vars:  # if variable NOT in q_vars
                 for key2 in cpts:  # for variable in cpts:
@@ -379,14 +381,18 @@ class BNReasoner:
                         # if cat != dog and dog in cat cpt table:
                         cpts[key2] = self.multiply(cpts[key2], cpts[key1])
                         cpts[key2] = self.maxx_out(cpts[key2], [key1])
+                        # replace the factors that where multiplied with only the maxed out one 
 
         # delete everything that is not in q_vars
         #### sorts order of deletion based on order heuristic
         cpts = sorted(cpts.items(), key=lambda pair: order.index[pair[0]])
-        to_delete = [key for key in cpts if key not in q_vars]
+        to_delete = [key for key in cpts if key not in q_vars] # not used anymore cause we replace in for loop
         for var in to_delete:
             cpts.pop(var)
 
+
+        #### if ievidence has to be done last, does pruning make sense?
+        #multiply resulting cpts
         # normalise results
         for key in cpts:
             cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
