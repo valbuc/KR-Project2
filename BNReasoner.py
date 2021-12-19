@@ -248,24 +248,19 @@ class BNReasoner:
                     variables.append(var)
         variables.remove("p")
 
-        intersect = set(factors[0].columns)
+        grand = factors[0]
         for factor in factors[1:]:
-            intersect.intersection_update(factor.columns)
-        intersect = list(intersect)
-        intersect.remove("p")
-
-        # TODO make it possible to multiply factors without overlap
-        if len(intersect) == 0:
-            grand = factors[0]
-            for factor in factors[1:]:
+            intersect = [var for var in grand.columns if var in factor.columns]
+            intersect.remove("p")
+            if len(intersect) == 0:
                 newgrand = pd.DataFrame()
                 for row1 in grand.iterrows():
                     for row2 in factor.iterrows():
                         print(row1)
                         print(row2)
                         # rename p row of row2
-                        row1ser = row1[1].rename({"p": "p1"})
-                        row2ser = row2[1].rename({"p": "p2"})
+                        row1ser = row1[1].rename({"p": "p_x"})
+                        row2ser = row2[1].rename({"p": "p_y"})
                         print(row1ser)
                         print(row2ser)
                         newrow = row1ser.append(row2ser)
@@ -275,16 +270,8 @@ class BNReasoner:
                         newgrand = newgrand.append(newrow)
                         print(newgrand)
                 grand = newgrand
-
-            # multiply p
-            grand["p"] = grand.apply(lambda row: row["p1"] * row["p2"], axis=1)
-            grand = grand.drop(["p1", "p2"], axis=1)
-
-            return grand
-
-        grand = factors[0]
-        for factor in factors[1:]:
-            grand = grand.merge(factor, how="outer", on=intersect)
+            else:
+                grand = grand.merge(factor, how="outer", on=intersect)
             grand["p"] = grand.apply(lambda row: row["p_x"] * row["p_y"], axis=1)
             grand = grand.drop(["p_x", "p_y"], axis=1)
 
