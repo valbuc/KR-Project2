@@ -93,7 +93,7 @@
     </DEFINITION>
     <DEFINITION>
         <FOR>Sore throat?</FOR>
-        <TABLE>0.95 0.05/TABLE>
+        <TABLE>0.95 0.05</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Positive PCR test?</FOR>
@@ -123,39 +123,39 @@
         <TABLE>0.9 0.1 0.3 0.7 0.2 0.8 0.1 0.9</TABLE>
     </DEFINITION>
     <DEFINITION>
-        <FOR>Ivermectin?</FOR>
-        <GIVEN>Covid-19</GIVEN>
+        <FOR>Take Ivermectin?</FOR>
+        <GIVEN>Covid-19?</GIVEN>
         <GIVEN>Cold?</GIVEN>
         <TABLE>1 0 0.995 0.005 0.95 0.05 0.95 0.05</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>High fever?</FOR>
-        <GIVEN>Covid-19</GIVEN>
+        <GIVEN>Covid-19?</GIVEN>
         <GIVEN>Cold?</GIVEN>
         <TABLE>1 0 0.95 0.05 0.7 0.3 0.65 0.35</TABLE>
     </DEFINITION>
     <DEFINITION>
-        <FOR>Cannot breath?</FOR>
-        <GIVEN>Covid-19</GIVEN>
+        <FOR>Cannot breathe?</FOR>
+        <GIVEN>Covid-19?</GIVEN>
         <GIVEN>Cold?</GIVEN>
         <TABLE>1 0 0.9995 0.0005 0.9 0.1 0.8 0.2</TABLE>
     </DEFINITION>
     <DEFINITION>
-        <FOR>Cannot breath?</FOR>
-        <GIVEN>Covid-19</GIVEN>
+        <FOR>Cannot breathe?</FOR>
+        <GIVEN>Covid-19?</GIVEN>
         <GIVEN>Cold?</GIVEN>
         <TABLE>1 0 0.9995 0.0005 0.9 0.1 0.8 0.2</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>ICU?</FOR>
-        <GIVEN>Cannot breath?</GIVEN>
+        <GIVEN>Cannot breathe?</GIVEN>
         <GIVEN>High fever?</GIVEN>
         <GIVEN>Take Ivermectin?</GIVEN>
         <TABLE>1 0 0.7 0.3 0.6 0.4 0.5 0.5 0.4 0.6 0.3 0.7 0.2 0.8 0.15 0.85</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Recovery?</FOR>
-        <GIVEN>Cannot breath?</GIVEN>
+        <GIVEN>Cannot breathe?</GIVEN>
         <GIVEN>High fever?</GIVEN>
         <GIVEN>Take Ivermectin?</GIVEN>
         <GIVEN>ICU?</GIVEN>
