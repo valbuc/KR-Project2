@@ -80,17 +80,17 @@ class BNReasoner:
 
         return True
 
-    def ordering_random(self):
-        variables = self.bn.get_all_variables()
+    def ordering_random(self, originalbn):
+        variables = originalbn.get_all_variables()
         random.shuffle(variables)
         return variables
 
-    def ordering_mindegree(self) -> List[str]:
+    def ordering_mindegree(self, originalbn) -> List[str]:
         """
         returns ordering of elimination list [order]
         the order is based on first eliminating the nodes with the least amount of neighbors
         """
-        bn = copy.deepcopy(self.bn)
+        bn = copy.deepcopy(originalbn)
         G = bn.get_interaction_graph()
         self.order = []
 
@@ -115,12 +115,12 @@ class BNReasoner:
 
         return self.order
 
-    def ordering_minfill(self) -> List[str]:
+    def ordering_minfill(self, originalbn) -> List[str]:
         """
         returns ordering of elimination list
         the min-full heuristic creates the order based on first eliminating the variables that add the smallest number of edges
         """
-        bn = copy.deepcopy(self.bn)
+        bn = copy.deepcopy(originalbn)
         G = bn.get_interaction_graph()
         self.order = []
 
@@ -224,7 +224,10 @@ class BNReasoner:
         y = [X for X in x if X not in variables]
 
         # sum out variable
-        summed_out = factor.groupby(y).agg("sum").reset_index()
+        if len(y) == 0:
+            summed_out = factor.agg("sum").to_frame().T
+        else:
+            summed_out = factor.groupby(y).agg("sum").reset_index()
 
         # remove variables in z from dataframe
         for variable in variables:
@@ -429,9 +432,9 @@ class BNReasoner:
 
         N = self.net_prune(q_vars, e_vars)  # prune edges
 
-        order = heuristics[
-            heuristic
-        ]()  # elimination order of variables Q # put this as parameter
+        order = heuristics[heuristic](
+            N
+        )  # elimination order of variables Q # put this as parameter
 
         cpts = N.get_all_cpts()
 
@@ -509,9 +512,13 @@ class BNReasoner:
 
         N = self.net_prune(q_vars, e_vars)  # prune edges
 
-        order = heuristics[
-            heuristic
-        ]()  # elimination order of variables Q # put this as parameter
+        # make map vars appear last
+        order = heuristics[heuristic](
+            N
+        )  # elimination order of variables Q # put this as parameter
+        for var in map_vars:
+            order.remove(var)
+            order.append(var)
 
         cpts = N.get_all_cpts()
 
