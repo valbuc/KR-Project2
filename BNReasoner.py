@@ -232,7 +232,7 @@ class BNReasoner:
             if variable in summed_out.columns:
                 delete.append(variable)
             for var in delete:
-                summed_out = summed_out.drop(var, 1)
+                summed_out = summed_out.drop(var, axis=1)
 
         return summed_out
 
@@ -427,6 +427,10 @@ class BNReasoner:
         heuristic can be 'random', 'mindegree', 'minfill'
         
         """
+        # performance measures
+        rows_multiplied = 0
+        rows_summed = 0
+        rows_maxxed = 0
 
         heuristics = {
             "random": self.ordering_random,
@@ -461,10 +465,13 @@ class BNReasoner:
             # multiply factors
             print(factors)
             factor = self.mult(factors)
+            print(len(factor))
+            rows_multiplied += len(factor)
 
             print(factor)
 
             # may out variable
+            rows_maxxed += len(factor)
             maxfactor = self.maxx_out(factor, [variable])
 
             # delete factors from cpts
@@ -488,7 +495,92 @@ class BNReasoner:
         print(m)
         result = maxx.loc[maxx["p"] == m]
 
-        return result
+        return result, rows_multiplied, rows_summed, rows_maxxed
+
+    def MAP(
+        self,
+        heuristic: str = "random",
+        map_vars: list = [],
+        e_vars: pd.Series = pd.Series(),
+    ):
+        """
+        heuristic can be 'random', 'mindegree', 'minfill'
+        """
+
+        # performance measures
+        rows_multiplied = 0
+        rows_summed = 0
+        rows_maxxed = 0
+
+        heuristics = {
+            "random": self.ordering_random,
+            "mindegree": self.ordering_mindegree,
+            "minfill": self.ordering_minfill,
+        }
+
+        q_vars = self.bn.get_all_variables()
+
+        N = self.net_prune(q_vars, e_vars)  # prune edges
+
+        order = heuristics[
+            heuristic
+        ]()  # elimination order of variables Q # put this as parameter
+
+        cpts = N.get_all_cpts()
+
+        print(order)
+
+        # loop over variables in order given
+        for variable in order:
+            # get factors which contain variable
+            factors = []
+            delete = []
+            for key, value in cpts.items():
+                if variable in value.columns:
+                    factors.append(value)
+                    delete.append(key)
+            if len(factors) == 0:
+                continue
+
+            # multiply factors
+            print(factors)
+            factor = self.mult(factors)
+            print(len(factor))
+            rows_multiplied += len(factor)
+
+            print(factor)
+
+            # if in mapvariables, max out
+            if variable in map_vars:
+                rows_maxxed += len(factor)
+                newfactor = self.maxx_out(factor, [variable])
+            else:
+                # sum out variable
+                rows_summed += len(factor)
+                newfactor = self.sum_out(factor, [variable])
+
+            # delete factors from cpts
+            for var in delete:
+                del cpts[var]
+
+            # add new factor to cpts
+            # TODO: can maxxout always return dataframe?
+            print(newfactor)
+            if type(newfactor) == pd.DataFrame:
+                cpts[variable] = newfactor
+            else:
+                cpts[variable] = newfactor.to_frame().T
+
+        for factor in cpts.values():
+            print(factor)
+            print(type(factor))
+
+        maxx = self.mult(list(cpts.values()))
+        m = maxx["p"].max()
+        print(m)
+        result = maxx.loc[maxx["p"] == m]
+
+        return result, rows_multiplied, rows_summed, rows_maxxed
 
 
 if __name__ == "__main__":
