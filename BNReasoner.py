@@ -190,6 +190,11 @@ class BNReasoner:
 
         # Edge pruning
         for variable in new_e:
+            # TODO also update cpts for variable itself
+            cpt = cp_bn.get_cpt(variable)
+            new_cpt = cp_bn.get_compatible_instantiations_table(e, cpt)
+            cp_bn.update_cpt(variable, new_cpt)
+
             for child in cp_bn.get_children(variable):
                 cp_bn.del_edge((variable, child))
 
@@ -199,6 +204,7 @@ class BNReasoner:
                     if ev[0] in new_cpt.columns:
                         new_cpt = new_cpt.drop(ev[0], axis=1)
                 cp_bn.update_cpt(child, new_cpt)
+                # print(new_cpt)
 
         # cp_bn.draw_structure()
 
@@ -252,7 +258,29 @@ class BNReasoner:
         if len(intersect) == 0:
             grand = factors[0]
             for factor in factors[1:]:
-                pass
+                newgrand = pd.DataFrame()
+                for row1 in grand.iterrows():
+                    for row2 in factor.iterrows():
+                        print(row1)
+                        print(row2)
+                        # rename p row of row2
+                        row1ser = row1[1].rename({"p": "p1"})
+                        row2ser = row2[1].rename({"p": "p2"})
+                        print(row1ser)
+                        print(row2ser)
+                        newrow = row1ser.append(row2ser)
+                        print(newrow)
+                        newrow = pd.DataFrame(newrow).T
+                        print(newrow)
+                        newgrand = newgrand.append(newrow)
+                        print(newgrand)
+                grand = newgrand
+
+            # multiply p
+            grand["p"] = grand.apply(lambda row: row["p1"] * row["p2"], axis=1)
+            grand = grand.drop(["p1", "p2"], axis=1)
+
+            return grand
 
         grand = factors[0]
         for factor in factors[1:]:
