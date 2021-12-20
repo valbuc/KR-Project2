@@ -451,11 +451,14 @@ class BNReasoner:
             variable for variable in allvariables if variable not in maxoutvariables
         ]
 
-        if len(stayvariables) == 0:
+        sorting = copy.deepcopy(factor)
+        if len(stayvariables) != 0:
             # TODO this should actually only return the row with max p, code for this is at end of MPE function
-            return factor.max()
-        sorting = factor.groupby(stayvariables)
+            sorting = factor.groupby(stayvariables)
+
         maxx = sorting.max()
+        if type(maxx) == pd.Series:
+            maxx = maxx.to_frame().T
         maxx = maxx.drop(maxoutvariables, axis=1)
 
         maxx = maxx.merge(factor, "left", on=["p", *stayvariables])
