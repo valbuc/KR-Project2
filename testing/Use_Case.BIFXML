@@ -26,7 +26,7 @@
         <OUTCOME>False</OUTCOME>
     </VARIABLE>
     <VARIABLE TYPE="nature">
-        <NAME>Smell?</NAME>
+        <NAME>Loss of smell?</NAME>
         <OUTCOME>True</OUTCOME>
         <OUTCOME>False</OUTCOME>
     </VARIABLE>
@@ -88,77 +88,71 @@
         <TABLE>0.95 0.05</TABLE>
     </DEFINITION>
     <DEFINITION>
-        <FOR>Smell?</FOR>
-        <TABLE>0.02 0.98</TABLE>
+        <FOR>Loss of smell?</FOR>
+        <TABLE>0.99 0.01</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Sore throat?</FOR>
-        <TABLE>0.95 0.05</TABLE>
+        <TABLE>0.98 0.02</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Positive PCR test?</FOR>
-        <GIVEN>Cough?</GIVEN>
-        <GIVEN>Smell?</GIVEN>
-        <GIVEN>Sore throat?</GIVEN>
         <GIVEN>Positive antigen test?</GIVEN>
+        <GIVEN>Sore throat?</GIVEN>
+        <GIVEN>Loss of smell?</GIVEN>
+        <GIVEN>Cough?</GIVEN>
         <TABLE>0.989 0.011 0.03 0.97 0.98 0.02 0.03 0.97 0.1 0.9 0.06 0.94 0.05 0.95 0.05 0.95 0.04 0.96 0.02 0.98 0.1 0.9 0.02 0.98 0.95 0.05 0.08 0.92 0.95 0.05 0.011 0.989</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Positive antigen test?</FOR>
-        <GIVEN>Cough?</GIVEN>
-        <GIVEN>Smell?</GIVEN>
         <GIVEN>Sore throat?</GIVEN>
-        <TABLE>0.02 0.98 0.13 0.87 0.75 0.25 0.2 0.8 0.05 0.95 0.1 0.9 0.8 0.2 0.7 0.3</TABLE>
+        <GIVEN>Loss of smell?</GIVEN>
+        <GIVEN>Cough?</GIVEN>
+        <TABLE>0.976 0.024 0.1 0.9 0.865 0.135 0.86 0.14 0.1 0.9 0.89 0.11 0.86 0.14 0.85 0.15</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Cold?</FOR>
         <GIVEN>Positive PCR test?</GIVEN>
         <GIVEN>Positive antigen test?</GIVEN>
-        <TABLE>0.2 0.8 0.92 0.08 0.98 0.02 0.97 0.03</TABLE>
+        <TABLE>0.95 0.05 0.99 0.1 0.985 0.015 0.985 0.015</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Covid-19?</FOR>
-        <GIVEN>Positive PCR test?</GIVEN>
         <GIVEN>Positive antigen test?</GIVEN>
-        <TABLE>0.9 0.1 0.3 0.7 0.2 0.8 0.1 0.9</TABLE>
+        <GIVEN>Positive PCR test?</GIVEN>
+        <TABLE>0.985 0.015 0.2 0.8 0.25 0.75 0.1 0.9</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Take Ivermectin?</FOR>
-        <GIVEN>Covid-19?</GIVEN>
         <GIVEN>Cold?</GIVEN>
+        <GIVEN>Covid-19?</GIVEN>
         <TABLE>1 0 0.995 0.005 0.95 0.05 0.95 0.05</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>High fever?</FOR>
-        <GIVEN>Covid-19?</GIVEN>
         <GIVEN>Cold?</GIVEN>
-        <TABLE>1 0 0.95 0.05 0.7 0.3 0.65 0.35</TABLE>
+        <GIVEN>Covid-19?</GIVEN>
+        <TABLE>1 0 0.95 0.05 0.7 0.3 0.55 0.45</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Cannot breathe?</FOR>
-        <GIVEN>Covid-19?</GIVEN>
         <GIVEN>Cold?</GIVEN>
-        <TABLE>1 0 0.9995 0.0005 0.9 0.1 0.8 0.2</TABLE>
-    </DEFINITION>
-    <DEFINITION>
-        <FOR>Cannot breathe?</FOR>
         <GIVEN>Covid-19?</GIVEN>
-        <GIVEN>Cold?</GIVEN>
-        <TABLE>1 0 0.9995 0.0005 0.9 0.1 0.8 0.2</TABLE>
+        <TABLE>1 0 0.9995 0.0005 0.85 0.15 0.8 0.2</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>ICU?</FOR>
-        <GIVEN>Cannot breathe?</GIVEN>
-        <GIVEN>High fever?</GIVEN>
         <GIVEN>Take Ivermectin?</GIVEN>
+        <GIVEN>High fever?</GIVEN>
+        <GIVEN>Cannot breathe?</GIVEN>
         <TABLE>1 0 0.7 0.3 0.6 0.4 0.5 0.5 0.4 0.6 0.3 0.7 0.2 0.8 0.15 0.85</TABLE>
     </DEFINITION>
     <DEFINITION>
         <FOR>Recovery?</FOR>
-        <GIVEN>Cannot breathe?</GIVEN>
-        <GIVEN>High fever?</GIVEN>
-        <GIVEN>Take Ivermectin?</GIVEN>
         <GIVEN>ICU?</GIVEN>
+        <GIVEN>Take Ivermectin?</GIVEN>
+        <GIVEN>High fever?</GIVEN>
+        <GIVEN>Cannot breathe?</GIVEN>
         <TABLE>0 1 0.1 0.9 0.95 0.05 0.15 0.85 0.05 0.95 0.3 0.7 0.1 0.9 0.3 0.7 0.1 0.9 0.25 0.75 0.1 0.9 0.4 0.6 0.25 0.75 0.55 0.45 0.3 0.7 0.6 0.4</TABLE>
     </DEFINITION>
 </NETWORK>
