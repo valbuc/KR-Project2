@@ -204,7 +204,6 @@ class BNReasoner:
                     if ev[0] in new_cpt.columns:
                         new_cpt = new_cpt.drop(ev[0], axis=1)
                 cp_bn.update_cpt(child, new_cpt)
-                # print(new_cpt)
 
         # cp_bn.draw_structure()
 
@@ -259,19 +258,12 @@ class BNReasoner:
                 newgrand = pd.DataFrame()
                 for row1 in grand.iterrows():
                     for row2 in factor.iterrows():
-                        print(row1)
-                        print(row2)
                         # rename p row of row2
                         row1ser = row1[1].rename({"p": "p_x"})
                         row2ser = row2[1].rename({"p": "p_y"})
-                        print(row1ser)
-                        print(row2ser)
                         newrow = row1ser.append(row2ser)
-                        print(newrow)
                         newrow = pd.DataFrame(newrow).T
-                        print(newrow)
                         newgrand = newgrand.append(newrow)
-                        print(newgrand)
                 grand = newgrand
             else:
                 grand = grand.merge(factor, how="outer", on=intersect)
@@ -330,14 +322,74 @@ class BNReasoner:
         multiplies >2 factors 
         """
 
-        # print(list(args))
-
         multiplied = list(args)[0]
 
         for factor in list(args)[1:]:
             multiplied = self.multiply(multiplied, factor)
 
         return multiplied
+
+    def get_marginal_distribution(
+        self,
+        heuristic: str = "random",
+        q_vars: list = [],
+        e_vars: pd.Series = pd.Series(),
+    ):
+        """
+        heuristic can be 'random', 'mindegree', 'minfill'
+        """
+
+        heuristics = {
+            "random": self.ordering_random,
+            "mindegree": self.ordering_mindegree,
+            "minfill": self.ordering_minfill,
+        }
+
+        # q_vars = self.bn.get_all_variables()
+
+        N = self.net_prune(q_vars, e_vars)  # prune edges
+
+        # make map vars appear last
+        order = heuristics[heuristic](
+            N
+        )  # elimination order of variables Q # put this as parameter
+        for var in q_vars:
+            order.remove(var)
+
+        cpts = N.get_all_cpts()
+
+        # loop over variables in order given
+        for variable in order:
+            # get factors which contain variable
+            factors = []
+            delete = []
+            for key, value in cpts.items():
+                if variable in value.columns:
+                    factors.append(value)
+                    delete.append(key)
+            if len(factors) == 0:
+                continue
+
+            # multiply factors
+            factor = self.mult(factors)
+
+            # sum out variable
+            newfactor = self.sum_out(factor, [variable])
+
+            # delete factors from cpts
+            for var in delete:
+                del cpts[var]
+
+            # add new factor to cpts
+            # TODO: can maxxout always return dataframe?
+            if type(newfactor) == pd.DataFrame:
+                cpts[variable] = newfactor
+            else:
+                cpts[variable] = newfactor.to_frame().T
+
+        result = self.mult(list(cpts.values()))
+
+        return result
 
     def get_marginal(self, q_vars: list, e_vars: pd.DataFrame):
         cpts = self.bn.get_all_cpts()
@@ -399,16 +451,13 @@ class BNReasoner:
         if len(stayvariables) == 0:
             # TODO this should actually only return the row with max p, code for this is at end of MPE function
             return factor.max()
-        print(factor)
         sorting = factor.groupby(stayvariables)
         maxx = sorting.max()
-        print(maxx)
         maxx = maxx.drop(maxoutvariables, axis=1)
 
         maxx = maxx.merge(factor, "left", on=["p", *stayvariables])
 
         maxx = maxx.drop_duplicates()
-        print(maxx)
 
         return maxx
 
@@ -438,8 +487,6 @@ class BNReasoner:
 
         cpts = N.get_all_cpts()
 
-        print(order)
-
         # loop over variables in order given
         for variable in order:
             # get factors which contain variable
@@ -453,12 +500,8 @@ class BNReasoner:
                 continue
 
             # multiply factors
-            print(factors)
             factor = self.mult(factors)
-            print(len(factor))
             rows_multiplied += len(factor)
-
-            print(factor)
 
             # may out variable
             rows_maxxed += len(factor)
@@ -470,19 +513,13 @@ class BNReasoner:
 
             # add new factor to cpts
             # TODO: can maxxout always return dataframe?
-            print(maxfactor)
             if type(maxfactor) == pd.DataFrame:
                 cpts[variable] = maxfactor
             else:
                 cpts[variable] = maxfactor.to_frame().T
 
-        for factor in cpts.values():
-            print(factor)
-            print(type(factor))
-
         maxx = self.mult(list(cpts.values()))
         m = maxx["p"].max()
-        print(m)
         result = maxx.loc[maxx["p"] == m]
 
         return result, rows_multiplied, rows_summed, rows_maxxed
@@ -508,9 +545,9 @@ class BNReasoner:
             "minfill": self.ordering_minfill,
         }
 
-        q_vars = self.bn.get_all_variables()
+        # q_vars = self.bn.get_all_variables()
 
-        N = self.net_prune(q_vars, e_vars)  # prune edges
+        N = self.net_prune(map_vars, e_vars)  # prune edges
 
         # make map vars appear last
         order = heuristics[heuristic](
@@ -521,8 +558,6 @@ class BNReasoner:
             order.append(var)
 
         cpts = N.get_all_cpts()
-
-        print(order)
 
         # loop over variables in order given
         for variable in order:
@@ -537,12 +572,8 @@ class BNReasoner:
                 continue
 
             # multiply factors
-            print(factors)
             factor = self.mult(factors)
-            print(len(factor))
             rows_multiplied += len(factor)
-
-            print(factor)
 
             # if in mapvariables, max out
             if variable in map_vars:
@@ -559,19 +590,13 @@ class BNReasoner:
 
             # add new factor to cpts
             # TODO: can maxxout always return dataframe?
-            print(newfactor)
             if type(newfactor) == pd.DataFrame:
                 cpts[variable] = newfactor
             else:
                 cpts[variable] = newfactor.to_frame().T
 
-        for factor in cpts.values():
-            print(factor)
-            print(type(factor))
-
         maxx = self.mult(list(cpts.values()))
         m = maxx["p"].max()
-        print(m)
         result = maxx.loc[maxx["p"] == m]
 
         return result, rows_multiplied, rows_summed, rows_maxxed
