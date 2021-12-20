@@ -191,9 +191,12 @@ class BNReasoner:
         # Edge pruning
         for variable in new_e:
             # TODO also update cpts for variable itself
-            cpt = cp_bn.get_cpt(variable)
-            new_cpt = cp_bn.get_compatible_instantiations_table(e, cpt)
-            cp_bn.update_cpt(variable, new_cpt)
+            # cpt = cp_bn.get_cpt(variable)
+            # new_cpt = cp_bn.get_compatible_instantiations_table(e, cpt)
+            # print(new_cpt)
+            # print(type(new_cpt))
+            # new_cpt = new_cpt.loc[new_cpt, "p"] = 1
+            # cp_bn.update_cpt(variable, new_cpt)
 
             for child in cp_bn.get_children(variable):
                 cp_bn.del_edge((variable, child))
@@ -559,6 +562,8 @@ class BNReasoner:
 
         cpts = N.get_all_cpts()
 
+        print(cpts)
+
         # loop over variables in order given
         for variable in order:
             # get factors which contain variable
@@ -570,6 +575,8 @@ class BNReasoner:
                     delete.append(key)
             if len(factors) == 0:
                 continue
+
+            print(factors)
 
             # multiply factors
             factor = self.mult(factors)
@@ -595,7 +602,11 @@ class BNReasoner:
             else:
                 cpts[variable] = newfactor.to_frame().T
 
+            print(newfactor)
+
+        print(cpts)
         maxx = self.mult(list(cpts.values()))
+        print(maxx)
         m = maxx["p"].max()
         result = maxx.loc[maxx["p"] == m]
 
