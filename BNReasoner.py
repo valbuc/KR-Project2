@@ -8,6 +8,7 @@ import itertools
 import numpy as np
 import matplotlib.pyplot as plt
 import random
+import time
 
 
 class BNReasoner:
@@ -245,6 +246,7 @@ class BNReasoner:
         """
         multiplies multiple factors independent of their variable values 
         """
+        rowsmult = 0
 
         variables = []
         for factor in factors:
@@ -272,8 +274,9 @@ class BNReasoner:
                 grand = grand.merge(factor, how="outer", on=intersect)
             grand["p"] = grand.apply(lambda row: row["p_x"] * row["p_y"], axis=1)
             grand = grand.drop(["p_x", "p_y"], axis=1)
+            rowsmult += len(grand)
 
-        return grand
+        return grand, rowsmult
 
     def create_truth_table(self, num_vars):
         return pd.DataFrame(list(itertools.product([False, True], repeat=num_vars)))
@@ -374,7 +377,7 @@ class BNReasoner:
                 continue
 
             # multiply factors
-            factor = self.mult(factors)
+            factor, rowsmult = self.mult(factors)
 
             # sum out variable
             newfactor = self.sum_out(factor, [variable])
@@ -390,7 +393,7 @@ class BNReasoner:
             else:
                 cpts[variable] = newfactor.to_frame().T
 
-        result = self.mult(list(cpts.values()))
+        result, rowsmult = self.mult(list(cpts.values()))
 
         return result
 
@@ -472,6 +475,9 @@ class BNReasoner:
         heuristic can be 'random', 'mindegree', 'minfill'
         
         """
+
+        start = time.time()
+
         # performance measures
         rows_multiplied = 0
         rows_summed = 0
@@ -506,8 +512,8 @@ class BNReasoner:
                 continue
 
             # multiply factors
-            factor = self.mult(factors)
-            rows_multiplied += len(factor)
+            factor, rowsmult = self.mult(factors)
+            rows_multiplied += rowsmult
 
             # may out variable
             rows_maxxed += len(factor)
@@ -524,11 +530,15 @@ class BNReasoner:
             else:
                 cpts[variable] = maxfactor.to_frame().T
 
-        maxx = self.mult(list(cpts.values()))
+        maxx, rowsmult = self.mult(list(cpts.values()))
         m = maxx["p"].max()
         result = maxx.loc[maxx["p"] == m]
 
-        return result, rows_multiplied, rows_summed, rows_maxxed
+        end = time.time()
+
+        elapsed = end - start
+
+        return result, rows_multiplied, rows_summed, rows_maxxed, elapsed
 
     def MAP(
         self,
@@ -539,6 +549,8 @@ class BNReasoner:
         """
         heuristic can be 'random', 'mindegree', 'minfill'
         """
+
+        start = time.time()
 
         # performance measures
         rows_multiplied = 0
@@ -565,8 +577,6 @@ class BNReasoner:
 
         cpts = N.get_all_cpts()
 
-        print(cpts)
-
         # loop over variables in order given
         for variable in order:
             # get factors which contain variable
@@ -579,11 +589,9 @@ class BNReasoner:
             if len(factors) == 0:
                 continue
 
-            print(factors)
-
             # multiply factors
-            factor = self.mult(factors)
-            rows_multiplied += len(factor)
+            factor, rowsmult = self.mult(factors)
+            rows_multiplied += rowsmult
 
             # if in mapvariables, max out
             if variable in map_vars:
@@ -605,15 +613,15 @@ class BNReasoner:
             else:
                 cpts[variable] = newfactor.to_frame().T
 
-            print(newfactor)
-
-        print(cpts)
-        maxx = self.mult(list(cpts.values()))
-        print(maxx)
+        maxx, rowsmult = self.mult(list(cpts.values()))
         m = maxx["p"].max()
         result = maxx.loc[maxx["p"] == m]
 
-        return result, rows_multiplied, rows_summed, rows_maxxed
+        end = time.time()
+
+        elapsed = end - start
+
+        return result, rows_multiplied, rows_summed, rows_maxxed, elapsed
 
 
 if __name__ == "__main__":

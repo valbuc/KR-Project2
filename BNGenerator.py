@@ -23,7 +23,7 @@ def generate_DAG(fname, num_levels=3, node_per_level=3):
         if l != len(nodes)-1:  #exclude last level
             for n, node in enumerate(current_level_nodes):
                 next_level_nodes = nodes[l+1]
-                num_children = random.randint(0, len(next_level_nodes)//2) #num children between 1 and num nodes in next level
+                num_children = random.randint(1, len(next_level_nodes)//3) #num children between 1 and num nodes in next level
                 children = random.sample(range(len(next_level_nodes)), num_children)
                 for child in children:
                     node.children.append(child)

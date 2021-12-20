@@ -1,0 +1,145 @@
+,Memory Error,Number Edges,Number Nodes,Number Evidence,Number MAP variables: ,Heuristic,Instantiation,rows multiplied,rows summed out,rows maxed out,seconds elapsed
+0,No,6,9,0,1,random,"          p  l2n0
+0  0.565746  True",72,72,2,0.16407203674316406
+0,No,6,9,0,1,random,"          p   l2n0
+0  0.511511  False",60,60,2,0.10784769058227539
+0,No,6,9,0,1,random,"       p   l1n1
+0  0.784  False",4,4,2,0.03000020980834961
+0,No,6,9,0,1,minfill,"      p  l0n0
+0  0.71  True",0,0,2,0.012636423110961914
+0,No,6,9,0,1,minfill,"      p   l1n0
+0  0.98  False",0,0,2,0.014052629470825195
+0,No,6,9,0,1,minfill,"      p   l0n2
+0  0.75  False",0,0,2,0.014002799987792969
+0,No,6,9,0,1,mindegree,"      p  l1n2
+0  0.71  True",0,0,2,0.013982057571411133
+0,No,6,9,0,1,mindegree,"      p   l2n1
+0  0.95  False",0,0,2,0.013955116271972656
+0,No,6,9,0,1,mindegree,"          p   l2n2
+0  0.782376  False",8,8,2,0.05999159812927246
+0,No,6,9,0,5,random,"   l0n2   l2n1   l1n0        p
+0  True  False  False  0.27328",2,0,8,0.060944557189941406
+0,No,6,9,0,5,random,"    l2n1  l0n1  l0n0         p
+0  False  True  True  0.365568",0,0,6,0.06595587730407715
+0,No,6,9,0,5,random,"    l2n0  l0n1   l1n0   l2n1         p
+0  False  True  False  False  0.284433",32,28,10,0.12695550918579102
+0,No,6,9,0,5,minfill,"   l1n2  l0n1  l2n2   l2n1        p
+0  True  True  True  False  0.52962",2,0,10,0.08101272583007812
+0,No,6,9,0,5,minfill,"    l2n1  l2n2  l1n2   l0n1  l0n0         p
+0  False  True  True  False  True  0.118014",41,16,31,0.19998669624328613
+0,No,6,9,0,5,minfill,"   l0n0   l1n0  l2n0  l0n2   l1n1         p
+0  True  False  True  True  False  0.197614",8,4,12,0.12383055686950684
+0,No,6,9,0,5,mindegree,"    l0n1  l2n1   l1n2  l1n0         p
+0  False  True  False  True  0.232124",10,4,12,0.12801218032836914
+0,No,6,9,0,5,mindegree,"   l2n1  l0n2   l1n2   l2n2         p
+0  True  True  False  False  0.267341",34,28,12,0.1620481014251709
+0,No,6,9,0,5,mindegree,"   l0n0  l2n2  l0n2   l1n2  l1n1         p
+0  True  True  True  False  True  0.127218",4,4,10,0.1019594669342041
+0,No,6,9,4,1,random,"    l1n2         p
+0  False  0.398272",8,14,2,0.09190225601196289
+0,No,6,9,4,1,random,"   l2n1     p
+0  True  0.69",22,36,2,0.13699579238891602
+0,No,6,9,4,1,random,"    l1n1         p
+0  False  0.474688",4,10,2,0.09805178642272949
+0,No,6,9,4,1,minfill,"    l0n0     p
+0  False  0.67",4,10,2,0.08104777336120605
+0,No,6,9,4,1,minfill,"    l0n1         p
+0  False  0.651014",2,4,2,0.09396004676818848
+0,No,6,9,4,1,minfill,"         p
+0  0.17555",8,12,0,0.11600470542907715
+0,No,6,9,4,1,mindegree,"    l1n0        p
+0  False  0.40989",6,10,2,0.07699441909790039
+0,No,6,9,4,1,mindegree,"   l1n2       p
+0  True  0.6775",8,14,2,0.08595156669616699
+0,No,6,9,4,1,mindegree,"   l1n1       p
+0  True  0.8433",8,14,2,0.09726357460021973
+0,No,6,9,4,5,random,"   l1n1  l0n1  l0n2         p
+0  True  True  True  0.330378",2,8,6,0.10907363891601562
+0,No,6,9,4,5,random,"   l1n1   l0n2   l0n1   l2n0  l1n0         p
+0  True  False  False  False  True  0.111783",16,16,12,0.2053976058959961
+0,No,6,9,4,5,random,"    l1n1  l2n2   l0n1  l0n2         p
+0  False  True  False  True  0.061358",22,22,10,0.17299818992614746
+0,No,6,9,4,5,minfill,"    l0n2  l0n0   l1n0   l1n2         p
+0  False  True  False  False  0.387576",26,28,12,0.20531797409057617
+0,No,6,9,4,5,minfill,"    l2n0  l1n1   l1n0         p
+0  False  True  False  0.319519",30,34,6,0.19805121421813965
+0,No,6,9,4,5,minfill,"   l1n0  l1n2         p
+0  True  True  0.083732",10,12,4,0.15368032455444336
+0,No,6,9,4,5,mindegree,"    l2n2  l0n2  l2n1   l1n0         p
+0  False  True  True  False  0.139943",2,2,10,0.1410377025604248
+0,No,6,9,4,5,mindegree,"   l1n0   l2n2   l0n2         p
+0  True  False  False  0.072908",2,4,6,0.16077876091003418
+0,No,6,9,4,5,mindegree,"   l0n0  l2n1   l1n0         p
+0  True  True  False  0.491832",6,8,8,0.1411421298980713
+0,No,12,16,0,1,random,"        p   l1n3
+0  0.7767  False",4,4,2,0.030615806579589844
+0,No,12,16,0,1,random,"        p  l1n0
+0  0.6978  True",4,4,2,0.04410600662231445
+0,No,12,16,0,1,random,"        p   l1n1
+0  0.6185  False",4,4,2,0.037003517150878906
+0,No,12,16,0,1,minfill,"          p  l3n2
+0  0.903292  True",12,12,2,0.08496904373168945
+0,No,12,16,0,1,minfill,"      p   l0n2
+0  0.58  False",0,0,2,0.01809525489807129
+0,No,12,16,0,1,minfill,"      p  l0n1
+0  0.86  True",0,0,2,0.015953779220581055
+0,No,12,16,0,1,mindegree,"      p   l0n1
+0  0.67  False",0,0,2,0.02295994758605957
+0,No,12,16,0,1,mindegree,"      p  l0n1
+0  0.91  True",0,0,2,0.018001317977905273
+0,No,12,16,0,1,mindegree,"         p   l3n0
+0  0.57235  False",20,20,2,0.0793759822845459
+0,No,12,16,0,9,random,"   l2n3  l2n1   l3n2   l3n3  l0n0   l2n2   l1n3         p
+0  True  True  False  False  True  False  False  0.111257",70,60,20,0.2786533832550049
+0,No,12,16,0,9,random,"   l0n0  l1n3  l3n1  l1n2   l2n3   l2n1         p
+0  True  True  True  True  False  False  0.206237",40,36,14,0.3551144599914551
+0,No,12,16,0,9,random,"    l2n1  l0n3   l1n1  l3n1   l1n0  l2n0   l3n0         p
+0  False  True  False  True  False  True  False  0.043398",102,84,26,0.4930112361907959
+0,No,12,16,0,9,minfill,"    l2n3  l2n0   l1n3   l1n2   l3n1  l2n2         p
+0  False  True  False  False  False  True  0.112628",43,36,21,0.5357475280761719
+0,No,12,16,0,9,minfill,"   l2n2  l3n0  l1n1  l2n0   l0n3   l2n3   l3n1         p
+0  True  True  True  True  False  False  False  0.148175",50,40,22,0.35700559616088867
+0,No,12,16,0,9,minfill,"   l2n3   l2n1  l1n2   l2n2  l3n0  l2n0         p
+0  True  False  True  False  True  True  0.109093",42,36,16,0.44501209259033203
+0,No,12,16,0,9,mindegree,"   l2n1   l0n2  l1n1   l0n0   l1n2   l3n0   l2n2         p
+0  True  False  True  False  False  False  False  0.061486",18,16,16,0.1980607509613037
+0,No,12,16,0,9,mindegree,"    l1n2   l0n3   l2n1  l2n3   l1n0   l0n1         p
+0  False  False  False  True  False  False  0.101265",42,36,16,0.24569272994995117
+0,No,12,16,0,9,mindegree,"    l1n0   l1n3   l2n1  l2n0  l3n3   l2n3   l0n0   l0n2         p
+0  False  False  False  True  True  False  False  False  0.084731",86,60,46,0.35213780403137207
+0,No,12,16,8,1,random,"   l3n2         p
+0  True  0.472177",38,52,2,0.24533510208129883
+0,No,12,16,8,1,random,"   l0n1         p
+0  True  0.207295",2,12,2,0.12199997901916504
+0,No,12,16,8,1,random,"   l2n1         p
+0  True  0.022835",18,28,2,0.30989837646484375
+0,No,12,16,8,1,minfill,"   l2n1         p
+0  True  0.010617",34,42,2,0.3367342948913574
+0,No,12,16,8,1,minfill,"    l2n0         p
+0  False  0.000899",20,30,2,0.6634950637817383
+0,No,12,16,8,1,minfill,"    l0n1      p
+0  False  0.176",22,36,2,0.3510458469390869
+0,No,12,16,8,1,mindegree,"          p
+0  0.004211",22,30,0,0.19499969482421875
+0,No,12,16,8,1,mindegree,"   l2n3         p
+0  True  0.232609",14,26,2,0.2513539791107178
+0,No,12,16,8,1,mindegree,"     p
+0  0.0",10,18,0,0.1579113006591797
+0,No,12,16,8,9,random,"   l2n1  l0n1  l1n3   l0n2   l1n2  l3n1  l1n0         p
+0  True  True  True  False  False  True  True  0.141871",22,14,24,0.38519787788391113
+0,No,12,16,8,9,random,"   l1n0  l3n1   l2n1   l3n0        p
+0  True  True  False  False  0.00652",12,22,10,0.28537535667419434
+0,No,12,16,8,9,random,"    l3n2   l1n3  l3n1  l1n1  l0n3  l0n1  l0n2         p
+0  False  False  True  True  True  True  True  0.010143",22,24,16,0.27495265007019043
+0,No,12,16,8,9,minfill,"    l1n2   l0n2   l0n3   l3n1  l3n0  l1n3         p
+0  False  False  False  False  True  True  0.006107",30,36,12,0.4551699161529541
+0,No,12,16,8,9,minfill,"   l3n0  l1n3   l1n2  l0n3  l0n2   l3n3  l2n3  l3n1         p
+0  True  True  False  True  True  False  True  True  0.015419",24,24,20,0.8802394866943359
+0,No,12,16,8,9,minfill,"   l3n3   l1n3  l0n1   l1n1  l3n1   l0n0         p
+0  True  False  True  False  True  False  0.136467",24,22,16,0.5227537155151367
+0,No,12,16,8,9,mindegree,"    l2n2   l0n2  l2n1   l2n3   l3n2   l0n1         p
+0  False  False  True  False  False  False  0.043583",8,14,12,0.38874197006225586
+0,No,12,16,8,9,mindegree,"    l0n0  l0n2   l1n3   l2n0  l1n1  l3n3   l3n1         p
+0  False  True  False  False  True  True  False  0.047008",18,16,16,0.5805044174194336
+0,No,12,16,8,9,mindegree,"    l1n1   l3n0   l0n0   l2n2  l1n3   l3n2         p
+0  False  False  False  False  True  False  0.004045",34,28,22,0.2349991798400879
