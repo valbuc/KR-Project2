@@ -1,0 +1,88 @@
+,Memory Error,Number Edges,Number Nodes,Number Evidence,Number MAP variables: ,Heuristic,Instantiation,rows multiplied,rows summed out,rows maxed out,seconds elapsed
+0,No,44,36,0,0,minfill,"   l5n5  l4n2   l5n3   l4n3   l5n4  l4n0  l4n4   l3n0   l0n2  l1n3  ...  \
+0  True  True  False  False  False  True  True  False  False  True  ...   
+
+    l2n3   l3n4  l3n5   l2n4   l2n0  l2n1  l2n2  l2n5  l3n1         p  
+0  False  False  True  False  False  True  True  True  True  0.000016  
+
+[1 rows x 37 columns]",129376.0,0.0,176882.0,23.35662603378296
+0,No,47,36,0,0,minfill,"    l5n4   l5n1   l4n0   l5n5  l3n1  l4n4  l5n0  l0n1  l0n2   l0n5  ...  \
+0  False  False  False  False  True  True  True  True  True  False  ...   
+
+    l4n3  l5n3   l4n5   l4n2  l3n0   l3n2   l3n3  l3n4   l4n1         p  
+0  False  True  False  False  True  False  False  True  False  0.000041  
+
+[1 rows x 37 columns]",655504.0,0.0,981026.0,249.4616777896881
+0,No,50,36,0,0,minfill,"   l5n5  l5n0   l5n3  l4n1  l4n4  l0n5   l0n2   l0n4   l1n1   l1n4  ...  \
+0  True  True  False  True  True  True  False  False  False  False  ...   
+
+    l3n3  l3n4  l3n2   l3n1   l2n0  l2n1  l2n3   l2n4  l3n5         p  
+0  False  True  True  False  False  True  True  False  True  0.000025  
+
+[1 rows x 37 columns]",3683320.0,0.0,3949388.0,317.8872723579407
+0,No,49,36,0,0,minfill,"    l5n3   l4n2   l5n5  l5n4  l5n0  l0n5  l0n3  l0n0  l1n2  l0n4  ...  l1n1  \
+0  False  False  False  True  True  True  True  True  True  True  ...  True   
+
+   l1n3   l1n4  l2n0  l4n0   l4n3  l4n4  l4n5   l5n1         p  
+0  True  False  True  True  False  True  True  False  0.000012  
+
+[1 rows x 37 columns]",464530.0,0.0,655054.0,139.28638792037964
+0,No,45,36,0,0,minfill,"    l5n2   l5n3   l5n4  l4n4   l5n1   l1n0  l2n4   l3n0  l0n5   l2n0  ...  \
+0  False  False  False  True  False  False  True  False  True  False  ...   
+
+    l4n1  l4n3   l4n5   l5n0  l0n0   l0n1   l0n2   l0n3  l1n2        p  
+0  False  True  False  False  True  False  False  False  True  0.00001  
+
+[1 rows x 37 columns]",1041316.0,0.0,1766916.0,145.00005865097046
+0,No,46,36,0,0,mindegree,"    l5n5  l0n1   l0n0   l0n3  l0n4   l0n2  l0n5  l1n5  l5n2   l5n1  ...  l3n4  \
+0  False  True  False  False  True  False  True  True  True  False  ...  True   
+
+    l2n2   l3n5  l2n3   l1n0  l1n1   l1n3  l1n4  l2n4         p  
+0  False  False  True  False  True  False  True  True  0.000094  
+
+[1 rows x 37 columns]",205586.0,0.0,349558.0,89.31207609176636
+0,No,47,36,0,0,mindegree,"   l5n1   l5n0  l5n4  l5n2  l4n5   l5n3   l4n1  l2n4   l1n2   l2n0  ...  l3n3  \
+0  True  False  True  True  True  False  False  True  False  False  ...  True   
+
+   l3n1   l3n4   l3n5  l4n4  l4n0   l4n2   l4n3  l5n5         p  
+0  True  False  False  True  True  False  False  True  0.000032  
+
+[1 rows x 37 columns]",209070.0,0.0,305652.0,74.47241592407227
+0,No,44,36,0,0,mindegree,"   l4n4  l5n0  l5n5   l4n0   l3n3   l4n3   l0n2   l0n4  l0n5  l1n0  ...  l2n0  \
+0  True  True  True  False  False  False  False  False  True  True  ...  True   
+
+   l2n3   l2n4  l2n5  l3n0   l3n1  l3n2   l3n4   l4n5         p  
+0  True  False  True  True  False  True  False  False  0.000003  
+
+[1 rows x 37 columns]",111941.0,0.0,127209.0,19.490129232406616
+0,No,46,36,0,0,mindegree,"             p  l5n5  l5n0  l4n2   l2n1   l5n1  l5n2   l4n3  l4n1  l5n4  ...  \
+5199  0.000073  True  True  True  False  False  True  False  True  True  ...   
+
+      l1n0  l2n3   l2n2  l2n5  l2n4  l3n1  l3n2  l3n3   l3n4  l4n0  
+5199  True  True  False  True  True  True  True  True  False  True  
+
+[1 rows x 37 columns]",112541.0,0.0,205237.0,8.96380615234375
+0,No,44,36,0,0,mindegree,"   l5n2   l0n5   l3n2  l3n1  l0n2  l1n4   l5n4   l5n0  l4n4  l3n4  ...  l4n0  \
+0  True  False  False  True  True  True  False  False  True  True  ...  True   
+
+    l4n2  l5n1  l5n5   l3n3  l4n1   l4n3   l4n5  l5n3         p  
+0  False  True  True  False  True  False  False  True  0.000066  
+
+[1 rows x 37 columns]",387428.0,0.0,505182.0,75.87751483917236
+0,No,44,36,0,0,random,"             p   l5n5   l3n1   l3n2  l4n0   l5n4   l4n1   l2n4   l1n4  l0n4  \
+466   0.000017  False  False  False  True  False  False  False  False  True   
+3704  0.000017   True  False  False  True  False  False  False  False  True   
+
+      ...  l1n5   l2n2   l4n4  l3n3   l2n1  l3n5  l0n3  l5n1  l0n1  l5n2  
+466   ...  True  False  False  True  False  True  True  True  True  True  
+3704  ...  True  False  False  True  False  True  True  True  True  True  
+
+[2 rows x 37 columns]",450302.0,0.0,591176.0,25.58040976524353
+0,No,43,36,0,0,random,"    l5n2   l5n3   l4n3  l3n2  l1n1  l0n0  l1n4   l1n0   l0n4  l0n3  ...  l4n0  \
+0  False  False  False  True  True  True  True  False  False  True  ...  True   
+
+   l3n0  l1n2   l5n4   l2n3   l5n1   l0n1   l4n5   l3n1         p  
+0  True  True  False  False  False  False  False  False  0.000013  
+
+[1 rows x 37 columns]",822863.0,0.0,1826337.0,616.7849912643433
+0,Yes,43,36,0,0,random,,,,,
