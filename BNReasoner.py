@@ -392,10 +392,32 @@ class BNReasoner:
                 cpts[variable] = newfactor
             else:
                 cpts[variable] = newfactor.to_frame().T
+        
 
         result, rowsmult = self.mult(list(cpts.values()))
 
+        # ev = result['p']
+
+        # ev = reasoner.get_marginal_distribution('random', evidence)
+        # with_ev = reasoner.get_marginal_distribution('random', query_vars, evidence)
+
+
+
+        # normalise results
+        # result = result["p"] / result["p"].sum()
+        # cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
+        # cpts[key] = cpts[key].to_frame()
+        # cpts[key][key] = [False, True]
+
         return result
+
+    def normalize(self, evidence, result):
+        ev = reasoner.get_marginal_distribution('random', evidence)
+
+
+
+        normalized = result.apply(lambda row: row['p'] / 
+
 
     def get_marginal(self, q_vars: list, e_vars: pd.DataFrame):
         cpts = self.bn.get_all_cpts()
@@ -430,7 +452,7 @@ class BNReasoner:
         # normalise results
         for key in cpts:
             cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
-            cpts[key] = cpts[key].to_frame()
+            # cpts[key] = cpts[key].to_frame()
             cpts[key][key] = [False, True]
 
         factors = list(cpts.values())
