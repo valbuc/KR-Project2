@@ -397,6 +397,68 @@ class BNReasoner:
 
         return result
 
+    def use_case_distribution(
+        self,
+        heuristic: str = "random",
+        q_vars: list = [],
+        e_vars: pd.Series = pd.Series(),
+    ):
+        """
+        heuristic can be 'random', 'mindegree', 'minfill'
+        """
+
+        heuristics = {
+            "random": self.ordering_random,
+            "mindegree": self.ordering_mindegree,
+            "minfill": self.ordering_minfill,
+        }
+
+        # q_vars = self.bn.get_all_variables()
+
+        N = self.net_prune(q_vars, e_vars)  # prune edges
+
+        # make map vars appear last
+        order = heuristics[heuristic](
+            N
+        )  # elimination order of variables Q # put this as parameter
+        for var in q_vars:
+            order.remove(var)
+
+        cpts = N.get_all_cpts()
+
+        # loop over variables in order given
+        for variable in order:
+            # get factors which contain variable
+            factors = []
+            delete = []
+            for key, value in cpts.items():
+                if variable in value.columns:
+                    factors.append(value)
+                    delete.append(key)
+            if len(factors) == 0:
+                continue
+
+            # multiply factors
+            factor, rowsmult = self.mult(factors)
+
+            # sum out variable
+            newfactor = self.sum_out(factor, [variable])
+
+            # delete factors from cpts
+            for var in delete:
+                del cpts[var]
+
+            # add new factor to cpts
+            # TODO: can maxxout always return dataframe?
+            if type(newfactor) == pd.DataFrame:
+                cpts[variable] = newfactor
+            else:
+                cpts[variable] = newfactor.to_frame().T
+
+        result, rowsmult = self.mult(list(cpts.values()))
+
+        return result
+
     def get_marginal(self, q_vars: list, e_vars: pd.DataFrame):
         cpts = self.bn.get_all_cpts()
 
