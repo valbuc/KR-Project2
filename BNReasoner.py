@@ -272,7 +272,8 @@ class BNReasoner:
                 grand = newgrand
             else:
                 grand = grand.merge(factor, how="outer", on=intersect)
-            grand["p"] = grand.apply(lambda row: row["p_x"] * row["p_y"], axis=1)
+            grand["p"] = grand.apply(
+                lambda row: row["p_x"] * row["p_y"], axis=1)
             grand = grand.drop(["p_x", "p_y"], axis=1)
             rowsmult += len(grand)
 
@@ -392,32 +393,14 @@ class BNReasoner:
                 cpts[variable] = newfactor
             else:
                 cpts[variable] = newfactor.to_frame().T
-        
 
         result, rowsmult = self.mult(list(cpts.values()))
 
-        # ev = result['p']
-
-        # ev = reasoner.get_marginal_distribution('random', evidence)
-        # with_ev = reasoner.get_marginal_distribution('random', query_vars, evidence)
-
-
-
         # normalise results
-        # result = result["p"] / result["p"].sum()
-        # cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
-        # cpts[key] = cpts[key].to_frame()
-        # cpts[key][key] = [False, True]
+        sum = result["p"].sum()
+        result['p'] = result.apply(lambda row: row['p']/sum, axis=1)
 
         return result
-
-    def normalize(self, evidence, result):
-        ev = reasoner.get_marginal_distribution('random', evidence)
-
-
-
-        normalized = result.apply(lambda row: row['p'] / 
-
 
     def get_marginal(self, q_vars: list, e_vars: pd.DataFrame):
         cpts = self.bn.get_all_cpts()
@@ -495,7 +478,7 @@ class BNReasoner:
     def MPE(self, heuristic: str = "random", e_vars: pd.Series = pd.Series()):
         """
         heuristic can be 'random', 'mindegree', 'minfill'
-        
+
         """
 
         start = time.time()
@@ -636,6 +619,11 @@ class BNReasoner:
                 cpts[variable] = newfactor.to_frame().T
 
         maxx, rowsmult = self.mult(list(cpts.values()))
+
+        # normalize
+        sum = maxx["p"].sum()
+        maxx['p'] = maxx.apply(lambda row: row['p']/sum, axis=1)
+
         m = maxx["p"].max()
         result = maxx.loc[maxx["p"] == m]
 
