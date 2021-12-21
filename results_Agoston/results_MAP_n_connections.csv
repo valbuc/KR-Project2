@@ -1,0 +1,2317 @@
+,Memory Error,Number Edges,Number Nodes,Number Evidence,Number MAP variables: ,Heuristic,Instantiation,rows multiplied,rows summed out,rows maxed out,seconds elapsed
+0,No,11,9,0,1,minfill,"          p   l2n2
+0  0.914299  False",28,28,2,0.02422809600830078
+0,No,12,9,0,1,minfill,"         p   l1n2
+0  0.51568  False",28,28,2,0.015585184097290039
+0,No,9,9,0,1,minfill,"      p  l0n0
+0  0.62  True",0,0,2,0.0028710365295410156
+0,No,11,9,0,1,minfill,"          p  l2n2
+0  0.519526  True",56,52,2,0.026064157485961914
+0,No,10,9,0,1,minfill,"          p  l2n2
+0  0.718855  True",56,52,2,0.02642083168029785
+0,No,15,9,0,1,minfill,"         p  l2n0
+0  0.54902  True",104,92,2,0.03397774696350098
+0,No,12,9,0,1,minfill,"          p  l1n1
+0  0.824884  True",12,12,2,0.011066913604736328
+0,No,11,9,0,1,minfill,"         p  l1n2
+0  0.64001  True",28,28,2,0.016271114349365234
+0,No,10,9,0,1,minfill,"         p   l2n1
+0  0.78584  False",28,28,2,0.019685983657836914
+0,No,13,9,0,1,minfill,"      p  l0n1
+0  0.86  True",0,0,2,0.002947092056274414
+0,No,16,9,0,1,minfill,"          p  l1n0
+0  0.517696  True",12,12,2,0.01083230972290039
+0,No,11,9,0,1,minfill,"      p  l0n2
+0  0.83  True",0,0,2,0.0031952857971191406
+0,No,12,9,0,1,minfill,"      p  l0n0
+0  0.61  True",0,0,2,0.002907991409301758
+0,No,15,9,0,1,minfill,"          p  l2n2
+0  0.659512  True",80,68,2,0.027041912078857422
+0,No,10,9,0,1,minfill,"      p   l0n0
+0  0.89  False",0,0,2,0.002868175506591797
+0,No,16,9,0,1,minfill,"          p   l1n1
+0  0.514377  False",28,28,2,0.01551675796508789
+0,No,13,9,0,1,minfill,"          p   l1n0
+0  0.619861  False",28,28,2,0.01538395881652832
+0,No,10,9,0,1,minfill,"         p   l1n2
+0  0.66676  False",12,12,2,0.010530948638916016
+0,No,13,9,0,1,minfill,"         p  l2n1
+0  0.62578  True",40,36,2,0.020344972610473633
+0,No,10,9,0,1,minfill,"      p   l1n1
+0  0.55  False",4,4,2,0.006400108337402344
+0,No,13,9,0,1,minfill,"          p  l2n1
+0  0.562868  True",72,76,2,0.03190898895263672
+0,No,16,9,0,1,minfill,"      p   l0n0
+0  0.68  False",0,0,2,0.0028638839721679688
+0,No,7,9,0,1,minfill,"      p  l0n2
+0  0.93  True",0,0,2,0.002850770950317383
+0,No,13,9,0,1,minfill,"      p   l0n1
+0  0.98  False",0,0,2,0.0028688907623291016
+0,No,10,9,0,1,minfill,"          p  l2n0
+0  0.725178  True",32,32,2,0.019354820251464844
+0,No,13,9,0,1,minfill,"          p   l2n2
+0  0.566118  False",76,76,2,0.03227376937866211
+0,No,9,9,0,1,minfill,"      p  l0n1
+0  0.59  True",0,0,2,0.002855062484741211
+0,No,15,9,0,1,minfill,"      p  l0n0
+0  0.65  True",0,0,2,0.002875089645385742
+0,No,8,9,0,1,minfill,"      p   l0n1
+0  0.98  False",0,0,2,0.002851247787475586
+0,No,14,9,0,1,minfill,"          p   l1n2
+0  0.551245  False",12,12,2,0.010536909103393555
+0,No,12,9,0,1,mindegree,"      p   l0n0
+0  0.89  False",0,0,2,0.0027959346771240234
+0,No,11,9,0,1,mindegree,"      p   l0n2
+0  0.57  False",0,0,2,0.0027909278869628906
+0,No,15,9,0,1,mindegree,"          p  l1n2
+0  0.669785  True",28,28,2,0.014267683029174805
+0,No,13,9,0,1,mindegree,"          p   l2n0
+0  0.610005  False",76,76,2,0.027540922164916992
+0,No,12,9,0,1,mindegree,"      p  l0n0
+0  0.55  True",0,0,2,0.0028228759765625
+0,No,12,9,0,1,mindegree,"          p  l1n0
+0  0.592608  True",12,12,2,0.00989389419555664
+0,No,11,9,0,1,mindegree,"      p  l0n0
+0  0.92  True",0,0,2,0.0028121471405029297
+0,No,11,9,0,1,mindegree,"        p   l1n0
+0  0.9393  False",12,12,2,0.009885787963867188
+0,No,11,9,0,1,mindegree,"      p   l0n2
+0  0.54  False",0,0,2,0.0028259754180908203
+0,No,13,9,0,1,mindegree,"      p  l0n1
+0  0.61  True",0,0,2,0.002816915512084961
+0,No,10,9,0,1,mindegree,"       p   l1n1
+0  0.849  False",12,12,2,0.009862899780273438
+0,No,10,9,0,1,mindegree,"          p   l2n0
+0  0.651851  False",64,60,2,0.022449254989624023
+0,No,8,9,0,1,mindegree,"     p  l0n2
+0  0.7  True",0,0,2,0.0028052330017089844
+0,No,12,9,0,1,mindegree,"          p  l2n2
+0  0.568424  True",64,60,2,0.02276301383972168
+0,No,12,9,0,1,mindegree,"          p  l1n1
+0  0.538506  True",28,28,2,0.014082193374633789
+0,No,10,9,0,1,mindegree,"          p   l2n1
+0  0.588704  False",72,76,2,0.026623010635375977
+0,No,15,9,0,1,mindegree,"          p   l1n1
+0  0.770312  False",12,12,2,0.010386943817138672
+0,No,12,9,0,1,mindegree,"      p   l0n2
+0  0.64  False",0,0,2,0.002892732620239258
+0,No,15,9,0,1,mindegree,"          p  l1n1
+0  0.759456  True",12,12,2,0.01034092903137207
+0,No,12,9,0,1,mindegree,"        p   l1n0
+0  0.8451  False",4,4,2,0.006439924240112305
+0,No,17,9,0,1,mindegree,"          p   l2n0
+0  0.508882  False",176,140,2,0.029201269149780273
+0,No,15,9,0,1,mindegree,"         p  l1n2
+0  0.60528  True",28,28,2,0.014236927032470703
+0,No,14,9,0,1,mindegree,"        p  l1n0
+0  0.7276  True",12,12,2,0.009867191314697266
+0,No,12,9,0,1,mindegree,"          p  l2n1
+0  0.689946  True",56,52,2,0.02200603485107422
+0,No,11,9,0,1,mindegree,"          p   l2n0
+0  0.589071  False",32,32,2,0.017141103744506836
+0,No,12,9,0,1,mindegree,"      p   l0n0
+0  0.63  False",0,0,2,0.002804994583129883
+0,No,10,9,0,1,mindegree,"          p  l1n2
+0  0.535704  True",28,28,2,0.014075040817260742
+0,No,15,9,0,1,mindegree,"          p   l2n1
+0  0.633536  False",112,108,2,0.027817964553833008
+0,No,12,9,0,1,mindegree,"      p   l1n0
+0  0.86  False",0,0,2,0.002811908721923828
+0,No,13,9,0,1,mindegree,"      p  l0n2
+0  0.62  True",0,0,2,0.002794027328491211
+0,No,14,9,0,1,random,"          p   l1n0
+0  0.565984  False",28,28,2,0.01431417465209961
+0,No,12,9,0,1,random,"      p   l0n0
+0  0.84  False",0,0,2,0.002789020538330078
+0,No,10,9,0,1,random,"         p   l1n1
+0  0.88449  False",12,12,2,0.009741783142089844
+0,No,15,9,0,1,random,"      p  l0n0
+0  0.56  True",0,0,2,0.0027740001678466797
+0,No,14,9,0,1,random,"        p   l1n0
+0  0.5948  False",12,12,2,0.009766101837158203
+0,No,10,9,0,1,random,"      p  l0n1
+0  0.81  True",0,0,2,0.0027260780334472656
+0,No,8,9,0,1,random,"      p  l2n0
+0  0.67  True",0,0,2,0.0026938915252685547
+0,No,15,9,0,1,random,"        p  l1n0
+0  0.9336  True",4,4,2,0.006118297576904297
+0,No,15,9,0,1,random,"          p  l2n2
+0  0.687484  True",200,188,2,0.030133962631225586
+0,No,11,9,0,1,random,"      p  l0n1
+0  0.77  True",0,0,2,0.0027823448181152344
+0,No,12,9,0,1,random,"          p  l1n2
+0  0.587541  True",28,28,2,0.014109134674072266
+0,No,15,9,0,1,random,"      p   l0n2
+0  0.67  False",0,0,2,0.002752065658569336
+0,No,14,9,0,1,random,"          p   l1n0
+0  0.866036  False",12,12,2,0.009884119033813477
+0,No,11,9,0,1,random,"      p  l0n2
+0  0.72  True",0,0,2,0.002865314483642578
+0,No,13,9,0,1,random,"          p  l2n0
+0  0.577554  True",92,92,2,0.023983001708984375
+0,No,11,9,0,1,random,"          p   l2n0
+0  0.731616  False",12,12,2,0.009850740432739258
+0,No,15,9,0,1,random,"       p   l1n0
+0  0.526  False",4,4,2,0.006012916564941406
+0,No,14,9,0,1,random,"          p  l2n2
+0  0.595726  True",188,188,2,0.02942800521850586
+0,No,10,9,0,1,random,"          p  l2n0
+0  0.700604  True",28,28,2,0.014043807983398438
+0,No,10,9,0,1,random,"         p  l1n2
+0  0.75128  True",12,12,2,0.009792804718017578
+0,No,12,9,0,1,random,"        p   l1n0
+0  0.8194  False",4,4,2,0.0060231685638427734
+0,No,14,9,0,1,random,"      p   l0n0
+0  0.79  False",0,0,2,0.002743244171142578
+0,No,15,9,0,1,random,"          p   l2n1
+0  0.514505  False",164,188,2,0.029165983200073242
+0,No,11,9,0,1,random,"          p   l2n1
+0  0.541361  False",20,20,2,0.013572931289672852
+0,No,10,9,0,1,random,"          p  l1n0
+0  0.763725  True",12,12,2,0.009804010391235352
+0,No,10,9,0,1,random,"      p  l0n0
+0  0.67  True",0,0,2,0.002755880355834961
+0,No,11,9,0,1,random,"      p  l0n1
+0  0.65  True",0,0,2,0.0027179718017578125
+0,No,12,9,0,1,random,"      p   l0n1
+0  0.61  False",0,0,2,0.0027239322662353516
+0,No,11,9,0,1,random,"         p  l1n1
+0  0.68128  True",12,12,2,0.009778261184692383
+0,No,11,9,0,1,random,"         p   l2n2
+0  0.67141  False",116,124,2,0.027869224548339844
+0,No,12,9,0,5,minfill,"         p  l0n2   l0n1  l1n0   l1n2
+0  0.28953  True  False  True  False",72,32,32,0.032240867614746094
+0,No,10,9,0,5,minfill,"          p   l0n0   l2n1  l1n0   l0n1   l0n2
+0  0.107829  False  False  True  False  False",106,64,62,0.049334049224853516
+0,No,12,9,0,5,minfill,"          p   l2n1  l2n2   l1n0
+1  0.277055  False  True  False",108,72,14,0.043898820877075195
+0,No,11,9,0,5,minfill,"          p   l1n1  l1n0  l2n0  l2n1
+1  0.187481  False  True  True  True",120,80,32,0.04953813552856445
+0,No,13,9,0,5,minfill,"   l0n0  l0n2  l2n2  l0n1         p
+0  True  True  True  True  0.275548",26,16,16,0.026723861694335938
+0,No,12,9,0,5,minfill,"          p  l2n0  l1n1   l1n0  l0n2   l1n2
+2  0.171132  True  True  False  True  False",64,32,40,0.04691624641418457
+0,No,15,9,0,5,minfill,"         p  l1n0   l1n2  l0n2
+1  0.24914  True  False  True",43,32,15,0.027688980102539062
+0,No,11,9,0,5,minfill,"          p  l2n0   l2n2   l1n1   l2n1
+0  0.234749  True  False  False  False",140,112,30,0.05617094039916992
+0,No,10,9,0,5,minfill,"          p  l0n1   l1n2  l2n1  l2n0  l0n2
+1  0.251507  True  False  True  True  True",172,104,48,0.05598807334899902
+0,No,10,9,0,5,minfill,"          p  l2n0   l1n1   l2n2  l0n1
+1  0.266361  True  False  False  True",76,48,36,0.03768491744995117
+0,No,8,9,0,5,minfill,"          p   l1n2   l1n0   l2n2   l0n1   l1n1
+0  0.216887  False  False  False  False  False",54,12,50,0.047148942947387695
+0,No,13,9,0,5,minfill,"          p   l2n2   l1n1   l1n2
+0  0.318154  False  False  False",52,40,14,0.03262019157409668
+0,No,15,9,0,5,minfill,"          p  l2n1   l1n2  l0n0   l2n0
+0  0.213441  True  False  True  False",188,160,32,0.05258607864379883
+0,No,10,9,0,5,minfill,"          p   l1n0   l0n2   l1n2   l2n0
+0  0.307311  False  False  False  False",56,24,30,0.03620100021362305
+0,No,11,9,0,5,minfill,"          p  l0n2  l2n1  l1n1   l2n2
+0  0.226036  True  True  True  False",108,84,30,0.04895901679992676
+0,No,13,9,0,5,minfill,"          p  l0n2  l1n0   l0n1  l1n1
+1  0.299662  True  True  False  True",60,32,31,0.0317692756652832
+0,No,11,9,0,5,minfill,"          p  l2n2  l0n1   l1n1  l1n0
+0  0.425733  True  True  False  True",38,24,18,0.03313732147216797
+0,No,10,9,0,5,minfill,"   l0n2  l2n0   l0n0         p
+0  True  True  False  0.214332",4,4,6,0.01512765884399414
+0,No,10,9,0,5,minfill,"          p  l2n1  l0n0  l2n0  l0n1
+1  0.470358  True  True  True  True",187,168,31,0.05158829689025879
+0,No,12,9,0,5,minfill,"          p   l2n1  l2n2  l1n1
+0  0.298595  False  True  True",92,80,14,0.04528498649597168
+0,No,12,9,0,5,minfill,"          p  l2n2   l0n2  l2n1
+0  0.341747  True  False  True",212,176,14,0.0482332706451416
+0,No,14,9,0,5,minfill,"         p  l1n0   l0n1  l0n2  l1n2
+2  0.19449  True  False  True  True",26,8,28,0.030974864959716797
+0,No,11,9,0,5,minfill,"          p   l0n0  l1n2   l0n2
+0  0.287508  False  True  False",27,16,15,0.022082090377807617
+0,No,11,9,0,5,minfill,"          p  l0n2   l0n1  l2n2  l2n1
+2  0.217564  True  False  True  True",224,160,33,0.052052974700927734
+0,No,13,9,0,5,minfill,"          p  l1n1  l0n0  l1n2  l2n1  l0n2
+4  0.228062  True  True  True  True  True",158,96,74,0.05128288269042969
+0,No,12,9,0,5,minfill,"          p  l0n2   l1n0   l2n2  l1n1
+1  0.211769  True  False  False  True",80,48,23,0.0374758243560791
+0,No,9,9,0,5,minfill,"          p  l2n2   l0n2   l1n2  l1n1
+0  0.396861  True  False  False  True",42,24,18,0.03293013572692871
+0,No,11,9,0,5,minfill,"          p   l1n2   l2n2   l0n0  l0n2  l1n1
+0  0.215527  False  False  False  True  True",86,48,50,0.04892778396606445
+0,No,9,9,0,5,minfill,"          p   l0n1  l1n1  l2n1  l2n0  l1n2
+1  0.142053  False  True  True  True  True",84,40,50,0.053603172302246094
+0,No,9,9,0,5,minfill,"          p  l2n0   l1n0  l0n1  l1n1
+0  0.268926  True  False  True  True",80,64,30,0.0427250862121582
+0,No,11,9,0,5,mindegree,"          p  l0n0   l2n2   l2n1   l2n0
+0  0.166169  True  False  False  False",348,236,30,0.04831290245056152
+0,No,13,9,0,5,mindegree,"         p   l1n0   l0n0  l0n1
+0  0.21294  False  False  True",8,0,16,0.017069101333618164
+0,No,12,9,0,5,mindegree,"          p   l0n2   l0n0  l2n1
+0  0.732765  False  False  True",44,32,14,0.025310993194580078
+0,No,9,9,0,5,mindegree,"   l1n2   l0n0   l1n0         p
+0  True  False  False  0.376258",12,12,6,0.017570972442626953
+0,No,12,9,0,5,mindegree,"          p   l0n1  l0n2   l2n1  l2n0   l1n1
+0  0.187772  False  True  False  True  False",152,80,62,0.04867672920227051
+0,No,14,9,0,5,mindegree,"          p   l0n2   l2n0   l1n2  l1n1
+0  0.341412  False  False  False  True",68,40,32,0.037000179290771484
+0,No,11,9,0,5,mindegree,"   l1n0  l0n1   l1n2        p
+0  True  True  False  0.48494",16,12,8,0.02095794677734375
+0,No,10,9,0,5,mindegree,"          p   l0n2   l1n2  l2n0  l1n1
+1  0.187892  False  False  True  True",42,32,18,0.03332996368408203
+0,No,11,9,0,5,mindegree,"          p   l0n1   l2n2  l1n0
+0  0.240612  False  False  True",96,80,14,0.03373217582702637
+0,No,13,9,0,5,mindegree,"          p   l2n0   l1n1  l2n1  l2n2
+0  0.170472  False  False  True  True",256,176,33,0.04884624481201172
+0,No,11,9,0,5,mindegree,"          p  l2n0   l1n0   l1n1  l0n1
+1  0.227715  True  False  False  True",97,80,35,0.03884530067443848
+0,No,17,9,0,5,mindegree,"          p   l1n2   l2n1   l0n2   l1n0
+0  0.274227  False  False  False  False",181,128,32,0.040368080139160156
+0,No,9,9,0,5,mindegree,"    l0n1  l1n0  l1n2   l2n1         p
+0  False  True  True  False  0.258997",28,16,17,0.0287020206451416
+0,No,12,9,0,5,mindegree,"          p  l2n2  l0n2   l1n0   l2n0   l1n1
+1  0.266589  True  True  False  False  False",112,72,41,0.047338008880615234
+0,No,8,9,0,5,mindegree,"   l2n1  l1n0  l1n2  l0n0  l0n2         p
+0  True  True  True  True  True  0.203112",51,32,37,0.0381779670715332
+0,No,13,9,0,5,mindegree,"          p   l2n1  l2n0  l0n0  l0n1   l1n0
+2  0.146265  False  True  True  True  False",191,160,68,0.05115485191345215
+0,No,10,9,0,5,mindegree,"          p  l2n1   l0n0  l2n0
+0  0.346795  True  False  True",100,80,14,0.03393983840942383
+0,No,11,9,0,5,mindegree,"          p  l2n2   l2n1  l0n2  l1n2
+1  0.142924  True  False  True  True",78,48,33,0.03431296348571777
+0,No,13,9,0,5,mindegree,"         p  l0n2   l1n1  l0n1   l1n2
+2  0.22617  True  False  True  False",61,32,33,0.029887914657592773
+0,No,10,9,0,5,mindegree,"          p   l1n1   l2n2  l1n0  l2n0   l0n0
+1  0.181391  False  False  True  True  False",38,16,27,0.036682844161987305
+0,No,12,9,0,5,mindegree,"          p  l1n0  l2n2   l0n0  l0n1
+1  0.203905  True  True  False  True",75,64,31,0.03447675704956055
+0,No,8,9,0,5,mindegree,"   l0n2  l1n1   l1n0         p
+0  True  True  False  0.379162",4,0,8,0.012574911117553711
+0,No,13,9,0,5,mindegree,"          p   l0n0  l0n1   l2n1   l2n0
+0  0.318788  False  True  False  False",184,144,32,0.044345855712890625
+0,No,11,9,0,5,mindegree,"   l0n0  l1n0  l0n2        p
+0  True  True  True  0.32853",4,4,6,0.014044046401977539
+0,No,14,9,0,5,mindegree,"        p  l2n0  l1n2  l0n2
+1  0.2146  True  True  True",91,80,15,0.034050941467285156
+0,No,11,9,0,5,mindegree,"          p   l1n2  l1n0   l2n2  l0n0
+1  0.223241  False  True  False  True",76,56,24,0.037467002868652344
+0,No,10,9,0,5,mindegree,"   l2n2  l1n1   l2n0  l1n0         p
+0  True  True  False  True  0.131467",176,128,16,0.03877615928649902
+0,No,11,9,0,5,mindegree,"          p  l1n0  l0n0   l1n1  l0n2
+4  0.247869  True  True  False  True",62,32,36,0.030740022659301758
+0,No,12,9,0,5,mindegree,"          p  l1n2   l1n1  l0n2   l2n1  l2n2
+2  0.180916  True  False  True  False  True",193,128,75,0.05203890800476074
+0,No,11,9,0,5,mindegree,"          p  l1n2  l2n0   l0n1  l1n0
+0  0.430391  True  True  False  True",72,56,30,0.04073810577392578
+0,No,12,9,0,5,random,"          p   l2n1  l0n1   l0n0  l2n0
+0  0.321364  False  True  False  True",100,88,18,0.04137086868286133
+0,No,8,9,0,5,random,"   l2n1   l0n0   l1n1  l2n0         p
+0  True  False  False  True  0.088634",76,60,17,0.037795066833496094
+0,No,10,9,0,5,random,"          p  l2n0  l1n2  l0n1   l0n2
+1  0.144938  True  True  True  False",25,16,19,0.029731273651123047
+0,No,13,9,0,5,random,"          p   l1n0  l1n2  l0n0  l2n1
+0  0.225028  False  True  True  True",158,128,34,0.039756059646606445
+0,No,10,9,0,5,random,"          p   l1n2  l2n0  l2n1   l2n2
+0  0.215285  False  True  True  False",404,352,36,0.05154299736022949
+0,No,10,9,0,5,random,"   l2n1  l0n0   l2n0   l0n1  l1n0         p
+0  True  True  False  False  True  0.228412",40,24,20,0.03694009780883789
+0,No,9,9,0,5,random,"          p  l2n1   l2n2   l1n0
+0  0.293447  True  False  False",46,40,10,0.026578903198242188
+0,No,15,9,0,5,random,"         p  l1n0  l0n2   l2n1
+0  0.34129  True  True  False",124,112,14,0.03484606742858887
+0,No,12,9,0,5,random,"          p   l1n2  l1n0  l2n1   l0n0
+1  0.222578  False  True  True  False",48,16,40,0.03365516662597656
+0,No,11,9,0,5,random,"    l0n1  l1n1  l0n0  l0n2         p
+0  False  True  True  True  0.299501",10,0,16,0.021357059478759766
+0,No,14,9,0,5,random,"          p   l0n2  l2n0   l0n0   l1n2
+0  0.209906  False  True  False  False",236,224,30,0.04045987129211426
+0,No,9,9,0,5,random,"          p  l1n0  l2n2   l1n1
+3  0.403547  True  True  False",28,16,16,0.02376389503479004
+0,No,12,9,0,5,random,"          p   l0n1   l2n1   l1n1   l0n0
+0  0.259693  False  False  False  False",163,128,31,0.0396270751953125
+0,No,9,9,0,5,random,"         p  l0n1   l2n2   l2n1  l0n2
+0  0.19308  True  False  False  True",202,168,30,0.04344511032104492
+0,No,16,9,0,5,random,"          p   l2n1   l0n2  l2n0   l1n2
+1  0.179682  False  False  True  False",176,144,34,0.0442349910736084
+0,No,10,9,0,5,random,"          p   l0n0   l1n2  l1n1   l2n1
+0  0.246113  False  False  True  False",68,48,28,0.033679962158203125
+0,No,11,9,0,5,random,"          p   l0n1   l1n2  l2n1  l0n0   l1n1
+1  0.150576  False  False  True  True  False",214,128,69,0.046617984771728516
+0,No,14,9,0,5,random,"          p  l0n1  l2n0  l1n1
+0  0.267511  True  True  True",176,176,14,0.03548169136047363
+0,No,11,9,0,5,random,"          p   l0n0  l2n0   l2n2   l1n0
+1  0.325056  False  True  False  False",90,64,18,0.03461790084838867
+0,No,15,9,0,5,random,"          p   l0n2  l2n2  l1n1
+0  0.341443  False  True  True",136,144,14,0.0349581241607666
+0,No,13,9,0,5,random,"          p   l1n1  l0n2   l0n0  l2n2  l2n1
+1  0.185094  False  True  False  True  True",188,96,71,0.04942011833190918
+0,No,13,9,0,5,random,"          p   l0n0   l2n0  l1n0   l2n2   l2n1
+1  0.079882  False  False  True  False  False",560,480,40,0.05653691291809082
+0,No,9,9,0,5,random,"    l1n0  l1n2  l0n2   l0n0         p
+0  False  True  True  False  0.129561",4,4,8,0.017654895782470703
+0,No,11,9,0,5,random,"   l0n0   l1n0   l2n0   l0n2   l2n2         p
+0  True  False  False  False  False  0.186069",98,64,32,0.03967165946960449
+0,No,13,9,0,5,random,"          p  l0n0   l1n0   l1n2  l1n1  l2n0
+0  0.292433  True  False  False  True  True",164,96,48,0.04460477828979492
+0,No,10,9,0,5,random,"          p  l0n2   l2n2   l2n0
+2  0.162245  True  False  False",120,104,15,0.03768801689147949
+0,No,14,9,0,5,random,"          p   l0n1  l0n2   l1n1
+0  0.469052  False  True  False",28,16,14,0.020755767822265625
+0,No,12,9,0,5,random,"          p   l0n2   l0n0  l1n2  l2n0
+1  0.190565  False  False  True  True",192,160,30,0.04012417793273926
+0,No,12,9,0,5,random,"          p  l0n0  l2n0  l1n0   l1n1
+2  0.231081  True  True  True  False",104,64,34,0.03796100616455078
+0,No,14,9,0,5,random,"          p   l0n2  l1n1  l2n1   l0n1
+1  0.245436  False  True  True  False",99,64,31,0.034544944763183594
+0,No,10,9,4,1,minfill,"    l2n0         p
+0  False  0.101449",24,20,2,0.03426790237426758
+0,No,10,9,4,1,minfill,"   l2n0        p
+0  True  0.56343",102,82,2,0.043673038482666016
+0,No,11,9,4,1,minfill,"    l0n0     p
+0  False  0.96",12,18,2,0.023648977279663086
+0,No,13,9,4,1,minfill,"   l2n2      p
+0  True  0.552",60,42,2,0.0377199649810791
+0,No,14,9,4,1,minfill,"    l1n0         p
+0  False  0.088556",48,30,2,0.03444981575012207
+0,No,14,9,4,1,minfill,"    l0n0         p
+0  False  0.149919",8,8,2,0.022569894790649414
+0,No,9,9,4,1,minfill,"      p
+0  0.68",24,24,0,0.025880098342895508
+0,No,10,9,4,1,minfill,"    l0n0      p
+0  False  0.598",14,16,2,0.02125406265258789
+0,No,13,9,4,1,minfill,"   l1n1         p
+0  True  0.012385",10,12,2,0.028273820877075195
+0,No,11,9,4,1,minfill,"    l2n1         p
+0  False  0.067149",16,12,2,0.027761220932006836
+0,No,15,9,4,1,minfill,"   l0n0         p
+0  True  0.624288",62,54,2,0.038186073303222656
+0,No,17,9,4,1,minfill,"          p
+0  0.043822",44,32,0,0.03522801399230957
+0,No,13,9,4,1,minfill,"   l1n1         p
+0  True  0.040606",8,10,2,0.02980828285217285
+0,No,13,9,4,1,minfill,"          p
+0  0.120079",18,12,0,0.025981903076171875
+0,No,12,9,4,1,minfill,"   l1n2       p
+0  True  0.7588",56,64,2,0.045095205307006836
+0,No,14,9,4,1,minfill,"          p
+0  0.308587",10,10,0,0.020268917083740234
+0,No,13,9,4,1,minfill,"    l0n1         p
+0  False  0.330175",62,52,2,0.036885976791381836
+0,No,16,9,4,1,minfill,"   l0n2         p
+0  True  0.053274",46,30,2,0.03672981262207031
+0,No,18,9,4,1,minfill,"          p
+0  0.313681",20,18,0,0.03053116798400879
+0,No,13,9,4,1,minfill,"    l0n0         p
+0  False  0.044617",32,18,2,0.028146028518676758
+0,No,13,9,4,1,minfill,"   l0n2         p
+0  True  0.189399",8,6,2,0.021072864532470703
+0,No,10,9,4,1,minfill,"         p  l2n0
+0  0.35612  True",88,72,2,0.04284811019897461
+0,No,14,9,4,1,minfill,"    l0n1         p
+0  False  0.151952",4,6,2,0.021622180938720703
+0,No,9,9,4,1,minfill,"    l0n1         p
+0  False  0.077047
+0   True  0.077047",4,4,2,0.01910996437072754
+0,No,10,9,4,1,minfill,"         p
+0  0.23042",2,6,0,0.014104127883911133
+0,No,11,9,4,1,minfill,"   l2n0        p
+0  True  0.55014",44,48,2,0.04334712028503418
+0,No,12,9,4,1,minfill,"          p   l1n0
+0  0.329021  False",108,68,2,0.036624908447265625
+0,No,12,9,4,1,minfill,"    l1n0      p
+0  False  0.071",4,10,2,0.02137017250061035
+0,No,13,9,4,1,minfill,"    l1n0         p
+0  False  0.517572",28,24,2,0.03032684326171875
+0,No,12,9,4,1,minfill,"    l1n1         p
+0  False  0.212113",30,30,2,0.034416913986206055
+0,No,10,9,4,1,mindegree,"    l0n2     p
+0  False  0.55",36,42,2,0.029681921005249023
+0,No,12,9,4,1,mindegree,"          p   l1n2
+0  0.201475  False",64,48,2,0.03170514106750488
+0,No,9,9,4,1,mindegree,"   l0n1         p
+0  True  0.150705",4,8,2,0.019701004028320312
+0,No,14,9,4,1,mindegree,"    l0n2        p
+0  False  0.10387",54,30,2,0.028290987014770508
+0,No,12,9,4,1,mindegree,"          p  l0n0
+0  0.291776  True",74,44,2,0.02887725830078125
+0,No,9,9,4,1,mindegree,"   l1n1         p
+0  True  0.037984",10,14,2,0.023730039596557617
+0,No,14,9,4,1,mindegree,"    l2n0         p
+0  False  0.819807",36,36,2,0.025426149368286133
+0,No,9,9,4,1,mindegree,"   l0n1         p
+0  True  0.524744",24,24,2,0.025176048278808594
+0,No,10,9,4,1,mindegree,"    l2n1         p
+0  False  0.372504",4,10,2,0.018101930618286133
+0,No,13,9,4,1,mindegree,"   l2n0         p
+0  True  0.043095",16,12,2,0.02604389190673828
+0,No,10,9,4,1,mindegree,"   l2n0         p
+0  True  0.128511",12,18,2,0.02398204803466797
+0,No,14,9,4,1,mindegree,"    l0n0       p
+0  False  0.3355",58,52,2,0.026369094848632812
+0,No,10,9,4,1,mindegree,"    l1n0         p
+0  False  0.722103",16,16,2,0.02440810203552246
+0,No,15,9,4,1,mindegree,"    l0n0         p
+0  False  0.088097",54,38,2,0.03049492835998535
+0,No,15,9,4,1,mindegree,"   l1n1         p
+0  True  0.038746",24,14,2,0.023260116577148438
+0,No,9,9,4,1,mindegree,"   l1n1      p
+0  True  0.795",4,10,2,0.013195037841796875
+0,No,13,9,4,1,mindegree,"   l1n1      p
+0  True  0.075",14,20,2,0.023759841918945312
+0,No,9,9,4,1,mindegree,"   l0n1     p
+0  True  0.72",50,44,2,0.03034186363220215
+0,No,11,9,4,1,mindegree,"   l1n2         p
+0  True  0.153094",34,26,2,0.02777099609375
+0,No,10,9,4,1,mindegree,"    l1n1         p
+0  False  0.426519",34,30,2,0.02806401252746582
+0,No,13,9,4,1,mindegree,"   l0n1         p
+0  True  0.040498",8,10,2,0.023921966552734375
+0,No,14,9,4,1,mindegree,"   l0n1     p
+0  True  0.61",114,90,2,0.03665900230407715
+0,No,12,9,4,1,mindegree,"    l2n1         p
+0  False  0.791173",40,52,2,0.033852338790893555
+0,No,10,9,4,1,mindegree,"   l0n1         p
+0  True  0.183583",48,50,2,0.02841496467590332
+0,No,10,9,4,1,mindegree,"   l0n2    p
+0  True  0.8",12,20,2,0.018776893615722656
+0,No,11,9,4,1,mindegree,"   l0n2       p
+0  True  0.0452",12,10,2,0.01895308494567871
+0,No,11,9,4,1,mindegree,"   l2n1        p
+0  True  0.45716",24,28,2,0.02903914451599121
+0,No,13,9,4,1,mindegree,"          p   l1n1
+0  0.189449  False",120,92,2,0.03400421142578125
+0,No,12,9,4,1,mindegree,"    l1n2       p
+0  False  0.7145",38,44,2,0.031514883041381836
+0,No,9,9,4,1,mindegree,"   l0n1         p
+0  True  0.064449",6,8,2,0.016937971115112305
+0,No,14,9,4,1,random,"    l0n0         p
+0  False  0.017846",16,10,2,0.022247791290283203
+0,No,11,9,4,1,random,"          p
+0  0.965385",18,24,0,0.021947860717773438
+0,No,8,9,4,1,random,"    l2n0     p
+0  False  0.88",26,30,2,0.02950596809387207
+0,No,12,9,4,1,random,"   l0n0         p
+0  True  0.085839",0,2,2,0.011962890625
+0,No,11,9,4,1,random,"          p
+0  0.026231",6,8,0,0.01693105697631836
+0,No,10,9,4,1,random,"   l1n1         p
+0  True  0.584058",28,32,2,0.018619775772094727
+0,No,12,9,4,1,random,"   l1n0         p
+0  True  0.277809",14,18,2,0.023179054260253906
+0,No,16,9,4,1,random,"          p  l1n1
+0  0.037816  True",148,76,2,0.033890724182128906
+0,No,10,9,4,1,random,"   l1n1     p
+0  True  0.51",72,66,2,0.03005695343017578
+0,No,9,9,4,1,random,"   l1n2         p
+0  True  0.272404",28,30,2,0.026618242263793945
+0,No,12,9,4,1,random,"    l1n0         p
+0  False  0.036054",20,18,2,0.026536941528320312
+0,No,13,9,4,1,random,"    l0n2         p
+0  False  0.171404",16,16,2,0.022042036056518555
+0,No,13,9,4,1,random,"   l2n0         p
+0  True  0.049281",8,8,2,0.017156124114990234
+0,No,11,9,4,1,random,"   l0n2      p
+0  True  0.345",22,32,2,0.025706052780151367
+0,No,11,9,4,1,random,"    l1n2         p
+0  False  0.202733",28,30,2,0.02010798454284668
+0,No,13,9,4,1,random,"   l2n2       p
+0  True  0.0339",56,54,2,0.03107595443725586
+0,No,14,9,4,1,random,"   l2n2         p
+0  True  0.520086",124,128,2,0.033560991287231445
+0,No,12,9,4,1,random,"    l2n2         p
+0  False  0.647226",62,64,2,0.02968597412109375
+0,No,14,9,4,1,random,"    l1n1         p
+0  False  0.051626",42,30,2,0.028396129608154297
+0,No,11,9,4,1,random,"   l1n1     p
+0  True  0.63",10,20,2,0.020707130432128906
+0,No,11,9,4,1,random,"   l0n2         p
+0  True  0.107173",18,16,2,0.026354074478149414
+0,No,6,9,4,1,random,"    l2n0         p
+0  False  0.068755",2,6,2,0.015779733657836914
+0,No,12,9,4,1,random,"    l0n1        p
+0  False  0.25344",78,78,2,0.031103849411010742
+0,No,12,9,4,1,random,"   l2n2       p
+0  True  0.4096",32,32,2,0.023615121841430664
+0,No,8,9,4,1,random,"   l0n1         p
+0  True  0.059725",8,10,2,0.023135900497436523
+0,No,14,9,4,1,random,"    l0n1         p
+0  False  0.061059",26,14,2,0.02472209930419922
+0,No,11,9,4,1,random,"   l0n2         p
+0  True  0.295137",26,24,2,0.02568507194519043
+0,No,11,9,4,1,random,"          p
+0  0.085905",8,10,0,0.016016006469726562
+0,No,13,9,4,1,random,"   l1n2         p
+0  True  0.323603",6,8,2,0.01930689811706543
+0,No,12,9,4,1,random,"   l0n0      p
+0  True  0.243",62,76,2,0.027551889419555664
+0,No,10,9,4,5,minfill,"   l0n1  l0n0   l0n2   l2n2         p
+0  True  True  False  False  0.252381",108,96,10,0.05153703689575195
+0,No,10,9,4,5,minfill,"   l2n0   l0n0  l0n2   l2n1         p
+0  True  False  True  False  0.231536",102,62,24,0.05855703353881836
+0,No,8,9,4,5,minfill,"    l0n0   l1n1  l2n1        p
+0  False  False  True  0.34088",8,12,6,0.03578972816467285
+0,No,14,9,4,5,minfill,"   l1n0  l2n0   l0n0         p
+0  True  True  False  0.035696",16,6,8,0.033963918685913086
+0,No,13,9,4,5,minfill,"   l0n0   l2n1  l0n1   l2n0         p
+0  True  False  True  False  0.011833",52,20,16,0.050733089447021484
+0,No,16,9,4,5,minfill,"    l0n2  l1n2  l2n2         p
+0  False  True  True  0.171961",12,4,10,0.037615060806274414
+0,No,12,9,4,5,minfill,"   l2n2   l0n0   l2n1   l0n1         p
+0  True  False  False  False  0.118008",94,82,16,0.05412101745605469
+0,No,12,9,4,5,minfill,"   l1n1   l0n2         p
+0  True  False  0.151381",6,2,4,0.023231029510498047
+0,No,12,9,4,5,minfill,"   l0n1  l0n0   l1n1   l2n0         p
+0  True  True  False  False  0.018335",14,2,12,0.03903627395629883
+0,No,11,9,4,5,minfill,"    l1n0   l1n1  l2n2   l1n2         p
+0  False  False  True  False  0.368484",39,24,31,0.05065584182739258
+0,No,9,9,4,5,minfill,"    l0n2   l2n1   l2n0   l2n2         p
+0  False  False  False  False  0.026134",14,12,10,0.04539084434509277
+0,No,13,9,4,5,minfill,"    l0n2   l2n1   l1n0        p
+0  False  False  False  0.06484",30,28,10,0.04306793212890625
+0,No,11,9,4,5,minfill,"   l2n0  l1n2         p
+0  True  True  0.014283",20,14,6,0.03633308410644531
+0,No,10,9,4,5,minfill,"   l0n1   l2n1   l0n0         p
+0  True  False  False  0.202364",14,10,6,0.03628706932067871
+0,No,14,9,4,5,minfill,"   l0n0   l0n1  l2n0   l2n2         p
+0  True  False  True  False  0.114409",52,32,10,0.0447239875793457
+0,No,11,9,4,5,minfill,"    l1n1   l2n1  l0n1  l0n0         p
+0  False  False  True  True  0.020316",14,4,10,0.041615962982177734
+0,No,10,9,4,5,minfill,"   l1n1         p
+0  True  0.112157",14,10,2,0.02722907066345215
+0,No,12,9,4,5,minfill,"   l2n2   l2n0  l0n1         p
+0  True  False  True  0.048607",46,28,8,0.049391984939575195
+0,No,11,9,4,5,minfill,"    l1n1  l1n2  l0n1         p
+0  False  True  True  0.003573",98,80,14,0.05081605911254883
+0,No,13,9,4,5,minfill,"    l0n0   l2n1   l1n2        p
+0  False  False  False  0.09211",22,14,8,0.041168928146362305
+0,No,10,9,4,5,minfill,"    l1n0  l0n1   l2n0         p
+0  False  True  False  0.047177",40,34,8,0.038861989974975586
+0,No,10,9,4,5,minfill,"   l2n0   l1n1   l1n0   l0n2         p
+0  True  False  False  False  0.337307",54,28,28,0.04935121536254883
+0,No,11,9,4,5,minfill,"    l0n2  l1n1   l1n0   l0n0        p
+0  False  True  False  False  0.19092",16,16,10,0.03973507881164551
+0,No,14,9,4,5,minfill,"          p   l0n0   l1n1  l0n2   l1n0
+0  0.084542  False  False  True  False",72,24,35,0.04903602600097656
+0,No,14,9,4,5,minfill,"    l1n2   l1n1         p
+0  False  False  0.119272",84,58,6,0.039839982986450195
+0,No,13,9,4,5,minfill,"   l2n0   l2n1   l0n2         p
+0  True  False  False  0.044334",30,18,8,0.04656720161437988
+0,No,11,9,4,5,minfill,"   l2n2  l2n0   l0n1   l1n2         p
+0  True  True  False  False  0.045686",74,54,32,0.05755186080932617
+0,No,14,9,4,5,minfill,"   l0n2   l1n1   l0n1  l1n0         p
+0  True  False  False  True  0.033844",34,16,17,0.04732394218444824
+0,No,13,9,4,5,minfill,"    l1n1  l0n0   l1n0   l1n2   l0n2         p
+0  False  True  False  False  False  0.215447",20,18,19,0.051386117935180664
+0,No,11,9,4,5,minfill,"    l1n0  l2n0         p
+0  False  True  0.010651",6,6,6,0.030021190643310547
+0,No,12,9,4,5,mindegree,"   l0n0  l2n2  l2n0         p
+0  True  True  True  0.242243",42,28,8,0.03720998764038086
+0,No,12,9,4,5,mindegree,"   l1n2   l0n2         p
+0  True  False  0.026581",24,18,6,0.030323028564453125
+0,No,14,9,4,5,mindegree,"    l2n2  l2n0   l0n0  l1n0  l1n2         p
+0  False  True  False  True  True  0.036708",24,4,22,0.045652151107788086
+0,No,10,9,4,5,mindegree,"   l0n0   l1n0   l2n2  l2n1  l0n1         p
+0  True  False  False  True  True  0.156545",32,6,21,0.04448723793029785
+0,No,15,9,4,5,mindegree,"   l0n0  l1n1  l2n0         p
+0  True  True  True  0.254324",76,58,8,0.04150199890136719
+0,No,10,9,4,5,mindegree,"    l0n0   l1n1   l1n2         p
+0  False  False  False  0.078116",32,24,8,0.03197908401489258
+0,No,13,9,4,5,mindegree,"   l1n0  l2n2   l0n1         p
+0  True  True  False  0.146059",28,14,8,0.035736799240112305
+0,No,15,9,4,5,mindegree,"   l1n1   l0n0        p
+0  True  False  0.06561",28,14,6,0.0321202278137207
+0,No,13,9,4,5,mindegree,"   l0n1   l1n1   l2n2         p
+0  True  False  False  0.160321",76,72,8,0.03924298286437988
+0,No,8,9,4,5,mindegree,"   l2n0  l0n0   l1n2         p
+0  True  True  False  0.112411",68,38,8,0.03374004364013672
+0,No,11,9,4,5,mindegree,"   l2n0   l1n0         p
+0  True  False  0.038206",96,76,4,0.033815860748291016
+0,No,13,9,4,5,mindegree,"    l2n1  l0n0   l0n1         p
+0  False  True  False  0.071806",86,64,8,0.039005279541015625
+0,No,14,9,4,5,mindegree,"    l1n0         p
+0  False  0.097976",30,14,2,0.023720979690551758
+0,No,13,9,4,5,mindegree,"   l0n1   l0n0   l2n2   l2n0         p
+0  True  False  False  False  0.376261",32,26,10,0.033573150634765625
+0,No,11,9,4,5,mindegree,"   l0n1   l0n0  l1n1         p
+0  True  False  True  0.029903",18,12,8,0.03205466270446777
+0,No,12,9,4,5,mindegree,"   l1n2   l0n0  l1n0         p
+0  True  False  True  0.138834",12,4,12,0.032874107360839844
+0,No,11,9,4,5,mindegree,"    l0n1  l2n1  l1n2         p
+0  False  True  True  0.056714",38,20,14,0.0344541072845459
+0,No,11,9,4,5,mindegree,"    l2n0  l2n1  l0n1  l0n2         p
+0  False  True  True  True  0.035018",28,22,16,0.037474870681762695
+0,No,10,9,4,5,mindegree,"   l0n1   l0n2  l1n2   l2n0         p
+0  True  False  True  False  0.054672",22,12,10,0.0298459529876709
+0,No,11,9,4,5,mindegree,"    l0n1  l2n1  l2n2   l0n2  l0n0         p
+0  False  True  True  False  True  0.024848",66,48,18,0.0420529842376709
+0,No,16,9,4,5,mindegree,"         p   l0n2   l0n1  l1n2   l1n0
+0  0.01266  False  False  True  False",108,40,30,0.04302811622619629
+0,No,16,9,4,5,mindegree,"   l0n2  l0n0         p
+0  True  True  0.041509",16,6,6,0.02900981903076172
+0,No,14,9,4,5,mindegree,"   l2n1   l0n2         p
+0  True  False  0.127892",26,18,6,0.03259110450744629
+0,No,14,9,4,5,mindegree,"   l0n2  l0n0  l2n1         p
+0  True  True  True  0.103572",8,4,6,0.026808977127075195
+0,No,9,9,4,5,mindegree,"   l1n0   l0n2   l0n1   l2n1         p
+0  True  False  False  False  0.112363",14,14,10,0.03361701965332031
+0,No,15,9,4,5,mindegree,"   l0n2   l2n0   l1n0  l0n0         p
+0  True  False  False  True  0.260203",135,114,17,0.04590106010437012
+0,No,9,9,4,5,mindegree,"    l2n2  l0n0   l1n0        p
+0  False  True  False  0.42624",20,18,8,0.02651810646057129
+0,No,11,9,4,5,mindegree,"   l0n0  l0n2  l1n2        p
+0  True  True  True  0.51744",12,16,6,0.027806997299194336
+0,No,13,9,4,5,mindegree,"    l0n0  l2n2  l1n2  l0n2         p
+0  False  True  True  True  0.287227",42,34,10,0.0368351936340332
+0,No,11,9,4,5,mindegree,"    l2n0   l0n2   l1n0   l2n2         p
+0  False  False  False  False  0.241544",40,24,20,0.044342994689941406
+0,No,8,9,4,5,random,"    l0n2  l0n0  l2n1  l0n1         p
+0  False  True  True  True  0.001078",2,0,8,0.023734092712402344
+0,No,14,9,4,5,random,"   l0n2  l2n2   l1n1        p
+0  True  True  False  0.07867",68,38,14,0.04128265380859375
+0,No,12,9,4,5,random,"    l0n0  l0n2  l2n2   l1n2         p
+0  False  True  True  False  0.002793
+0  False  True  True   True  0.002793",0,2,8,0.023833036422729492
+0,No,11,9,4,5,random,"   l0n2   l2n2   l1n2         p
+0  True  False  False  0.055941",12,10,6,0.027917146682739258
+0,No,13,9,4,5,random,"   l0n0   l0n2        p
+0  True  False  0.25647",14,14,4,0.026688098907470703
+0,No,14,9,4,5,random,"   l0n1   l0n2   l1n1  l1n0         p
+0  True  False  False  True  0.058452",22,2,16,0.03294515609741211
+0,No,15,9,4,5,random,"   l0n0   l2n1         p
+0  True  False  0.063847",46,30,4,0.03305697441101074
+0,No,13,9,4,5,random,"   l2n0   l2n1   l0n1         p
+0  True  False  False  0.200088",38,22,8,0.03810405731201172
+0,No,15,9,4,5,random,"    l0n1   l0n0         p
+0  False  False  0.023892",4,4,4,0.02085423469543457
+0,No,14,9,4,5,random,"    l0n2         p
+0  False  0.086875",20,14,2,0.024602174758911133
+0,No,9,9,4,5,random,"   l0n2  l0n0   l2n1  l0n1         p
+0  True  True  False  True  0.127325",10,4,10,0.025573253631591797
+0,No,13,9,4,5,random,"          p   l0n2   l1n2  l1n1
+0  0.068269  False  False  True",76,56,14,0.03755903244018555
+0,No,14,9,4,5,random,"   l0n1  l2n0  l1n1         p
+0  True  True  True  0.067198",12,6,8,0.027180194854736328
+0,No,15,9,4,5,random,"   l1n1   l1n0   l0n2        p
+0  True  False  False  0.32046",10,6,8,0.02914905548095703
+0,No,12,9,4,5,random,"   l1n0  l2n1         p
+0  True  True  0.011289",6,6,6,0.027121782302856445
+0,No,11,9,4,5,random,"    l0n2   l0n1   l1n0   l2n0         p
+0  False  False  False  False  0.159415",16,2,12,0.03166985511779785
+0,No,7,9,4,5,random,"    l1n0  l0n1  l0n2  l1n1         p
+0  False  True  True  True  0.246324",8,6,10,0.026257038116455078
+0,No,11,9,4,5,random,"    l0n1   l2n1   l2n0         p
+0  False  False  False  0.201313",92,74,8,0.03970003128051758
+0,No,9,9,4,5,random,"    l2n2   l0n1  l1n1        p
+0  False  False  True  0.20702",28,22,8,0.03378605842590332
+0,No,12,9,4,5,random,"    l0n2   l0n1   l1n0         p
+0  False  False  False  0.426871",2,2,6,0.0211179256439209
+0,No,8,9,4,5,random,"   l0n1  l1n1  l1n0  l0n2  l0n0        p
+0  True  True  True  True  True  0.01925",20,2,22,0.03876495361328125
+0,No,16,9,4,5,random,"   l1n0   l2n1   l0n2  l2n2         p
+0  True  False  False  True  0.032472",50,20,32,0.050453901290893555
+0,No,9,9,4,5,random,"   l0n2   l0n1  l1n1  l1n0         p
+0  True  False  True  True  0.516672",12,16,10,0.029967069625854492
+0,No,10,9,4,5,random,"    l2n0  l2n2         p
+0  False  True  0.141098",18,20,4,0.028950929641723633
+0,No,13,9,4,5,random,"    l0n2  l2n0         p
+0  False  True  0.034723",8,6,4,0.02489185333251953
+0,No,10,9,4,5,random,"    l2n0   l0n0   l2n2  l0n2         p
+0  False  False  False  True  0.046204",42,26,16,0.04143691062927246
+0,No,11,9,4,5,random,"    l2n0  l0n2   l1n2   l0n1         p
+0  False  True  False  False  0.005866",33,10,19,0.037299156188964844
+0,No,11,9,4,5,random,"    l2n0   l2n2   l1n1         p
+0  False  False  False  0.246877
+0   True  False  False  0.246877",25,20,11,0.03557276725769043
+0,No,16,9,4,5,random,"   l0n0   l0n1  l0n2  l2n2  l2n0         p
+0  True  False  True  True  True  0.217017",168,144,18,0.04993581771850586
+0,No,10,9,4,5,random,"    l1n1   l0n2   l2n2         p
+0  False  False  False  0.139074",60,46,8,0.03596806526184082
+0,No,27,16,0,1,minfill,"          p  l3n2
+0  0.520475  True",260,268,2,0.07480716705322266
+0,No,30,16,0,1,minfill,"         p   l1n1
+0  0.57519  False",12,12,2,0.011024236679077148
+0,No,28,16,0,1,minfill,"          p  l3n3
+0  0.546537  True",308,284,2,0.07494187355041504
+0,No,30,16,0,1,minfill,"          p   l1n0
+0  0.582463  False",28,28,2,0.015989065170288086
+0,No,29,16,0,1,minfill,"      p   l0n1
+0  0.96  False",0,0,2,0.0031409263610839844
+0,No,30,16,0,1,minfill,"     p  l0n1
+0  0.9  True",0,0,2,0.003253936767578125
+0,No,25,16,0,1,minfill,"          p   l3n1
+0  0.893119  False",32,32,2,0.024309873580932617
+0,No,23,16,0,1,minfill,"        p   l3n0
+0  0.8299  False",192,164,2,0.047331809997558594
+0,No,31,16,0,1,minfill,"          p  l2n1
+0  0.655622  True",88,76,2,0.02712702751159668
+0,No,30,16,0,1,minfill,"      p   l0n0
+0  0.83  False",0,0,2,0.0031528472900390625
+0,No,34,16,0,1,minfill,"          p   l1n3
+0  0.582841  False",60,60,2,0.0213470458984375
+0,No,32,16,0,1,minfill,"          p  l2n3
+0  0.529162  True",180,188,2,0.050209999084472656
+0,No,28,16,0,1,minfill,"          p  l1n0
+0  0.523828  True",28,28,2,0.015733003616333008
+0,No,33,16,0,1,minfill,"          p   l3n1
+0  0.649834  False",108,108,2,0.05316305160522461
+0,No,28,16,0,1,minfill,"          p   l3n1
+0  0.618037  False",640,556,2,0.061840057373046875
+0,No,32,16,0,1,minfill,"         p  l2n3
+0  0.50828  True",96,84,2,0.03240609169006348
+0,No,33,16,0,1,minfill,"          p   l2n1
+0  0.516593  False",156,144,2,0.046584129333496094
+0,No,31,16,0,1,minfill,"          p   l1n3
+0  0.713379  False",28,28,2,0.015789031982421875
+0,No,32,16,0,1,minfill,"         p  l2n0
+0  0.53708  True",120,108,2,0.03334617614746094
+0,No,33,16,0,1,minfill,"          p  l3n2
+0  0.577284  True",412,412,2,0.0774850845336914
+0,No,31,16,0,1,minfill,"          p   l1n3
+0  0.531894  False",28,28,2,0.015829086303710938
+0,No,30,16,0,1,minfill,"      p  l0n3
+0  0.65  True",0,0,2,0.0031659603118896484
+0,No,32,16,0,1,minfill,"          p  l1n3
+0  0.754755  True",28,28,2,0.015822887420654297
+0,No,34,16,0,1,minfill,"          p  l3n0
+0  0.541708  True",808,796,2,0.09470677375793457
+0,No,31,16,0,1,minfill,"          p   l1n0
+0  0.554264  False",60,60,2,0.021538734436035156
+0,No,35,16,0,1,minfill,"      p   l0n2
+0  0.71  False",0,0,2,0.003155946731567383
+0,No,33,16,0,1,minfill,"      p   l0n2
+0  0.68  False",0,0,2,0.0032720565795898438
+0,No,32,16,0,1,minfill,"         p   l1n1
+0  0.52592  False",12,12,2,0.01085805892944336
+0,No,32,16,0,1,minfill,"      p   l0n3
+0  0.98  False",0,0,2,0.0031392574310302734
+0,No,26,16,0,1,minfill,"          p   l3n0
+0  0.568624  False",616,588,2,0.07965421676635742
+0,No,33,16,0,1,mindegree,"          p  l1n1
+0  0.659489  True",28,28,2,0.014555931091308594
+0,No,33,16,0,1,mindegree,"          p  l3n3
+0  0.596192  True",88,84,2,0.031076908111572266
+0,No,33,16,0,1,mindegree,"          p  l3n2
+0  0.650497  True",168,156,2,0.037368059158325195
+0,No,33,16,0,1,mindegree,"          p  l2n0
+0  0.556431  True",400,380,2,0.041285037994384766
+0,No,29,16,0,1,mindegree,"          p  l2n1
+0  0.599899  True",112,108,2,0.02791905403137207
+0,No,29,16,0,1,mindegree,"          p  l3n0
+0  0.716992  True",132,112,2,0.03877520561218262
+0,No,35,16,0,1,mindegree,"      p  l0n1
+0  0.71  True",0,0,2,0.0031528472900390625
+0,No,25,16,0,1,mindegree,"      p  l0n3
+0  0.83  True",0,0,2,0.003231048583984375
+0,No,31,16,0,1,mindegree,"          p   l1n3
+0  0.652132  False",28,28,2,0.01447296142578125
+0,No,31,16,0,1,mindegree,"          p   l3n2
+0  0.538616  False",360,364,2,0.05908083915710449
+0,No,34,16,0,1,mindegree,"      p  l0n0
+0  0.65  True",0,0,2,0.0030870437622070312
+0,No,33,16,0,1,mindegree,"          p   l1n1
+0  0.784068  False",12,12,2,0.010274887084960938
+0,No,24,16,0,1,mindegree,"          p  l3n1
+0  0.637324  True",116,116,2,0.03927779197692871
+0,No,33,16,0,1,mindegree,"      p   l0n0
+0  0.56  False",0,0,2,0.0032351016998291016
+0,No,38,16,0,1,mindegree,"          p   l3n1
+0  0.719549  False",1200,1116,2,0.06873083114624023
+0,No,29,16,0,1,mindegree,"          p   l2n3
+0  0.500103  False",164,164,2,0.03700685501098633
+0,No,27,16,0,1,mindegree,"          p  l3n0
+0  0.749278  True",400,364,2,0.049761056900024414
+0,No,26,16,0,1,mindegree,"       p   l1n2
+0  0.601  False",12,12,2,0.010123014450073242
+0,No,27,16,0,1,mindegree,"          p  l2n3
+0  0.568876  True",16,16,2,0.01328897476196289
+0,No,26,16,0,1,mindegree,"          p   l3n3
+0  0.612838  False",224,212,2,0.04592394828796387
+0,No,29,16,0,1,mindegree,"          p  l3n0
+0  0.527296  True",40,40,2,0.021392107009887695
+0,No,22,16,0,1,mindegree,"          p   l2n1
+0  0.508394  False",120,108,2,0.03193998336791992
+0,No,26,16,0,1,mindegree,"        p   l1n2
+0  0.5445  False",4,4,2,0.006493806838989258
+0,No,29,16,0,1,mindegree,"          p   l3n1
+0  0.597694  False",216,204,2,0.04251980781555176
+0,No,30,16,0,1,mindegree,"          p   l3n2
+0  0.502271  False",480,476,2,0.055119991302490234
+0,No,26,16,0,1,mindegree,"      p   l0n3
+0  0.69  False",0,0,2,0.0032100677490234375
+0,No,36,16,0,1,mindegree,"      p   l0n0
+0  0.65  False",0,0,2,0.003094196319580078
+0,No,30,16,0,1,mindegree,"      p   l0n1
+0  0.58  False",0,0,2,0.0031061172485351562
+0,No,30,16,0,1,mindegree,"      p   l0n2
+0  0.88  False",0,0,2,0.0030701160430908203
+0,No,30,16,0,1,mindegree,"          p   l3n0
+0  0.516094  False",300,268,2,0.05079984664916992
+0,No,29,16,0,1,random,"          p   l1n2
+0  0.613376  False",60,60,2,0.018835067749023438
+0,No,27,16,0,1,random,"          p   l2n0
+0  0.642352  False",156,140,2,0.028419971466064453
+0,No,26,16,0,1,random,"          p  l2n1
+0  0.603056  True",40,40,2,0.021491050720214844
+0,No,32,16,0,1,random,"          p  l3n2
+0  0.574925  True",1464,1532,2,0.06581997871398926
+0,No,30,16,0,1,random,"          p   l2n1
+0  0.506939  False",164,140,2,0.02885723114013672
+0,No,24,16,0,1,random,"          p  l1n0
+0  0.505174  True",28,28,2,0.014179706573486328
+0,No,33,16,0,1,random,"         p   l3n3
+0  0.57131  False",1108,956,2,0.05689692497253418
+0,No,26,16,0,1,random,"          p   l3n1
+0  0.894234  False",288,284,2,0.039383888244628906
+0,No,28,16,0,1,random,"      p  l0n1
+0  0.52  True",0,0,2,0.003034830093383789
+0,No,35,16,0,1,random,"          p   l1n1
+0  0.562605  False",28,28,2,0.014243841171264648
+0,No,32,16,0,1,random,"         p   l3n2
+0  0.59436  False",4916,4668,2,0.09629201889038086
+0,No,29,16,0,1,random,"      p  l0n0
+0  0.96  True",0,0,2,0.003111124038696289
+0,No,33,16,0,1,random,"      p  l0n1
+0  0.66  True",0,0,2,0.003002166748046875
+0,No,31,16,0,1,random,"      p  l2n1
+0  0.68  True",0,0,2,0.0030319690704345703
+0,No,33,16,0,1,random,"         p   l2n1
+0  0.60004  False",204,204,2,0.03391408920288086
+0,No,28,16,0,1,random,"        p   l2n0
+0  0.5796  False",212,212,2,0.03749585151672363
+0,No,34,16,0,1,random,"      p  l0n3
+0  0.74  True",0,0,2,0.0030069351196289062
+0,No,35,16,0,1,random,"          p  l1n2
+0  0.556204  True",28,28,2,0.014250993728637695
+0,No,32,16,0,1,random,"          p  l2n3
+0  0.521062  True",144,132,2,0.02809906005859375
+0,No,29,16,0,1,random,"          p  l2n0
+0  0.611854  True",136,124,2,0.024338960647583008
+0,No,25,16,0,1,random,"          p   l2n1
+0  0.513921  False",204,188,2,0.029680967330932617
+0,No,24,16,0,1,random,"          p  l3n0
+0  0.590118  True",1308,1292,2,0.05772113800048828
+0,No,26,16,0,1,random,"      p  l0n0
+0  0.87  True",0,0,2,0.002979755401611328
+0,No,35,16,0,1,random,"          p   l1n2
+0  0.590529  False",60,60,2,0.01896381378173828
+0,No,36,16,0,1,random,"          p   l1n2
+0  0.609744  False",60,60,2,0.01884317398071289
+0,No,29,16,0,1,random,"          p   l2n3
+0  0.768552  False",124,124,2,0.024279117584228516
+0,No,28,16,0,1,random,"         p  l1n1
+0  0.50235  True",28,28,2,0.01430511474609375
+0,No,28,16,0,1,random,"          p   l2n0
+0  0.590221  False",128,128,2,0.027437210083007812
+0,No,31,16,0,1,random,"         p   l1n0
+0  0.62392  False",12,12,2,0.010020017623901367
+0,No,33,16,0,1,random,"          p  l2n0
+0  0.503443  True",408,380,2,0.03690505027770996
+0,No,29,16,0,9,minfill,"           p  l2n1  l3n3  l1n1  l0n1   l1n2  l0n0  l2n3  l2n0
+15  0.063221  True  True  True  True  False  True  True  True",929,624,399,0.13504600524902344
+0,No,28,16,0,9,minfill,"          p   l0n0  l1n2   l2n2  l2n0  l0n3   l1n0   l2n1   l2n3
+2  0.041024  False  True  False  True  True  False  False  False",1924,1312,601,0.13697099685668945
+0,No,31,16,0,9,minfill,"           p  l1n0  l1n2  l0n2  l2n2  l3n1   l1n3   l0n0
+10  0.091796  True  True  True  True  True  False  False",528,240,299,0.1027669906616211
+0,No,34,16,0,9,minfill,"          p   l2n0   l0n3  l2n3   l3n0   l0n0   l0n1
+0  0.085678  False  False  True  False  False  False",2641,2016,157,0.12215495109558105
+0,No,25,16,0,9,minfill,"          p   l2n2   l0n0   l2n0  l1n2   l3n3  l3n1   l0n3   l2n3
+0  0.228799  False  False  False  True  False  True  False  False",1026,808,367,0.14665985107421875
+0,No,28,16,0,9,minfill,"          p  l3n0   l3n2  l0n1  l0n3  l2n1  l3n1
+2  0.078118  True  False  True  True  True  True",1088,1200,132,0.14316987991333008
+0,No,36,16,0,9,minfill,"          p  l3n1  l2n2  l2n0   l1n3  l3n0  l1n1
+4  0.126323  True  True  True  False  True  True",1664,1184,156,0.12859606742858887
+0,No,31,16,0,9,minfill,"          p   l2n0  l1n1   l0n3  l3n0   l0n0  l0n2
+1  0.077167  False  True  False  True  False  True",1072,992,138,0.10881209373474121
+0,No,33,16,0,9,minfill,"          p   l1n3  l0n0  l3n0   l0n2  l1n1   l2n3
+3  0.095835  False  True  True  False  True  False",1562,1728,173,0.12556791305541992
+0,No,27,16,0,9,minfill,"          p   l3n1   l0n3   l3n0   l2n0  l2n1   l1n1  l0n0   l2n3
+0  0.060016  False  False  False  False  True  False  True  False",1152,864,338,0.14548683166503906
+0,No,23,16,0,9,minfill,"          p  l1n0  l0n3   l1n3   l3n0  l3n1   l3n2  l0n2  l3n3
+3  0.090854  True  True  False  False  True  False  True  True",1520,1040,525,0.17427825927734375
+0,No,33,16,0,9,minfill,"          p   l3n3   l0n1   l0n2   l2n0   l3n0  l2n3
+0  0.161273  False  False  False  False  False  True",1568,1632,126,0.13605999946594238
+0,No,32,16,0,9,minfill,"          p  l3n1  l2n3   l0n1   l0n0  l1n0   l1n3  l3n3
+2  0.057344  True  True  False  False  True  False  True",2048,2496,262,0.1512289047241211
+0,No,27,16,0,9,minfill,"          p  l0n3   l0n0   l0n2   l3n0  l2n2   l2n3   l3n2
+3  0.086068  True  False  False  False  True  False  False",1199,1344,82,0.1232762336730957
+0,No,30,16,0,9,minfill,"          p   l1n0  l3n1   l1n2  l0n0   l0n2   l2n1   l3n2
+4  0.084634  False  True  False  True  False  False  False",1204,936,336,0.14342403411865234
+0,No,27,16,0,9,minfill,"          p  l3n1   l1n1   l3n3   l0n3  l1n2
+2  0.077981  True  False  False  False  True",320,288,73,0.0929558277130127
+0,No,29,16,0,9,minfill,"           p   l0n2  l2n0   l2n3  l3n1   l3n3   l2n2   l1n3   l3n2
+12  0.071581  False  True  False  True  False  False  False  False",1344,832,631,0.16687989234924316
+0,No,31,16,0,9,minfill,"          p  l0n1  l1n2   l3n3   l1n0   l3n2   l0n3  l3n1
+2  0.202895  True  True  False  False  False  False  True",2031,1952,266,0.1610569953918457
+0,No,38,16,0,9,minfill,"          p   l3n2  l3n3  l0n1  l2n2   l2n1   l2n3   l0n3  l0n0
+3  0.031344  False  True  True  True  False  False  False  True",3983,3392,633,0.18193578720092773
+0,No,24,16,0,9,minfill,"         p   l3n1  l0n3  l1n1  l2n0   l1n2   l3n0
+4  0.07839  False  True  True  True  False  False",408,280,137,0.09866523742675781
+0,No,28,16,0,9,minfill,"          p  l1n1  l3n0   l0n2   l0n3  l0n1   l3n3   l3n1   l2n0
+5  0.049809  True  True  False  False  True  False  False  False",2768,2304,536,0.16383671760559082
+0,No,27,16,0,9,minfill,"          p   l1n0   l3n1   l1n1   l3n2   l3n0   l1n2   l3n3  l2n2
+0  0.071288  False  False  False  False  False  False  False  True",2445,2208,648,0.1933732032775879
+0,No,28,16,0,9,minfill,"          p   l3n2   l2n2   l1n3  l0n0   l0n3   l2n1   l3n0   l2n0
+0  0.063429  False  False  False  True  False  False  False  False",1019,832,265,0.14071917533874512
+0,No,33,16,0,9,minfill,"         p   l0n3   l1n0  l1n3   l2n2  l2n0  l1n2   l3n0
+0  0.03457  False  False  True  False  True  True  False",790,512,208,0.1264193058013916
+0,No,33,16,0,9,minfill,"          p   l0n0  l1n1   l0n2   l0n1   l1n0  l2n3
+3  0.255635  False  True  False  False  False  True",348,160,140,0.0674891471862793
+0,No,25,16,0,9,minfill,"          p  l3n3   l3n2   l3n1  l1n2   l1n0   l2n2
+2  0.229783  True  False  False  True  False  False",1192,1104,141,0.14201092720031738
+0,No,26,16,0,9,minfill,"          p   l0n0   l1n1  l0n3  l1n3  l2n1   l0n1   l3n2
+2  0.067862  False  False  True  True  True  False  False",268,160,131,0.10246086120605469
+0,No,33,16,0,9,minfill,"          p  l2n1   l2n0   l1n2  l3n0  l1n0  l0n3  l1n3
+6  0.052094  True  False  False  True  True  True  True",856,608,344,0.12905001640319824
+0,No,25,16,0,9,minfill,"    l3n0   l2n0   l1n2   l3n2  l0n1  l2n1  l0n3         p
+0  False  False  False  False  True  True  True  0.035523",750,768,156,0.12264490127563477
+0,No,35,16,0,9,minfill,"          p  l3n1   l1n0   l1n2  l3n0  l2n1  l0n2  l0n1   l2n2
+4  0.077115  True  False  False  True  True  True  True  False",1223,1024,336,0.15311574935913086
+0,No,32,16,0,9,mindegree,"          p  l2n0  l1n3   l2n1   l2n2  l1n2  l3n2
+5  0.049745  True  True  False  False  True  True",880,608,161,0.09168195724487305
+0,No,30,16,0,9,mindegree,"         p   l0n3   l1n3  l0n1  l3n3  l2n3   l3n2  l1n2
+3  0.13663  False  False  True  True  True  False  True",1256,844,189,0.10514473915100098
+0,No,24,16,0,9,mindegree,"          p   l3n3  l2n0  l3n1   l3n0  l0n2  l1n0   l1n1   l2n3
+0  0.044367  False  True  True  False  True  True  False  False",1048,792,636,0.12491321563720703
+0,No,18,16,0,9,mindegree,"    l3n2   l3n3   l2n3   l0n0   l0n1  l3n1  l1n3   l2n2   l1n0         p
+0  False  False  False  False  False  True  True  False  False  0.069694",246,112,157,0.08649182319641113
+0,No,30,16,0,9,mindegree,"          p   l3n1   l3n2   l1n0  l3n3   l1n2  l0n1
+1  0.060874  False  False  False  True  False  True",1130,1112,151,0.10419797897338867
+0,No,32,16,0,9,mindegree,"       p   l3n0  l3n2   l1n0   l1n2  l3n1   l0n3   l2n0
+4  0.116  False  True  False  False  True  False  False",1418,1136,286,0.1153099536895752
+0,No,33,16,0,9,mindegree,"          p  l2n0  l1n0   l3n2   l2n1   l0n0   l2n3   l3n1
+3  0.067359  True  True  False  False  False  False  False",734,576,141,0.09286618232727051
+0,No,30,16,0,9,mindegree,"          p  l1n2  l2n2  l2n0  l0n2   l0n1  l0n0  l2n1
+5  0.075102  True  True  True  True  False  True  True",1096,896,281,0.09348297119140625
+0,No,36,16,0,9,mindegree,"          p   l3n3  l2n0  l3n1  l3n2   l2n2   l2n1
+1  0.076085  False  True  True  True  False  False",776,528,142,0.09707498550415039
+0,No,34,16,0,9,mindegree,"          p  l0n2  l2n2   l3n3  l1n1  l2n1   l2n3   l1n2  l3n2
+8  0.086562  True  True  False  True  True  False  False  True",1144,704,434,0.11629819869995117
+0,No,30,16,0,9,mindegree,"          p   l0n1   l1n2  l0n2   l1n3   l2n2   l3n2  l3n0   l3n3
+0  0.057547  False  False  True  False  False  False  True  False",2444,2496,261,0.12708568572998047
+0,No,29,16,0,9,mindegree,"           p  l2n1  l1n1  l0n3  l3n1   l1n3   l2n0  l0n1   l1n2   l1n0
+10  0.074229  True  True  True  True  False  False  True  False  False",736,192,700,0.12509918212890625
+0,No,31,16,0,9,mindegree,"          p   l0n0   l3n2   l3n3   l0n2  l0n1   l2n1
+0  0.071248  False  False  False  False  True  False",2964,2624,126,0.11023402214050293
+0,No,23,16,0,9,mindegree,"   l3n0   l3n2   l2n2   l2n0  l0n3   l0n1   l3n3  l1n1   l3n1         p
+0  True  False  False  False  True  False  False  True  False  0.043934",832,624,274,0.11852478981018066
+0,No,27,16,0,9,mindegree,"          p   l2n0  l1n1   l0n1   l1n2   l3n2  l2n1
+1  0.114226  False  True  False  False  False  True",322,240,114,0.08110618591308594
+0,No,29,16,0,9,mindegree,"          p   l0n1  l2n2   l2n3  l1n2  l1n1   l0n2   l1n0
+2  0.103044  False  True  False  True  True  False  False",418,272,155,0.07285308837890625
+0,No,29,16,0,9,mindegree,"          p  l0n3  l1n3   l3n0   l2n3   l0n2   l3n1  l0n1
+4  0.107271  True  True  False  False  False  False  True",1568,1248,264,0.10238385200500488
+0,No,25,16,0,9,mindegree,"   l0n3  l1n0  l1n1   l0n1   l3n0  l0n0   l3n3         p
+0  True  True  True  False  False  True  False  0.072636",66,40,32,0.057285308837890625
+0,No,22,16,0,9,mindegree,"          p   l0n3  l1n2   l0n1   l3n0  l2n1  l1n3  l1n0  l2n2
+2  0.070551  False  True  False  False  True  True  True  True",272,52,292,0.09192299842834473
+0,No,28,16,0,9,mindegree,"          p  l1n1   l1n3  l0n2  l1n0   l1n2  l3n1
+7  0.069898  True  False  True  True  False  True",409,288,162,0.07507514953613281
+0,No,24,16,0,9,mindegree,"          p  l3n1  l1n1   l1n2  l0n2   l0n3   l1n3   l0n0
+3  0.339345  True  True  False  True  False  False  False",221,128,117,0.07164907455444336
+0,No,31,16,0,9,mindegree,"          p   l3n2  l3n0  l0n3   l1n2   l0n0
+1  0.281801  False  True  True  False  False",1118,1248,68,0.08487892150878906
+0,No,30,16,0,9,mindegree,"          p   l2n2   l0n0   l0n1  l2n1  l3n2  l0n2   l2n3  l2n0
+3  0.066488  False  False  False  True  True  True  False  True",2177,2112,651,0.12572026252746582
+0,No,26,16,0,9,mindegree,"          p  l1n3  l3n1   l3n2  l3n3   l2n1   l0n1
+5  0.069918  True  True  False  True  False  False",2518,2544,141,0.10962986946105957
+0,No,35,16,0,9,mindegree,"          p   l3n2   l2n0  l1n0   l0n2  l0n1   l3n0   l3n3  l2n1
+1  0.036883  False  False  True  False  True  False  False  True",1438,1280,478,0.12302589416503906
+0,No,24,16,0,9,mindegree,"    l2n0  l2n1   l3n1   l2n2  l2n3   l1n2   l0n0         p
+0  False  True  False  False  True  False  False  0.163017",522,356,88,0.07990789413452148
+0,No,32,16,0,9,mindegree,"          p  l0n3  l3n0   l2n3   l0n0   l3n3   l0n2  l1n3
+0  0.081979  True  True  False  False  False  False  True",2116,2368,256,0.11316895484924316
+0,No,32,16,0,9,mindegree,"          p   l3n2  l3n1   l2n0  l0n0  l2n2  l1n1  l1n2
+6  0.087563  False  True  False  True  True  True  True",5277,5120,301,0.13466715812683105
+0,No,28,16,0,9,mindegree,"          p   l2n0   l3n1  l0n1  l1n2  l2n2
+0  0.096077  False  False  True  True  True",602,508,70,0.07073044776916504
+0,No,30,16,0,9,mindegree,"          p   l2n3  l2n1   l3n2  l0n1   l0n0  l3n3  l2n2   l1n3
+5  0.039265  False  True  False  True  False  True  True  False",2150,1696,434,0.12868404388427734
+0,No,31,16,0,9,random,"         p  l0n1  l3n2   l1n2  l3n1  l1n0  l3n0  l3n3
+6  0.06877  True  True  False  True  True  True  True",4304,4416,285,0.1414330005645752
+0,No,29,16,0,9,random,"    l3n1   l3n0   l1n0   l0n0  l2n3   l2n0         p
+0  False  False  False  False  True  False  0.112773",2827,2496,75,0.10532236099243164
+0,No,24,16,0,9,random,"          p   l1n1  l2n1   l2n2   l3n0   l0n1   l1n3   l3n3
+3  0.034263  False  True  False  False  False  False  False",3208,2124,336,0.11942696571350098
+0,No,31,16,0,9,random,"          p  l0n1   l3n3  l3n0  l0n2   l3n1   l2n3   l0n0   l1n3
+8  0.061166  True  False  True  True  False  False  False  False",5747,5248,552,0.16041803359985352
+0,No,32,16,0,9,random,"          p  l0n2  l2n3   l2n0  l1n0   l3n1   l1n1
+2  0.068314  True  True  False  True  False  False",6448,5024,135,0.13022112846374512
+0,No,32,16,0,9,random,"          p  l0n3   l2n3  l0n2  l0n1  l0n0   l1n3
+8  0.152168  True  False  True  True  True  False",408,256,165,0.066741943359375
+0,No,29,16,0,9,random,"          p   l1n1   l3n0   l0n1  l3n1  l1n0   l2n0  l0n3   l2n1
+1  0.039706  False  False  False  True  True  False  True  False",1884,1664,583,0.11888790130615234
+0,No,25,16,0,9,random,"          p  l3n3  l2n1   l0n2   l1n0   l0n0  l1n1  l3n1
+9  0.046607  True  True  False  False  False  True  True",1484,1216,304,0.10832095146179199
+0,No,27,16,0,9,random,"          p   l1n1  l2n0   l2n1   l3n0  l0n3   l0n0  l1n0   l0n1
+1  0.081829  False  True  False  False  True  False  True  False",610,408,280,0.0906212329864502
+0,No,27,16,0,9,random,"           p  l2n1  l2n2  l3n3  l3n2  l1n2   l3n1  l3n0
+11  0.036222  True  True  True  True  True  False  True",4288,3968,323,0.1415870189666748
+0,No,35,16,0,9,random,"          p   l3n2   l3n0   l2n1  l2n0   l2n3   l0n0   l1n1
+1  0.050905  False  False  False  True  False  False  False",2024,1568,160,0.10622286796569824
+0,No,27,16,0,9,random,"          p   l3n3   l1n2   l1n3  l2n2  l0n1  l2n3   l0n0
+1  0.093139  False  False  False  True  True  True  False",1337,1160,281,0.09552574157714844
+0,No,30,16,0,9,random,"          p   l1n3  l2n0   l3n3   l0n1   l0n2  l2n3   l1n2  l3n2
+1  0.047565  False  True  False  False  False  True  False  True",2384,2320,599,0.1273510456085205
+0,No,29,16,0,9,random,"          p  l1n3   l1n2  l2n2  l2n0   l0n0  l2n1  l2n3
+6  0.058012  True  False  True  True  False  True  True",1437,928,321,0.0966038703918457
+0,No,37,16,0,9,random,"           p  l1n0  l1n3  l0n1  l2n1  l2n3  l0n0   l3n2   l3n1
+11  0.061777  True  True  True  True  True  True  False  False",20088,16896,630,0.2555840015411377
+0,No,32,16,0,9,random,"         p   l0n0   l0n2  l3n1   l1n2  l3n2   l0n1
+0  0.09475  False  False  True  False  True  False",9334,10112,138,0.15819001197814941
+0,No,30,16,0,9,random,"          p   l2n3   l2n1  l1n0  l3n1  l1n2  l0n0   l3n3   l1n3
+6  0.029391  False  False  True  True  True  True  False  False",3174,2496,635,0.13561701774597168
+0,No,29,16,0,9,random,"          p   l2n3  l0n2  l1n2  l1n3   l1n0   l0n1
+4  0.096945  False  True  True  True  False  False",617,416,138,0.0689852237701416
+0,No,23,16,0,9,random,"          p  l3n0  l1n1  l1n2   l2n3   l3n1  l2n2  l2n1
+6  0.085626  True  True  True  False  False  True  True",435,336,93,0.0840449333190918
+0,No,31,16,0,9,random,"          p  l3n2   l2n2  l2n3   l3n1  l0n1  l1n1  l0n2
+2  0.091564  True  False  True  False  True  True  True",1597,1536,315,0.1480579376220703
+0,No,30,16,0,9,random,"          p   l3n1   l3n0   l1n3   l0n1   l0n3   l2n1
+0  0.074692  False  False  False  False  False  False",4240,4352,128,0.11693906784057617
+0,No,31,16,0,9,random,"          p   l3n1  l2n1   l1n2   l2n0  l0n2  l2n3  l3n2
+3  0.052958  False  True  False  False  True  True  True",11516,11008,271,0.19335389137268066
+0,No,26,16,0,9,random,"          p   l3n1   l1n1  l0n0  l1n2   l3n0   l3n3
+1  0.062385  False  False  True  True  False  False",3619,3968,139,0.12331604957580566
+0,No,30,16,0,9,random,"          p  l1n3  l0n1  l0n3   l3n2   l1n2  l2n3   l1n1
+8  0.085188  True  True  True  False  False  True  False",982,800,284,0.08903694152832031
+0,No,23,16,0,9,random,"          p  l3n0   l1n1   l1n3  l3n3  l1n2   l2n2  l2n3   l0n0
+7  0.058782  True  False  False  True  True  False  True  False",446,288,245,0.1006629467010498
+0,No,32,16,0,9,random,"          p  l1n0   l1n3  l0n0   l0n2   l3n3   l2n0
+2  0.251471  True  False  True  False  False  False",1770,1440,150,0.08714413642883301
+0,No,30,16,0,9,random,"          p  l3n1  l3n0   l0n1  l2n3   l0n0  l0n2  l0n3
+3  0.109539  True  True  False  True  False  True  True",5919,5888,281,0.14285683631896973
+0,No,31,16,0,9,random,"          p  l3n0  l0n2  l3n2  l2n0   l2n1  l3n3   l3n1
+1  0.079871  True  True  True  True  False  True  False",2880,3072,146,0.12314391136169434
+0,No,29,16,0,9,random,"          p  l2n3  l3n0  l0n0  l2n0  l2n2   l1n0
+6  0.056196  True  True  True  True  True  False",1414,1216,163,0.08910322189331055
+0,No,28,16,0,9,random,"           p  l3n3  l2n0  l0n3   l3n1  l2n1  l0n2  l0n0   l2n3  l2n2
+12  0.031415  True  True  True  False  True  True  True  False  True",2098,1472,644,0.1326920986175537
+0,No,30,16,8,1,minfill,"          p
+0  0.075191",88,58,0,0.08490109443664551
+0,No,21,16,8,1,minfill,"   l1n2         p
+0  True  0.108178",52,50,2,0.08859801292419434
+0,No,29,16,8,1,minfill,"   l3n1         p
+0  True  0.000683",92,54,2,0.10699105262756348
+0,No,31,16,8,1,minfill,"   l2n2         p
+0  True  0.001806",82,48,2,0.09723377227783203
+0,No,37,16,8,1,minfill,"    l0n2         p
+0  False  0.005796",176,98,2,0.09108805656433105
+0,No,32,16,8,1,minfill,"          p
+0  0.045855",46,34,0,0.07383203506469727
+0,No,30,16,8,1,minfill,"   l2n2         p
+0  True  0.052745",102,106,2,0.10375714302062988
+0,No,32,16,8,1,minfill,"          p
+0  0.015428",52,36,0,0.08263492584228516
+0,No,27,16,8,1,minfill,"    l2n3         p
+0  False  0.073039",238,144,2,0.09897613525390625
+0,No,27,16,8,1,minfill,"          p
+0  0.001519",10,12,0,0.05866384506225586
+0,No,25,16,8,1,minfill,"   l0n3       p
+0  True  0.0174",156,144,2,0.1037130355834961
+0,No,23,16,8,1,minfill,"          p
+0  0.101445",24,26,0,0.0747687816619873
+0,No,25,16,8,1,minfill,"          p
+0  0.017711",18,16,0,0.0517277717590332
+0,No,27,16,8,1,minfill,"   l2n2         p
+0  True  0.005284",78,54,2,0.07600617408752441
+0,No,35,16,8,1,minfill,"    l3n1         p
+0  False  0.010384",172,112,2,0.10409379005432129
+0,No,27,16,8,1,minfill,"    l0n0         p
+0  False  0.007631",24,24,2,0.0652470588684082
+0,No,35,16,8,1,minfill,"          p
+0  0.088055",34,20,0,0.05623602867126465
+0,No,32,16,8,1,minfill,"          p
+0  0.016757",28,22,0,0.06803512573242188
+0,No,30,16,8,1,minfill,"          p
+0  0.051326",36,28,0,0.07224798202514648
+0,No,28,16,8,1,minfill,"          p
+0  0.117311",66,52,0,0.0801992416381836
+0,No,30,16,8,1,minfill,"    l3n2         p
+0  False  0.003275",84,58,2,0.096710205078125
+0,No,28,16,8,1,minfill,"   l0n3         p
+0  True  0.003995",66,42,2,0.08081889152526855
+0,No,21,16,8,1,minfill,"    l0n1         p
+0  False  0.084882",38,32,2,0.05863618850708008
+0,No,26,16,8,1,minfill,"   l0n1         p
+0  True  0.289206",122,126,2,0.09719610214233398
+0,No,23,16,8,1,minfill,"    l1n1        p
+0  False  0.05309",28,26,2,0.05941128730773926
+0,No,25,16,8,1,minfill,"    l3n2         p
+0  False  0.024731",116,62,2,0.09526276588439941
+0,No,28,16,8,1,minfill,"    l1n2         p
+0  False  0.017233",120,98,2,0.14974713325500488
+0,No,32,16,8,1,minfill,"   l0n3         p
+0  True  0.081704",34,22,2,0.05898404121398926
+0,No,32,16,8,1,minfill,"   l1n0         p
+0  True  0.001967",138,72,2,0.0882868766784668
+0,No,31,16,8,1,minfill,"    l2n0         p
+0  False  0.081531",78,58,2,0.09094905853271484
+0,No,31,16,8,1,mindegree,"    l2n3         p
+0  False  0.003498",36,30,2,0.05235791206359863
+0,No,26,16,8,1,mindegree,"    l2n3        p
+0  False  0.00197",52,36,2,0.04887580871582031
+0,No,31,16,8,1,mindegree,"          p
+0  0.018818",108,78,0,0.057172298431396484
+0,No,33,16,8,1,mindegree,"          p
+0  0.008232",54,36,0,0.0506131649017334
+0,No,37,16,8,1,mindegree,"   l1n3         p
+0  True  0.010802",64,28,2,0.05474996566772461
+0,No,27,16,8,1,mindegree,"    l2n3         p
+0  False  0.121082",80,48,2,0.05333399772644043
+0,No,26,16,8,1,mindegree,"   l0n2         p
+0  True  0.008638",6,12,2,0.0350949764251709
+0,No,28,16,8,1,mindegree,"    l3n3         p
+0  False  0.021119",64,64,2,0.0609130859375
+0,No,23,16,8,1,mindegree,"     p
+0  0.0",90,74,0,0.051329851150512695
+0,No,30,16,8,1,mindegree,"   l0n1         p
+0  True  0.058002",62,48,2,0.05541515350341797
+0,No,19,16,8,1,mindegree,"         p
+0  0.16297",68,60,0,0.04922294616699219
+0,No,39,16,8,1,mindegree,"    l0n0         p
+0  False  0.002833",80,44,2,0.06006503105163574
+0,No,33,16,8,1,mindegree,"    l1n2         p
+0  False  0.132919",108,84,2,0.05437779426574707
+0,No,31,16,8,1,mindegree,"   l0n3         p
+0  True  0.017156",80,30,2,0.04577183723449707
+0,No,33,16,8,1,mindegree,"    l3n0         p
+0  False  0.002026",60,48,2,0.05685997009277344
+0,No,28,16,8,1,mindegree,"   l2n1         p
+0  True  0.147173",108,110,2,0.0658102035522461
+0,No,27,16,8,1,mindegree,"          p
+0  0.001109",42,34,0,0.04702115058898926
+0,No,29,16,8,1,mindegree,"          p
+0  0.001408",34,30,0,0.043103933334350586
+0,No,29,16,8,1,mindegree,"   l1n3         p
+0  True  0.012884",34,26,2,0.04997682571411133
+0,No,29,16,8,1,mindegree,"   l0n3         p
+0  True  0.040944",50,42,2,0.05563521385192871
+0,No,33,16,8,1,mindegree,"          p
+0  0.032263",12,14,0,0.04257512092590332
+0,No,28,16,8,1,mindegree,"          p
+0  0.018406",18,22,0,0.04179692268371582
+0,No,32,16,8,1,mindegree,"   l2n2         p
+0  True  0.010276",76,60,2,0.058260202407836914
+0,No,31,16,8,1,mindegree,"          p
+0  0.007031",42,40,0,0.04657602310180664
+0,No,37,16,8,1,mindegree,"    l0n3         p
+0  False  0.000063",124,54,2,0.05840587615966797
+0,No,29,16,8,1,mindegree,"   l0n3         p
+0  True  0.000067",156,96,2,0.058695077896118164
+0,No,26,16,8,1,mindegree,"    l0n2         p
+0  False  0.011361",30,34,2,0.0521397590637207
+0,No,32,16,8,1,mindegree,"    l2n3         p
+0  False  0.086707",28,20,2,0.04228091239929199
+0,No,23,16,8,1,mindegree,"         p
+0  0.11876",74,72,0,0.05538296699523926
+0,No,29,16,8,1,mindegree,"    l0n0         p
+0  False  0.060114",110,94,2,0.060398101806640625
+0,No,34,16,8,1,random,"   l0n3        p
+0  True  0.04151",128,116,2,0.06482291221618652
+0,No,25,16,8,1,random,"   l1n2         p
+0  True  0.011406",74,70,2,0.05866599082946777
+0,No,22,16,8,1,random,"   l1n0         p
+0  True  0.061146",52,48,2,0.0505528450012207
+0,No,26,16,8,1,random,"    l3n2         p
+0  False  0.000576",38,24,2,0.04784798622131348
+0,No,29,16,8,1,random,"          p
+0  0.027339",50,56,0,0.05040884017944336
+0,No,33,16,8,1,random,"   l0n3         p
+0  True  0.028537",246,192,2,0.06438994407653809
+0,No,26,16,8,1,random,"    l3n2        p
+0  False  0.00516",90,44,2,0.04952692985534668
+0,No,33,16,8,1,random,"          p
+0  0.063396",154,144,0,0.0627448558807373
+0,No,38,16,8,1,random,"   l0n1         p
+0  True  0.003038",116,74,2,0.06681013107299805
+0,No,29,16,8,1,random,"    l0n2    p
+0  False  0.0",144,108,2,0.05776619911193848
+0,No,27,16,8,1,random,"   l1n1         p
+0  True  0.088625",30,36,2,0.05019116401672363
+0,No,30,16,8,1,random,"   l0n3         p
+0  True  0.000615",48,26,2,0.05292487144470215
+0,No,30,16,8,1,random,"   l0n0         p
+0  True  0.033541",118,88,2,0.05584001541137695
+0,No,32,16,8,1,random,"    l0n0         p
+0  False  0.015789",262,178,2,0.06608796119689941
+0,No,23,16,8,1,random,"   l2n0         p
+0  True  0.079826",22,22,2,0.04193568229675293
+0,No,26,16,8,1,random,"   l1n1         p
+0  True  0.009798",86,70,2,0.05183696746826172
+0,No,29,16,8,1,random,"    l3n2         p
+0  False  0.000409",54,38,2,0.052764177322387695
+0,No,27,16,8,1,random,"   l3n0         p
+0  True  0.086238",290,260,2,0.06158804893493652
+0,No,33,16,8,1,random,"    l2n1         p
+0  False  0.003559",78,38,2,0.04840397834777832
+0,No,34,16,8,1,random,"          p
+0  0.012011",68,62,0,0.06064319610595703
+0,No,35,16,8,1,random,"          p
+0  0.007449",60,34,0,0.05280900001525879
+0,No,24,16,8,1,random,"   l1n3         p
+0  True  0.030142",80,62,2,0.05242609977722168
+0,No,35,16,8,1,random,"   l3n0         p
+0  True  0.016444",30,24,2,0.05296206474304199
+0,No,30,16,8,1,random,"   l1n2         p
+0  True  0.044414",126,70,2,0.0568540096282959
+0,No,35,16,8,1,random,"    l1n2         p
+0  False  0.011878",328,254,2,0.07000088691711426
+0,No,29,16,8,1,random,"   l2n0         p
+0  True  0.004696",68,58,2,0.06042075157165527
+0,No,28,16,8,1,random,"    l3n0         p
+0  False  0.034452",90,92,2,0.05067014694213867
+0,No,29,16,8,1,random,"         p
+0  0.13069",112,106,0,0.062098026275634766
+0,No,34,16,8,1,random,"          p
+0  0.003932",186,128,0,0.061833858489990234
+0,No,29,16,8,1,random,"    l2n1         p
+0  False  0.095299",136,134,2,0.05726790428161621
+0,No,31,16,8,9,minfill,"    l1n2  l1n3  l3n2  l1n1   l0n0         p
+0  False  True  True  True  False  0.010015",232,72,66,0.13638091087341309
+0,No,34,16,8,9,minfill,"   l0n3   l2n1   l3n3   l2n0   l1n2   l2n2         p
+0  True  False  False  False  False  False  0.009537",142,94,43,0.1372969150543213
+0,No,32,16,8,9,minfill,"   l0n2  l0n3   l2n1         p
+0  True  True  False  0.001551",44,34,8,0.09148979187011719
+0,No,29,16,8,9,minfill,"    l0n3  l1n3   l2n0  l2n2   l3n0  l2n3         p
+0  False  True  False  True  False  True  0.018862",59,20,33,0.1168210506439209
+0,No,30,16,8,9,minfill,"   l0n1   l0n2         p
+0  True  False  0.000516",50,30,4,0.08711004257202148
+0,No,28,16,8,9,minfill,"   l0n2   l3n1  l2n1  l0n1   l1n3        p
+0  True  False  True  True  False  0.05599",164,130,20,0.12488603591918945
+0,No,27,16,8,9,minfill,"   l2n3   l3n2  l1n0  l0n3   l1n3  l2n0        p
+0  True  False  True  True  False  True  0.08852",249,96,98,0.13028287887573242
+0,No,32,16,8,9,minfill,"   l1n0  l0n2   l0n1  l2n0         p
+0  True  True  False  True  0.008428",73,36,19,0.10854291915893555
+0,No,25,16,8,9,minfill,"    l2n2  l2n3  l3n0   l1n0   l1n2  l3n3   l0n1         p
+0  False  True  True  False  False  True  False  0.004557",96,66,16,0.10374999046325684
+0,No,30,16,8,9,minfill,"    l0n3         p
+0  False  0.001333",162,74,2,0.08219313621520996
+0,No,30,16,8,9,minfill,"    l0n2  l2n3  l1n0   l2n1   l2n2  l3n1  l1n1         p
+0  False  True  True  False  False  True  True  0.000411",216,90,87,0.12697982788085938
+0,No,29,16,8,9,minfill,"    l0n1   l0n0   l0n3  l2n3  l2n1  l1n1         p
+0  False  False  False  True  True  True  0.088585",90,74,20,0.11219978332519531
+0,No,31,16,8,9,minfill,"    l3n3   l0n3   l2n2  l2n3  l1n0         p
+0  False  False  False  True  True  0.002495",64,28,18,0.09788393974304199
+0,No,31,16,8,9,minfill,"   l3n3  l1n2  l3n0   l0n0   l0n2         p
+0  True  True  True  False  False  0.026813",246,146,32,0.1166999340057373
+0,No,39,16,8,9,minfill,"    l0n3         p
+0  False  0.008673",98,64,2,0.07813191413879395
+0,No,33,16,8,9,minfill,"   l0n0  l0n3   l1n3  l1n2        p
+0  True  True  False  True  0.00483",288,120,31,0.09602713584899902
+0,No,25,16,8,9,minfill,"   l3n1  l3n2  l0n3  l1n3         p
+0  True  True  True  True  0.000497",28,20,10,0.0979771614074707
+0,No,28,16,8,9,minfill,"   l0n1   l0n0  l1n1  l2n1   l3n3  l1n3         p
+0  True  False  True  True  False  True  0.131673",258,188,34,0.1101069450378418
+0,No,28,16,8,9,minfill,"    l0n1  l2n1  l2n2   l2n0  l0n2   l3n3         p
+0  False  True  True  False  True  False  0.034402",218,122,72,0.12649893760681152
+0,No,20,16,8,9,minfill,"   l2n2  l0n3  l0n0  l0n2         p
+0  True  True  True  True  0.001149",6,10,8,0.05524587631225586
+0,No,23,16,8,9,minfill,"    l3n1   l1n1  l1n3  l0n0  l2n3  l0n2         p
+0  False  False  True  True  True  True  0.000058",138,92,70,0.11848902702331543
+0,No,28,16,8,9,minfill,"   l3n2   l0n1  l1n1   l1n3         p
+0  True  False  True  False  0.001419
+0  True   True  True  False  0.001419",148,104,10,0.096099853515625
+0,No,26,16,8,9,minfill,"    l0n3  l2n2  l0n0   l2n3   l3n2   l3n3  l2n0         p
+0  False  True  True  False  False  False  True  0.000675",70,42,26,0.11289286613464355
+0,No,24,16,8,9,minfill,"    l0n1  l0n2  l1n2   l1n1         p
+0  False  True  True  False  0.014538",62,42,10,0.07181119918823242
+0,No,30,16,8,9,minfill,"   l0n0  l0n2   l3n1  l3n2   l3n0         p
+0  True  True  False  True  False  0.012219",186,136,32,0.11683416366577148
+0,No,37,16,8,9,minfill,"   l0n3  l1n1  l2n1   l1n0  l3n2   l3n1         p
+0  True  True  True  False  True  False  0.000386",260,132,70,0.14201807975769043
+0,No,35,16,8,9,minfill,"   l1n0   l0n2  l0n0         p
+0  True  False  True  0.000617",44,18,8,0.08174991607666016
+0,No,33,16,8,9,minfill,"   l3n0  l0n3   l3n2   l1n3  l0n0  l0n1         p
+0  True  True  False  False  True  True  0.002881",206,144,34,0.13154888153076172
+0,No,35,16,8,9,minfill,"    l3n3  l2n0   l3n2  l0n3         p
+0  False  True  False  True  0.000892",194,132,36,0.1316840648651123
+0,No,34,16,8,9,minfill,"    l0n1  l1n1   l1n0  l3n0         p
+0  False  True  False  True  0.000678",280,128,16,0.12412786483764648
+0,No,32,16,8,9,mindegree,"   l3n1   l1n1  l2n0         p
+0  True  False  True  0.000959",98,50,14,0.07093501091003418
+0,No,29,16,8,9,mindegree,"    l0n0  l0n2   l2n0         p
+0  False  True  False  0.009636",76,38,6,0.056639909744262695
+0,No,31,16,8,9,mindegree,"    l1n2   l2n1  l3n3   l0n3  l1n1  l0n2         p
+0  False  False  True  False  True  True  0.054503",149,82,43,0.08659005165100098
+0,No,29,16,8,9,mindegree,"   l0n1  l1n1  l2n2   l3n0   l1n0         p
+0  True  True  True  False  False  0.002566",104,48,32,0.0683140754699707
+0,No,27,16,8,9,mindegree,"   l1n3   l2n0  l2n1   l1n2  l2n3   l2n2         p
+0  True  False  True  False  True  False  0.081803",204,78,140,0.08898305892944336
+0,No,33,16,8,9,mindegree,"   l0n1   l0n0   l2n1  l2n2         p
+0  True  False  False  True  0.000149",62,28,10,0.06353306770324707
+0,No,25,16,8,9,mindegree,"   l1n0  l2n0  l1n3   l1n1  l2n3         p
+0  True  True  True  False  True  0.009104",232,116,62,0.0791168212890625
+0,No,31,16,8,9,mindegree,"   l0n1  l2n2   l3n2  l3n1   l0n2         p
+0  True  True  False  True  False  0.003271",54,34,18,0.07131814956665039
+0,No,25,16,8,9,mindegree,"   l1n2  l2n1   l0n1  l3n0   l0n3  l0n0         p
+0  True  True  False  True  False  True  0.017513",18,14,12,0.05659914016723633
+0,No,33,16,8,9,mindegree,"   l0n1  l3n3   l2n2  l3n1         p
+0  True  True  False  True  0.004907",44,38,10,0.07111597061157227
+0,No,23,16,8,9,mindegree,"   l3n1   l0n2  l1n1   l3n0  l1n2         p
+0  True  False  True  False  True  0.007239",46,30,18,0.06516122817993164
+0,No,30,16,8,9,mindegree,"   l0n0  l1n2         p
+0  True  True  0.001189",156,74,6,0.0619359016418457
+0,No,34,16,8,9,mindegree,"    l1n0  l1n3   l2n0  l0n1         p
+0  False  True  False  True  0.000404",64,22,16,0.06658101081848145
+0,No,31,16,8,9,mindegree,"    l0n1  l0n2   l3n1   l1n2   l3n2   l1n0         p
+0  False  True  False  False  False  False  0.005669
+0   True  True  False  False  False  False  0.005669",182,142,34,0.0812520980834961
+0,No,29,16,8,9,mindegree,"    l3n2   l0n3   l0n0   l3n1   l0n2         p
+0  False  False  False  False  False  0.000498",28,14,12,0.06908607482910156
+0,No,32,16,8,9,mindegree,"   l0n0   l3n0  l2n3  l2n1  l1n2  l2n0  l1n3         p
+0  True  False  True  True  True  True  True  0.016839",860,452,141,0.10976123809814453
+0,No,36,16,8,9,mindegree,"    l1n3  l0n2   l2n2  l3n1         p
+0  False  True  False  True  0.107345",96,70,30,0.07019710540771484
+0,No,28,16,8,9,mindegree,"   l0n3   l2n0  l3n1  l1n3  l1n1        p
+0  True  False  True  True  True  0.00432",132,82,38,0.07366585731506348
+0,No,23,16,8,9,mindegree,"    l0n2   l2n0  l3n3  l2n3   l2n1   l0n3         p
+0  False  False  True  True  False  False  0.001724",126,86,34,0.07686710357666016
+0,No,36,16,8,9,mindegree,"   l0n3   l1n1  l3n3  l3n1  l0n1         p
+0  True  False  True  True  True  0.000116",202,88,32,0.08467292785644531
+0,No,30,16,8,9,mindegree,"   l0n1  l3n1  l1n1  l0n2  l0n0         p
+0  True  True  True  True  True  0.036582",96,72,14,0.07329201698303223
+0,No,29,16,8,9,mindegree,"    l1n3  l3n2   l2n2   l1n0        p
+0  False  True  False  False  0.08423",140,108,16,0.07749795913696289
+0,No,34,16,8,9,mindegree,"    l2n1   l1n3   l1n1  l2n3         p
+0  False  False  False  True  0.003616",162,60,40,0.07786917686462402
+0,No,28,16,8,9,mindegree,"   l0n2   l3n2  l3n0   l0n3         p
+0  True  False  True  False  0.000016",44,30,10,0.0630948543548584
+0,No,32,16,8,9,mindegree,"   l2n1  l1n3   l2n3   l3n3   l0n2         p
+0  True  True  False  False  False  0.000113",58,38,24,0.07654809951782227
+0,No,26,16,8,9,mindegree,"   l2n3   l0n0  l3n3   l2n0   l0n1         p
+0  True  False  True  False  False  0.051567",58,42,14,0.0667269229888916
+0,No,34,16,8,9,mindegree,"    l0n3   l1n1  l0n2  l1n2  l2n2  l2n1         p
+0  False  False  True  True  True  True  0.002563",164,26,72,0.08878612518310547
+0,No,32,16,8,9,mindegree,"   l3n3  l3n0   l0n1   l2n3         p
+0  True  True  False  False  0.001931",82,48,30,0.07617712020874023
+0,No,23,16,8,9,mindegree,"    l1n1   l1n2   l1n0   l0n1         p
+0  False  False  False  False  0.204886",16,20,12,0.05000925064086914
+0,No,32,16,8,9,mindegree,"    l0n1  l2n3   l3n3  l3n2   l2n2         p
+0  False  True  False  True  False  0.050906",276,138,36,0.08355903625488281
+0,No,25,16,8,9,random,"          p   l3n0   l1n0  l1n2  l3n3   l0n2
+1  0.023075  False  False  True  True  False",300,240,64,0.08201193809509277
+0,No,29,16,8,9,random,"   l0n3   l3n0   l1n1   l2n2   l3n2         p
+0  True  False  False  False  False  0.010622",352,180,66,0.0787210464477539
+0,No,37,16,8,9,random,"    l0n2  l0n0   l3n2  l1n0   l1n1   l3n1         p
+0  False  True  False  True  False  False  0.009555",140,58,36,0.08236289024353027
+0,No,29,16,8,9,random,"   l0n0  l0n3  l0n2   l1n0         p
+0  True  True  True  False  0.001473",40,20,16,0.0531008243560791
+0,No,20,16,8,9,random,"    l1n2   l0n3  l3n2  l3n0  l1n1   l0n1         p
+0  False  False  True  True  True  False  0.044457",66,44,20,0.06543779373168945
+0,No,32,16,8,9,random,"    l3n3   l3n0   l0n2  l2n2         p
+0  False  False  False  True  0.006289",264,132,18,0.07677388191223145
+0,No,30,16,8,9,random,"          p   l0n2  l1n1
+0  0.019543  False  True",300,232,6,0.06677699089050293
+0,No,28,16,8,9,random,"   l0n0   l0n1  l2n0   l3n0  l1n3         p
+0  True  False  True  False  True  0.011879",52,26,20,0.06463170051574707
+0,No,28,16,8,9,random,"    l3n1   l2n2   l1n3   l1n1         p
+0  False  False  False  False  0.016138",54,22,16,0.0622410774230957
+0,No,23,16,8,9,random,"   l1n3   l2n2   l1n2         p
+0  True  False  False  0.004199",66,38,10,0.05566287040710449
+0,No,38,16,8,9,random,"    l0n3  l3n1   l3n0  l3n3   l2n1         p
+0  False  True  False  True  False  0.005124",138,84,20,0.08709359169006348
+0,No,32,16,8,9,random,"    l0n0  l1n1   l3n0   l3n1  l2n2   l3n3   l0n1   l0n3         p
+0  False  True  False  False  True  False  False  False  0.001147",212,138,50,0.10178303718566895
+0,No,33,16,8,9,random,"    l0n3  l2n0   l3n3  l3n2  l0n0         p
+0  False  True  False  True  True  0.001732",140,76,18,0.076019287109375
+0,No,34,16,8,9,random,"    l0n3  l0n1   l0n0   l3n1         p
+0  False  True  False  False  0.019463",88,42,18,0.06854009628295898
+0,No,32,16,8,9,random,"   l0n1  l1n0         p
+0  True  True  0.000351",78,62,6,0.05530095100402832
+0,No,26,16,8,9,random,"   l0n3  l0n2  l0n0   l2n0   l3n3  l3n1  l3n2         p
+0  True  True  True  False  False  True  True  0.008325",44,14,39,0.07451510429382324
+0,No,31,16,8,9,random,"    l0n1  l3n3  l3n0         p
+0  False  True  True  0.022918",160,94,8,0.07058405876159668
+0,No,28,16,8,9,random,"    l0n1  l3n1   l0n3         p
+0  False  True  False  0.000038",10,8,6,0.04934120178222656
+0,No,25,16,8,9,random,"    l0n1   l3n1  l0n3  l1n2   l3n0         p
+0  False  False  True  True  False  0.000144",118,90,32,0.07657814025878906
+0,No,26,16,8,9,random,"    l1n3   l0n1  l0n0  l2n1         p
+0  False  False  True  True  0.007716",66,42,12,0.06243395805358887
+0,No,35,16,8,9,random,"   l2n3   l3n0  l0n0   l2n0         p
+0  True  False  True  False  0.010908",384,260,30,0.08426165580749512
+0,No,36,16,8,9,random,"   l0n0  l0n1  l0n3   l1n0   l2n1        p
+0  True  True  True  False  False  0.00144",268,144,34,0.07796883583068848
+0,No,22,16,8,9,random,"   l0n2  l1n3  l2n2         p
+0  True  True  True  0.141952",56,44,8,0.05721879005432129
+0,No,27,16,8,9,random,"   l3n0  l3n2  l1n1   l1n0  l2n2   l0n1   l0n2         p
+0  True  True  True  False  True  False  False  0.000098",154,106,40,0.09034132957458496
+0,No,28,16,8,9,random,"    l0n1   l2n0   l1n1  l0n3         p
+0  False  False  False  True  0.000376",90,56,10,0.060137033462524414
+0,No,38,16,8,9,random,"    l3n0  l1n0  l0n3   l2n1  l0n2         p
+0  False  True  True  False  True  0.001685",283,162,41,0.08994626998901367
+0,No,21,16,8,9,random,"    l0n2  l1n2   l0n0   l1n1  l3n0         p
+0  False  True  False  False  True  0.001817",18,20,12,0.05463910102844238
+0,No,33,16,8,9,random,"   l0n3   l1n3  l3n1  l1n0         p
+0  True  False  True  True  0.000861",220,184,23,0.08605575561523438
+0,No,31,16,8,9,random,"   l3n2   l0n3   l2n3  l0n1         p
+0  True  False  False  True  0.002136",170,98,32,0.07545924186706543
+0,No,27,16,8,9,random,"    l0n1  l3n3   l1n0  l0n2  l2n2   l2n3         p
+0  False  True  False  True  True  False  0.003824",44,30,14,0.06127595901489258
+0,No,62,25,0,1,minfill,"          p  l1n4
+0  0.501963  True",28,28,2,0.01642298698425293
+0,No,68,25,0,1,minfill,"          p  l3n2
+0  0.600382  True",2184,1692,2,0.1353919506072998
+0,No,72,25,0,1,minfill,"     p   l0n3
+0  0.6  False",0,0,2,0.003603219985961914
+0,No,52,25,0,1,minfill,"          p  l2n0
+0  0.526069  True",104,104,2,0.04571700096130371
+0,No,63,25,0,1,minfill,"        p   l1n3
+0  0.5556  False",4,4,2,0.0070629119873046875
+0,No,63,25,0,1,minfill,"          p  l4n0
+0  0.517092  True",1252,1252,2,0.18552184104919434
+0,No,59,25,0,1,minfill,"          p   l3n0
+0  0.723263  False",420,396,2,0.09746885299682617
+0,No,55,25,0,1,minfill,"      p  l0n2
+0  0.79  True",0,0,2,0.003484010696411133
+0,No,64,25,0,1,minfill,"          p  l4n2
+0  0.517373  True",1020,980,2,0.18643522262573242
+0,No,59,25,0,1,minfill,"          p  l3n2
+0  0.548175  True",2384,1820,2,0.13407683372497559
+0,No,63,25,0,1,minfill,"      p   l0n4
+0  0.93  False",0,0,2,0.0035600662231445312
+0,No,69,25,0,1,minfill,"      p   l0n3
+0  0.82  False",0,0,2,0.0035657882690429688
+0,No,47,25,0,1,minfill,"          p   l4n1
+0  0.583293  False",356,364,2,0.09650897979736328
+0,No,66,25,0,1,minfill,"          p  l1n0
+0  0.559133  True",124,124,2,0.028338909149169922
+0,No,63,25,0,1,minfill,"          p   l2n2
+0  0.599757  False",752,700,2,0.06444478034973145
+0,No,71,25,0,1,minfill,"          p  l4n3
+0  0.500137  True",2736,2460,2,0.22931313514709473
+0,No,62,25,0,1,minfill,"      p  l0n3
+0  0.82  True",0,0,2,0.003557920455932617
+0,No,64,25,0,1,minfill,"          p   l3n4
+0  0.616509  False",628,604,2,0.10451912879943848
+0,No,67,25,0,1,minfill,"          p   l4n4
+0  0.508775  False",1608,1564,2,0.21410298347473145
+0,No,65,25,0,1,minfill,"          p  l1n3
+0  0.513334  True",60,60,2,0.02179694175720215
+0,No,59,25,0,1,minfill,"      p   l0n1
+0  0.86  False",0,0,2,0.0035238265991210938
+0,No,47,25,0,1,minfill,"          p   l3n4
+0  0.777588  False",548,556,2,0.11376309394836426
+0,No,62,25,0,1,minfill,"      p  l0n0
+0  0.74  True",0,0,2,0.003498077392578125
+0,No,67,25,0,1,minfill,"          p   l4n3
+0  0.510234  False",1952,1916,2,0.19977688789367676
+0,No,60,25,0,1,minfill,"          p   l4n1
+0  0.619925  False",1180,1340,2,0.22477483749389648
+0,No,73,25,0,1,minfill,"         p  l3n1
+0  0.51227  True",2864,2684,2,0.1400761604309082
+0,No,61,25,0,1,minfill,"          p   l2n1
+0  0.565261  False",160,132,2,0.03532004356384277
+0,No,53,25,0,1,minfill,"      p   l0n1
+0  0.64  False",0,0,2,0.003493070602416992
+0,No,63,25,0,1,minfill,"          p  l2n0
+0  0.538496  True",200,172,2,0.04150819778442383
+0,No,70,25,0,1,minfill,"          p  l1n3
+0  0.512685  True",124,124,2,0.028501033782958984
+0,No,64,25,0,1,mindegree,"          p   l2n2
+0  0.545079  False",648,588,2,0.0536808967590332
+0,No,62,25,0,1,mindegree,"      p  l0n4
+0  0.63  True",0,0,2,0.0035979747772216797
+0,No,62,25,0,1,mindegree,"      p   l0n3
+0  0.52  False",0,0,2,0.0034618377685546875
+0,No,60,25,0,1,mindegree,"      p   l0n1
+0  0.71  False",0,0,2,0.0034570693969726562
+0,No,64,25,0,1,mindegree,"      p   l0n3
+0  0.53  False",0,0,2,0.0035238265991210938
+0,No,54,25,0,1,mindegree,"          p   l2n4
+0  0.576894  False",176,172,2,0.03370094299316406
+0,No,52,25,0,1,mindegree,"         p   l1n2
+0  0.70738  False",12,12,2,0.010597705841064453
+0,No,60,25,0,1,mindegree,"      p   l0n0
+0  0.69  False",0,0,2,0.0034990310668945312
+0,No,61,25,0,1,mindegree,"          p  l2n1
+0  0.537425  True",96,84,2,0.027658939361572266
+0,No,65,25,0,1,mindegree,"          p  l1n2
+0  0.726792  True",60,60,2,0.01941204071044922
+0,No,65,25,0,1,mindegree,"          p  l4n1
+0  0.582658  True",1784,1804,2,0.10344815254211426
+0,No,53,25,0,1,mindegree,"          p   l3n2
+0  0.519442  False",420,420,2,0.06567931175231934
+0,No,53,25,0,1,mindegree,"          p   l3n2
+0  0.581158  False",1176,1092,2,0.07308793067932129
+0,No,56,25,0,1,mindegree,"          p  l3n0
+0  0.792329  True",236,236,2,0.051566123962402344
+0,No,69,25,0,1,mindegree,"          p   l4n0
+0  0.516512  False",880,828,2,0.0755760669708252
+0,No,49,25,0,1,mindegree,"      p   l0n2
+0  0.68  False",0,0,2,0.0034050941467285156
+0,No,53,25,0,1,mindegree,"          p  l2n0
+0  0.602734  True",40,40,2,0.02166438102722168
+0,No,59,25,0,1,mindegree,"     p  l0n0
+0  1.0  True",0,0,2,0.003453969955444336
+0,No,57,25,0,1,mindegree,"          p   l4n4
+0  0.670241  False",920,908,2,0.08424496650695801
+0,No,57,25,0,1,mindegree,"          p   l1n3
+0  0.854294  False",12,12,2,0.01065969467163086
+0,No,66,25,0,1,mindegree,"          p   l3n0
+0  0.564509  False",880,796,2,0.06092476844787598
+0,No,61,25,0,1,mindegree,"          p   l4n1
+0  0.584188  False",1532,1536,2,0.10368704795837402
+0,No,57,25,0,1,mindegree,"          p  l3n1
+0  0.782466  True",180,188,2,0.045307159423828125
+0,No,64,25,0,1,mindegree,"          p  l3n3
+0  0.528497  True",1088,1084,2,0.0733492374420166
+0,No,60,25,0,1,mindegree,"      p  l0n1
+0  0.99  True",0,0,2,0.0034818649291992188
+0,No,53,25,0,1,mindegree,"          p  l4n1
+0  0.644321  True",864,780,2,0.06484079360961914
+0,No,60,25,0,1,mindegree,"          p  l4n3
+0  0.712918  True",1176,1116,2,0.08760309219360352
+0,No,66,25,0,1,mindegree,"          p  l3n4
+0  0.682591  True",2784,2556,2,0.08246612548828125
+0,No,72,25,0,1,mindegree,"      p   l0n3
+0  0.98  False",0,0,2,0.0034530162811279297
+0,No,62,25,0,1,mindegree,"          p  l4n1
+0  0.682272  True",1712,1628,2,0.0932159423828125
+0,No,62,25,0,1,random,"          p   l2n3
+0  0.625069  False",372,380,2,0.041466712951660156
+0,No,71,25,0,1,random,"          p  l1n0
+0  0.822246  True",60,60,2,0.01959705352783203
+0,No,66,25,0,1,random,"          p  l2n4
+0  0.577918  True",380,380,2,0.041326045989990234
+0,No,64,25,0,1,random,"          p  l1n2
+0  0.664202  True",28,28,2,0.014725208282470703
+0,No,67,25,0,1,random,"          p  l2n0
+0  0.624995  True",316,316,2,0.03594207763671875
+0,No,61,25,0,1,random,"          p  l1n1
+0  0.531968  True",12,12,2,0.010413646697998047
+0,No,67,25,0,1,random,"      p  l0n3
+0  0.55  True",0,0,2,0.0034449100494384766
+0,No,54,25,0,1,random,"          p   l3n3
+0  0.532872  False",4568,5820,2,0.10861730575561523
+0,No,65,25,0,1,random,"          p  l3n4
+0  0.517596  True",4944,5372,2,0.11050891876220703
+0,No,58,25,0,1,random,"          p  l2n1
+0  0.703644  True",784,780,2,0.04968595504760742
+0,No,63,25,0,1,random,"          p  l2n0
+0  0.697221  True",1076,1052,2,0.052123069763183594
+0,No,65,25,0,1,random,"          p  l4n4
+0  0.576003  True",61924,66300,2,0.5317237377166748
+0,No,61,25,0,1,random,"          p   l4n0
+0  0.614662  False",66640,74396,2,0.5646259784698486
+0,No,56,25,0,1,random,"          p  l3n3
+0  0.616445  True",356,380,2,0.04519009590148926
+0,No,60,25,0,1,random,"          p  l3n1
+0  0.522072  True",2328,2492,2,0.08366203308105469
+0,No,60,25,0,1,random,"          p   l4n0
+0  0.538378  False",111992,141564,2,0.8921048641204834
+0,No,59,25,0,1,random,"          p  l3n3
+0  0.725629  True",1184,1052,2,0.058795928955078125
+0,No,58,25,0,1,random,"      p   l0n1
+0  0.95  False",0,0,2,0.003432035446166992
+0,No,54,25,0,1,random,"          p   l4n3
+0  0.660841  False",40532,38060,2,0.37545013427734375
+0,No,67,25,0,1,random,"          p   l3n0
+0  0.774607  False",15880,14332,2,0.18052196502685547
+0,No,61,25,0,1,random,"          p   l1n1
+0  0.714697  False",60,60,2,0.019335031509399414
+0,No,60,25,0,1,random,"          p  l3n3
+0  0.809333  True",708,700,2,0.049157142639160156
+0,No,55,25,0,1,random,"          p  l4n0
+0  0.663424  True",96952,133628,2,0.7776899337768555
+0,No,58,25,0,1,random,"          p  l3n3
+0  0.501229  True",6144,5628,2,0.12134718894958496
+0,No,66,25,0,1,random,"          p  l3n1
+0  0.670833  True",2696,2620,2,0.09240293502807617
+0,No,69,25,0,1,random,"      p  l0n1
+0  0.99  True",0,0,2,0.003448009490966797
+0,No,52,25,0,1,random,"        p   l1n2
+0  0.6058  False",12,12,2,0.010711908340454102
+0,No,64,25,0,1,random,"          p  l2n3
+0  0.543426  True",308,284,2,0.03602266311645508
+0,No,54,25,0,1,random,"         p   l4n3
+0  0.63508  False",13980,13580,2,0.1831521987915039
+0,No,69,25,0,1,random,"          p  l1n2
+0  0.577019  True",124,124,2,0.02470707893371582
+0,No,49,25,0,13,minfill,"           p  l3n0   l4n3  l4n2   l2n3  l2n2  l3n4   l1n4   l0n0   l4n1  \
+16  0.034242  True  False  True  False  True  True  False  False  False   
+
+     l4n4   l4n0  
+16  False  False  ",47287,38728,4599,0.7764182090759277
+0,No,63,25,0,13,minfill,"           p  l0n4  l4n4  l1n2  l2n2  l0n2   l2n0  l1n1   l4n0  l1n4  l3n3  \
+60  0.011248  True  True  True  True  True  False  True  False  True  True   
+
+    l2n4  
+60  True  ",26490,31168,4711,0.5624890327453613
+0,No,62,25,0,13,minfill,"          p  l0n3   l0n4   l3n2   l4n3   l1n2   l0n1  l3n4  l2n2   l2n0
+2  0.043856  True  False  False  False  False  False  True  True  False",25576,24784,1155,0.41009521484375
+0,No,63,25,0,13,minfill,"           p   l1n4  l3n1  l0n4  l1n3  l2n3   l4n0  l3n0  l4n3   l1n2   l2n2  \
+35  0.010381  False  True  True  True  True  False  True  True  False  False   
+
+    l2n4   l1n1  
+35  True  False  ",25911,19616,10839,0.710299015045166
+0,No,59,25,0,13,minfill,"           p   l3n0  l1n3   l0n2  l2n3   l0n4  l1n0   l0n3  l3n1   l1n2  \
+33  0.016846  False  True  False  True  False  True  False  True  False   
+
+     l3n4   l4n3   l0n0  
+33  False  False  False  ",30625,25280,11295,0.766434907913208
+0,No,68,25,0,13,minfill,"           p  l4n3  l2n3  l0n1   l1n4   l3n2  l0n0   l3n0  l1n0  l1n1   l3n1
+26  0.018974  True  True  True  False  False  True  False  True  True  False",12222,11584,2397,0.371906042098999
+0,No,52,25,0,13,minfill,"          p   l1n4  l1n2   l4n2  l0n1  l0n4   l2n4   l2n0   l1n3
+2  0.064183  False  True  False  True  True  False  False  False",4248,4640,583,0.23921513557434082
+0,No,64,25,0,13,minfill,"          p  l2n1   l4n0   l3n2   l0n4  l0n0  l4n3  l0n1   l1n1   l1n4   l2n3
+7  0.023527  True  False  False  False  True  True  True  False  False  False",6279,5888,1180,0.31728506088256836
+0,No,53,25,0,13,minfill,"           p  l3n4   l0n3  l3n3   l4n2   l2n0  l1n0  l3n2   l2n3   l1n4  \
+22  0.028774  True  False  True  False  False  True  True  False  False   
+
+     l2n1   l4n0   l1n3  
+22  False  False  False  ",20896,13488,8741,0.5900900363922119
+0,No,61,25,0,13,minfill,"          p   l1n0   l2n3   l4n1  l3n1  l0n1  l0n0  l2n0  l2n2  l2n1   l4n0
+2  0.018621  False  False  False  True  True  True  True  True  True  False",14457,18984,2474,0.43184471130371094
+0,No,73,25,0,13,minfill,"           p   l1n1   l0n2   l1n0  l1n4  l0n4  l3n0  l3n2  l4n2  l3n4   l1n3  \
+27  0.006518  False  False  False  True  True  True  True  True  True  False   
+
+    l4n0   l0n0  
+27  True  False  ",30700,22144,11629,0.8181960582733154
+0,No,51,25,0,13,minfill,"    l0n0  l1n0   l1n1   l3n1  l2n0   l4n2  l4n3  l3n4  l2n4  l1n2   l2n2  \
+0  False  True  False  False  True  False  True  True  True  True  False   
+
+    l0n3         p  
+0  False  0.009526  ",1843,1216,1343,0.3128209114074707
+0,No,49,25,0,13,minfill,"           p   l0n0  l0n2   l3n3  l4n4   l2n3   l1n0  l2n2  l4n0   l2n1  l2n4  \
+13  0.015999  False  True  False  True  False  False  True  True  False  True   
+
+     l4n1   l3n2  
+13  False  False  ",25247,29928,7164,0.6785879135131836
+0,No,78,25,0,13,minfill,"           p  l4n4   l0n2   l3n4   l4n1  l1n3  l3n3   l1n0  l4n0   l2n4  \
+27  0.010477  True  False  False  False  True  True  False  True  False   
+
+     l2n0  l3n2  
+27  False  True  ",18080,18816,4640,0.5630571842193604
+0,No,69,25,0,13,minfill,"          p   l4n0   l1n2   l1n3  l4n4  l3n4  l0n2   l3n0  l4n2  l4n3   l2n2
+5  0.013567  False  False  False  True  True  True  False  True  True  False",58449,58944,2547,0.7910580635070801
+0,No,64,25,0,13,minfill,"           p  l1n0   l0n0   l2n0  l0n1   l4n4   l0n3   l2n3  l1n3  l3n2  l2n4
+25  0.015789  True  False  False  True  False  False  False  True  True  True",27689,32256,2749,0.5168259143829346
+0,No,67,25,0,13,minfill,"           p   l0n3   l1n3  l1n1  l0n2  l2n0  l3n1  l4n3  l2n2   l3n3   l3n2  \
+38  0.006205  False  False  True  True  True  True  True  True  False  False   
+
+    l4n4   l0n4  
+38  True  False  ",40161,43840,10574,0.8235340118408203
+0,No,66,25,0,13,minfill,"          p  l0n0   l1n1   l1n0  l2n4   l3n0   l0n2   l4n4   l4n3  l1n3  l2n3  \
+8  0.046424  True  False  False  True  False  False  False  False  True  True   
+
+    l3n1   l2n1  
+8  False  False  ",34936,28032,10341,0.772881031036377
+0,No,59,25,0,13,minfill,"          p   l3n4   l3n2   l1n4  l0n2  l0n1  l3n1   l0n4  l1n2  l0n0  l2n0
+7  0.014019  False  False  False  True  True  True  False  True  True  True",15983,21632,1664,0.3741738796234131
+0,No,41,25,0,13,minfill,"         p   l4n2  l4n0   l1n4   l1n0   l0n3   l2n0   l0n4  l3n0   l3n4  l1n2  \
+1  0.01312  False  True  False  False  False  False  False  True  False  True   
+
+   l3n3   l2n2  
+1  True  False  ",7765,5352,2905,0.4121842384338379
+0,No,58,25,0,13,minfill,"           p   l1n1  l1n2   l0n4  l2n2  l1n0   l3n0  l2n0   l4n3   l1n4  l0n1  \
+28  0.015009  False  True  False  True  True  False  True  False  False  True   
+
+     l4n2  
+28  False  ",53549,62400,5188,0.7865149974822998
+0,No,66,25,0,13,minfill,"          p   l1n0  l2n3  l1n3   l0n0  l1n2   l1n4   l3n1  l4n3   l0n4   l3n3  \
+25  0.00948  False  True  True  False  True  False  False  True  False  False   
+
+    l4n1  
+25  True  ",46242,62560,5878,0.7786478996276855
+0,No,64,25,0,13,minfill,"           p  l3n0  l3n1  l2n3  l1n1   l2n4   l2n1   l4n3  l1n2   l0n2   l4n1
+38  0.025369  True  True  True  True  False  False  False  True  False  False",19088,24424,2653,0.49056482315063477
+0,No,64,25,0,13,minfill,"          p   l2n1   l2n4   l2n0  l1n2  l0n2  l1n4   l4n3  l4n0  l2n2   l2n3
+5  0.017117  False  False  False  True  True  True  False  True  True  False",4314,2768,2532,0.34033632278442383
+0,No,72,25,0,13,minfill,"           p   l0n0   l4n1  l3n0   l0n2  l3n3   l4n3   l3n1   l2n2  l1n0  \
+10  0.015351  False  False  True  False  True  False  False  False  True   
+
+    l1n4   l4n0  
+10  True  False  ",104950,131456,3753,1.1835899353027344
+0,No,70,25,0,13,minfill,"           p  l2n1  l3n4  l2n0   l4n1   l3n1  l3n2  l4n4   l1n2   l4n0  l4n2  \
+60  0.006628  True  True  True  False  False  True  True  False  False  True   
+
+    l1n1  
+60  True  ",35136,36672,5508,0.7341511249542236
+0,No,64,25,0,13,minfill,"           p   l2n3  l3n1  l0n3   l4n0  l0n0  l0n2  l1n0   l4n4  l1n4   l3n2
+17  0.031419  False  True  True  False  True  True  True  False  True  False",44966,49424,2482,0.6649510860443115
+0,No,72,25,0,13,minfill,"           p  l1n4  l1n3   l1n2  l4n2   l4n1  l2n3   l0n3  l2n4   l2n1   l3n2  \
+52  0.010385  True  True  False  True  False  True  False  True  False  False   
+
+    l3n4  
+52  True  ",35466,28288,5577,0.692028284072876
+0,No,52,25,0,13,minfill,"   l1n4   l0n4  l1n0   l1n2   l2n0   l0n3  l2n3  l3n1  l0n2   l4n3         p
+0  True  False  True  False  False  False  True  True  True  False  0.034277",4383,2944,1350,0.2760012149810791
+0,No,70,25,0,13,minfill,"          p   l4n0  l1n0   l1n4   l2n3  l2n2  l4n2  l0n4  l0n1  l1n3  l4n3
+18  0.00989  False  True  False  False  True  True  True  True  True  True",14236,14528,2692,0.469681978225708
+0,No,63,25,0,13,mindegree,"          p   l2n2   l2n0  l1n4   l2n4   l0n3   l1n2  l0n4   l2n1  l4n3   l3n0
+1  0.027283  False  False  True  False  False  False  True  False  True  False",33871,37568,2555,0.44484615325927734
+0,No,70,25,0,13,mindegree,"           p  l2n3   l4n4  l3n4  l0n3   l3n2  l0n2   l1n2   l0n4   l4n2  \
+85  0.006209  True  False  True  True  False  True  False  False  False   
+
+     l4n1   l2n2  
+85  False  False  ",49946,72832,5407,0.6511871814727783
+0,No,60,25,0,13,mindegree,"           p   l0n0  l4n1   l0n2  l3n0  l1n4  l3n3   l4n4   l0n1  l2n3  l3n2
+10  0.011533  False  True  False  True  True  True  False  False  True  True",61098,68320,2141,0.6225399971008301
+0,No,65,25,0,13,mindegree,"          p   l2n1   l4n2  l0n3   l1n4   l2n2  l1n3   l4n0   l3n2   l1n0
+2  0.015213  False  False  True  False  False  True  False  False  False",16115,22016,1187,0.2927103042602539
+0,No,62,25,0,13,mindegree,"          p   l2n3   l0n4   l0n1   l1n0   l0n0  l1n3   l2n1  l1n2  l2n4  l2n0  \
+1  0.017048  False  False  False  False  False  True  False  True  True  True   
+
+    l4n0  
+1  False  ",42186,43648,5456,0.5723929405212402
+0,No,66,25,0,13,mindegree,"           p   l4n0  l2n3  l3n0  l3n2   l0n4   l1n1   l4n3  l0n0   l4n4  l2n1  \
+13  0.016068  False  True  True  True  False  False  False  True  False  True   
+
+     l1n2  
+13  False  ",28399,36000,3162,0.457136869430542
+0,No,64,25,0,13,mindegree,"           p  l3n3  l4n3  l0n0   l4n0   l1n2   l3n4  l2n1  l1n4  l1n1
+16  0.036025  True  True  True  False  False  False  True  True  True",10003,10304,1151,0.23840928077697754
+0,No,46,25,0,13,mindegree,"          p   l1n0   l3n0  l4n1  l0n4  l1n4   l3n1  l0n3  l0n2   l1n1   l4n0
+7  0.029369  False  False  True  True  True  False  True  True  False  False",1426,896,916,0.16840887069702148
+0,No,64,25,0,13,mindegree,"          p   l4n1   l0n4   l2n4  l3n1  l3n3  l2n3  l3n2  l0n3   l1n4  l4n4
+4  0.014482  False  False  False  True  True  True  True  True  False  True",12150,15408,2398,0.2954118251800537
+0,No,53,25,0,13,mindegree,"          p   l0n4  l1n1   l3n2   l3n4   l4n0   l4n2   l2n3  l1n4   l2n4  l2n2
+3  0.015595  False  True  False  False  False  False  False  True  False  True",14908,15936,1453,0.29306507110595703
+0,No,55,25,0,13,mindegree,"           p  l3n3  l4n4  l0n0  l1n0   l1n2  l2n1  l2n3  l0n4   l3n0   l4n0
+19  0.034376  True  True  True  True  False  True  True  True  False  False",8264,9392,2561,0.33394575119018555
+0,No,72,25,0,13,mindegree,"           p   l2n4  l3n2  l1n1  l4n1  l1n4  l0n4  l3n1   l2n1   l0n3
+15  0.051761  False  True  True  True  True  True  True  False  False",8455,10752,1342,0.2303178310394287
+0,No,66,25,0,13,mindegree,"          p   l2n4  l3n0   l1n4  l4n3   l3n4   l1n2   l3n1  l4n0   l0n4  l4n4
+8  0.012878  False  True  False  True  False  False  False  True  False  True",9816,10640,1796,0.2784450054168701
+0,No,64,25,0,13,mindegree,"         p   l0n2   l2n3  l3n2   l3n0   l0n0  l4n3   l1n1  l3n3  l2n1  l0n4  \
+9  0.01853  False  False  True  False  False  True  False  True  True  True   
+
+    l1n0  
+9  False  ",66153,66448,5261,0.7336180210113525
+0,No,51,25,0,13,mindegree,"          p   l2n1   l4n1   l3n4   l1n2   l0n4  l4n2  l4n0  l1n1  l2n2
+1  0.035644  False  False  False  False  False  True  True  True  True",10198,12008,1113,0.2464449405670166
+0,No,69,25,0,13,mindegree,"           p   l4n4  l2n3  l2n4  l0n4  l2n1  l3n1  l3n4   l4n1  l0n3   l0n0
+22  0.028489  False  True  True  True  True  True  True  False  True  False",14851,14080,2567,0.3187999725341797
+0,No,65,25,0,13,mindegree,"          p  l0n3  l3n1   l0n4   l3n4   l1n0   l0n2   l4n4   l3n0  l4n0  \
+43  0.01562  True  True  False  False  False  False  False  False  True   
+
+     l2n2  l3n3   l1n1  
+43  False  True  False  ",11536,10848,4822,0.3485860824584961
+0,No,50,25,0,13,mindegree,"          p  l4n3   l0n2  l2n1  l2n3  l0n4   l1n0   l2n2  l0n1  l4n0   l3n2
+3  0.022937  True  False  True  True  True  False  False  True  True  False",12801,15904,2069,0.271928071975708
+0,No,60,25,0,13,mindegree,"           p  l1n1  l3n4  l0n0   l2n3   l3n0   l4n4   l2n1  l4n0  l1n0
+22  0.030233  True  True  True  False  False  False  False  True  True",11826,12184,1327,0.26204681396484375
+0,No,60,25,0,13,mindegree,"          p   l2n0   l4n1   l1n3  l0n4   l2n1  l2n4  l1n1   l4n3   l2n2  \
+8  0.013178  False  False  False  True  False  True  True  False  False   
+
+    l1n4   l1n2   l4n4  
+8  False  False  False  ",19155,13248,9908,0.5091719627380371
+0,No,56,25,0,13,mindegree,"          p   l1n0   l1n1   l2n4   l3n4  l1n2  l0n1  l1n4   l2n0   l4n1
+0  0.079402  False  False  False  False  True  True  True  False  False",18768,20392,1383,0.30774712562561035
+0,No,67,25,0,13,mindegree,"           p  l3n0   l0n2   l2n0   l2n2  l4n3   l1n2   l4n0   l3n4   l0n4  \
+28  0.010096  True  False  False  False  True  False  False  False  False   
+
+     l4n1   l2n1  
+28  False  False  ",19590,21504,4759,0.4051399230957031
+0,No,64,25,0,13,mindegree,"          p   l3n3   l2n4  l4n4  l3n4  l0n4  l1n3   l1n2  l2n3  l2n2  l1n4
+9  0.011939  False  False  True  True  True  True  False  True  True  True",6508,6096,1329,0.21821212768554688
+0,No,58,25,0,13,mindegree,"           p  l3n4   l2n3  l4n1  l0n3   l2n2  l3n0  l1n0   l0n1   l4n2   l0n2  \
+54  0.012963  True  False  True  True  False  True  True  False  False  False   
+
+    l2n1  
+54  True  ",16468,19008,5679,0.41905999183654785
+0,No,54,25,0,13,mindegree,"           p   l2n1  l1n1  l3n1   l2n2  l4n4  l3n4   l3n3  l0n3  l0n4   l0n0
+12  0.044726  False  True  True  False  True  True  False  True  True  False",9252,10816,2572,0.27251100540161133
+0,No,50,25,0,13,mindegree,"    l4n0  l4n3  l0n0   l4n1  l2n2  l2n4  l2n0   l0n3  l3n2  l3n3  l0n2  l3n4  \
+0  False  True  True  False  True  True  True  False  True  True  True  True   
+
+          p  
+0  0.005422  ",7514,6240,2356,0.2885160446166992
+0,No,61,25,0,13,mindegree,"          p   l0n3   l1n2   l4n1  l4n3   l0n2   l2n3   l2n0   l3n2
+1  0.047661  False  False  False  True  False  False  False  False",10253,10176,586,0.21941876411437988
+0,No,66,25,0,13,mindegree,"          p   l0n1   l4n3  l1n3   l4n0   l3n0  l2n3  l4n2   l0n2   l2n2  \
+9  0.014524  False  False  True  False  False  True  True  False  False   
+
+    l3n4  l4n4  
+9  False  True  ",25828,33312,4515,0.4383108615875244
+0,No,58,25,0,13,mindegree,"           p  l4n3  l4n0  l0n1   l0n2  l3n3  l0n3   l2n4   l1n0  l1n1
+15  0.060919  True  True  True  False  True  True  False  False  True",11927,10624,1228,0.25165891647338867
+0,No,76,25,0,13,mindegree,"           p  l3n3  l4n0  l3n2  l0n0  l1n3  l4n2   l4n1  l2n0   l2n4  l0n4  \
+29  0.024212  True  True  True  True  True  True  False  True  False  True   
+
+     l3n4  
+29  False  ",212618,222464,4792,1.7459490299224854
+0,No,58,25,0,13,random,"          p   l1n0  l2n1   l4n0  l4n3   l0n4  l2n3  l1n2   l3n4  l0n3
+3  0.036805  False  True  False  True  False  True  True  False  True",28919,34112,1184,0.378572940826416
+0,No,67,25,0,13,random,"          p  l1n3  l3n4  l3n0   l3n1  l1n2  l2n3  l0n3   l0n2  l2n2  l1n4  \
+78  0.01303  True  True  True  False  True  True  True  False  True  True   
+
+    l4n4  
+78  True  ",74486,92176,5104,0.7992639541625977
+0,No,60,25,0,13,random,"           p   l1n2   l2n3  l1n0   l3n4  l4n4  l4n2   l4n3   l0n2  l0n0  \
+15  0.007738  False  False  True  False  True  True  False  False  True   
+
+     l2n1   l0n1  
+15  False  False  ",139896,180640,5191,1.2600078582763672
+0,No,52,25,0,13,random,"           p   l0n4  l2n1   l3n2   l4n0  l1n3  l3n0   l3n1   l2n2  l4n4  \
+16  0.012524  False  True  False  False  True  True  False  False  True   
+
+     l2n3   l4n2  
+16  False  False  ",41894,40576,2407,0.5359129905700684
+0,No,60,25,0,13,random,"          p   l3n3  l0n4  l4n4  l1n3   l0n1  l2n4  l2n0
+3  0.044362  False  True  True  True  False  True  True",48414,48992,265,0.4635639190673828
+0,No,60,25,0,13,random,"           p   l3n3   l0n1  l0n0   l1n2  l1n4  l0n2   l3n4  l4n3   l4n2  \
+19  0.008683  False  False  True  False  True  True  False  True  False   
+
+     l0n3   l2n2  
+19  False  False  ",86097,100480,5095,0.8766047954559326
+0,No,49,25,0,13,random,"          p   l1n0   l2n4   l4n4  l4n1   l0n0  l0n3   l2n2  l0n1
+0  0.067627  False  False  False  True  False  True  False  True",9357,9864,531,0.21508121490478516
+0,No,72,25,0,13,random,"           p   l3n0  l4n3  l0n3  l0n4  l2n0   l2n3  l2n1   l3n4   l1n3  l4n2  \
+15  0.013786  False  True  True  True  True  False  True  False  False  True   
+
+     l2n2  
+15  False  ",47682,62784,4691,0.5908558368682861
+0,No,65,25,0,13,random,"           p   l1n0  l1n2  l1n3  l2n4  l3n1  l0n1   l4n4   l2n0  l4n2  l4n3  \
+38  0.015034  False  True  True  True  True  True  False  False  True  True   
+
+     l0n3   l1n1  
+38  False  False  ",77704,75872,10799,0.9527721405029297
+0,No,61,25,0,13,random,"           p  l0n4  l2n0   l2n1   l0n0  l1n3  l4n2   l2n4   l0n1  l2n2   l1n4  \
+26  0.064972  True  True  False  False  True  True  False  False  True  False   
+
+    l0n3  
+26  True  ",310787,457728,4825,2.4819960594177246
+0,No,61,25,0,13,random,"           p   l4n4  l3n4  l1n0  l1n3   l4n2   l1n1   l2n3   l3n0   l2n4  l0n0
+15  0.025038  False  True  True  True  False  False  False  False  False  True",97389,111360,2140,0.8680431842803955
+0,No,58,25,0,13,random,"           p   l1n2  l4n1   l2n0   l0n3  l0n2  l3n3   l4n2  l0n4  l0n1  l3n4  \
+13  0.024214  False  True  False  False  True  True  False  True  True  True   
+
+    l2n3  
+13  True  ",41778,37952,4873,0.5499448776245117
+0,No,65,25,0,13,random,"          p   l4n3   l0n1   l1n1   l3n3   l2n3   l1n4  l1n0   l3n4   l0n2  \
+0  0.017617  False  False  False  False  False  False  True  False  False   
+
+   l0n3  l3n1  
+0  True  True  ",84093,80640,5010,0.8444099426269531
+0,No,59,25,0,13,random,"          p   l4n1  l0n3   l0n2  l4n0  l1n2   l3n4  l1n0  l4n3  l3n3  l2n4
+1  0.017646  False  True  False  True  True  False  True  True  True  True",76352,102656,2122,0.7316489219665527
+0,No,63,25,0,13,random,"           p   l0n4  l0n3  l2n4   l3n2  l2n0   l2n1  l2n2  l3n4  l3n3  l4n1  \
+34  0.009605  False  True  True  False  True  False  True  True  True  True   
+
+     l4n4   l4n0  
+34  False  False  ",35830,35072,2686,0.5177509784698486
+0,No,65,25,0,13,random,"           p  l2n0   l0n1  l2n1  l4n1   l3n1  l0n4   l0n3  l4n2   l3n3   l3n0  \
+83  0.003275  True  False  True  True  False  True  False  True  False  False   
+
+     l3n2  l1n2   l1n0  
+83  False  True  False  ",109931,156192,9915,1.1464989185333252
+0,No,58,25,0,13,random,"          p   l1n3  l4n1   l4n4   l4n2   l2n2   l0n3   l1n1   l3n2   l4n0  \
+25  0.00686  False  True  False  False  False  False  False  False  False   
+
+     l2n3   l2n0  
+25  False  False  ",7602,5952,1803,0.2713160514831543
+0,No,54,25,0,13,random,"           p  l3n0   l0n3   l4n3   l1n0   l3n2   l4n0   l2n3   l0n1   l0n4  \
+18  0.011104  True  False  False  False  False  False  False  False  False   
+
+    l1n3  l1n1  
+18  True  True  ",36707,34176,4874,0.5211560726165771
+0,No,53,25,0,13,random,"           p  l4n2  l4n3   l0n1  l2n0   l1n1   l3n4   l0n3  l1n3   l3n2  l3n0  \
+33  0.008306  True  True  False  True  False  False  False  True  False  True   
+
+    l3n1   l0n2  
+33  True  False  ",55807,56896,2453,0.5991480350494385
+0,No,66,25,0,13,random,"           p  l1n2  l0n2  l3n1   l4n0  l0n0   l4n3   l1n1  l0n1   l4n4   l2n4  \
+45  0.014609  True  True  True  False  True  False  False  True  False  False   
+
+    l1n0  
+45  True  ",237747,356480,4658,1.9361190795898438
+0,No,54,25,0,13,random,"           p  l2n1  l4n0  l3n2  l1n4  l0n2   l4n4  l4n2   l1n2  l0n4   l1n0  \
+76  0.014258  True  True  True  True  True  False  True  False  True  False   
+
+    l3n4  
+76  True  ",31680,30304,5677,0.5262532234191895
+0,No,56,25,0,13,random,"           p  l4n3  l1n1   l0n1   l3n2   l3n4   l3n3  l0n4   l4n0  l0n0  \
+62  0.012468  True  True  False  False  False  False  True  False  True   
+
+     l4n2   l3n0   l4n1  
+62  False  False  False  ",163595,204288,4310,1.4427111148834229
+0,No,58,25,0,13,random,"          p   l3n2   l0n0   l2n1   l2n4  l0n1  l1n1   l3n4  l2n2  l0n4
+3  0.032709  False  False  False  False  True  True  False  True  True",21589,33536,589,0.2873070240020752
+0,No,52,25,0,13,random,"          p   l4n4   l2n1  l4n3  l1n4  l1n3  l4n2  l1n1  l0n3   l1n0
+5  0.037384  False  False  True  True  True  True  True  True  False",95132,109712,1164,0.8444428443908691
+0,No,59,25,0,13,random,"          p  l4n2  l0n3  l3n3   l3n2   l3n1   l0n1  l2n1   l2n2   l0n0  l1n2  \
+26  0.02892  True  True  True  False  False  False  True  False  False  True   
+
+    l3n0  
+26  True  ",75314,82816,4712,0.773726224899292
+0,No,66,25,0,13,random,"          p   l0n1  l1n2   l2n1  l2n4   l4n4   l1n4   l3n2   l0n0  l1n1
+0  0.048343  False  True  False  True  False  False  False  False  True",63374,73728,1066,0.6020689010620117
+0,No,59,25,0,13,random,"          p   l2n0  l3n0   l4n3  l4n0   l2n2   l1n0  l4n2  l4n1   l3n4   l3n2  \
+7  0.016289  False  True  False  True  False  False  True  True  False  False   
+
+    l1n4  
+7  False  ",1590720,2101896,5109,11.819226264953613
+0,No,61,25,0,13,random,"           p   l3n3   l0n2   l2n4   l1n1  l2n2  l0n3  l0n0  l1n0  l1n4  l1n2  \
+11  0.030744  False  False  False  False  True  True  True  True  True  True   
+
+     l4n1  l4n3  
+11  False  True  ",27919,27136,9416,0.5349040031433105
+0,No,66,25,0,13,random,"           p   l0n0  l1n1   l3n1   l0n4   l1n0  l2n4   l1n3  l0n1   l2n1
+10  0.028107  False  True  False  False  False  True  False  True  False",4919,3584,1036,0.18674087524414062
+0,No,60,25,0,13,random,"           p   l4n3  l4n0   l0n4  l3n1   l0n0   l4n1  l1n3  l2n2   l1n4   l3n0
+13  0.008341  False  True  False  True  False  False  True  True  False  False",123087,127744,2479,1.0753071308135986
+0,No,64,25,12,1,minfill,"          p
+0  0.001405",292,190,0,0.24308300018310547
+0,No,71,25,12,1,minfill,"    l4n0         p
+0  False  0.000407",436,264,2,0.24950313568115234
+0,No,63,25,12,1,minfill,"    l2n1         p
+0  False  0.004958",480,230,2,0.26479625701904297
+0,No,68,25,12,1,minfill,"    l2n1         p
+0  False  0.000078",120,82,2,0.19869112968444824
+0,No,65,25,12,1,minfill,"   l3n2         p
+0  True  0.001553",468,314,2,0.2483062744140625
+0,No,61,25,12,1,minfill,"   l1n2        p
+0  True  0.00551",248,170,2,0.22144603729248047
+0,No,58,25,12,1,minfill,"    l0n4       p
+0  False  0.0002",246,150,2,0.23546600341796875
+0,No,56,25,12,1,minfill,"    l1n1         p
+0  False  0.003904",156,110,2,0.171051025390625
+0,No,59,25,12,1,minfill,"   l1n2         p
+0  True  0.115602",264,210,2,0.2085130214691162
+0,No,67,25,12,1,minfill,"   l0n2         p
+0  True  0.000493",166,74,2,0.19751191139221191
+0,No,55,25,12,1,minfill,"          p
+0  0.011103",176,184,0,0.19522714614868164
+0,No,60,25,12,1,minfill,"          p
+0  0.000621",264,172,0,0.25765395164489746
+0,No,66,25,12,1,minfill,"          p
+0  0.005775",232,148,0,0.22227001190185547
+0,No,63,25,12,1,minfill,"   l0n0         p
+0  True  0.001753",226,134,2,0.21248602867126465
+0,No,63,25,12,1,minfill,"          p
+0  0.000919",170,122,0,0.21828889846801758
+0,No,52,25,12,1,minfill,"    l0n2         p
+0  False  0.000078",110,78,2,0.2192859649658203
+0,No,72,25,12,1,minfill,"    l0n3         p
+0  False  0.001552",194,130,2,0.22797107696533203
+0,No,65,25,12,1,minfill,"   l4n0         p
+0  True  0.002503",186,122,2,0.2617981433868408
+0,No,51,25,12,1,minfill,"    l1n0        p
+0  False  0.00596",94,84,2,0.20184707641601562
+0,No,61,25,12,1,minfill,"   l1n4         p
+0  True  0.000012",64,36,2,0.14549708366394043
+0,No,54,25,12,1,minfill,"   l0n1         p
+0  True  0.000141",158,128,2,0.16934704780578613
+0,No,56,25,12,1,minfill,"          p
+0  0.000193",112,100,0,0.18717575073242188
+0,No,59,25,12,1,minfill,"          p
+0  0.001238",356,268,0,0.26553821563720703
+0,No,40,25,12,1,minfill,"          p
+0  0.002568",50,42,0,0.09554362297058105
+0,No,45,25,12,1,minfill,"   l0n1         p
+0  True  0.001751",222,176,2,0.18650603294372559
+0,No,58,25,12,1,minfill,"    l4n2         p
+0  False  0.000471",112,66,2,0.17771601676940918
+0,No,55,25,12,1,minfill,"    l1n0         p
+0  False  0.003424",152,108,2,0.17687201499938965
+0,No,64,25,12,1,minfill,"   l3n1         p
+0  True  0.006839",164,102,2,0.19495892524719238
+0,No,54,25,12,1,minfill,"          p
+0  0.011986",300,244,0,0.2602047920227051
+0,No,53,25,12,1,minfill,"   l3n2         p
+0  True  0.009201",88,70,2,0.15547394752502441
+0,No,54,25,12,1,mindegree,"   l3n2        p
+0  True  0.11756",240,224,2,0.10539817810058594
+0,No,62,25,12,1,mindegree,"    l3n3         p
+0  False  0.015795",78,56,2,0.07745003700256348
+0,No,55,25,12,1,mindegree,"          p
+0  0.001352",122,72,0,0.07513785362243652
+0,No,59,25,12,1,mindegree,"    l0n2         p
+0  False  0.003482",294,176,2,0.09938693046569824
+0,No,54,25,12,1,mindegree,"          p
+0  0.008287",182,116,0,0.08790087699890137
+0,No,59,25,12,1,mindegree,"   l1n2        p
+0  True  0.00013",28,24,2,0.07460570335388184
+0,No,64,25,12,1,mindegree,"    l4n4         p
+0  False  0.000047",124,68,2,0.09696292877197266
+0,No,58,25,12,1,mindegree,"   l1n1         p
+0  True  0.003648",248,170,2,0.10216116905212402
+0,No,58,25,12,1,mindegree,"          p
+0  0.000391",120,86,0,0.09145617485046387
+0,No,63,25,12,1,mindegree,"          p
+0  0.000056",292,154,0,0.10229802131652832
+0,No,64,25,12,1,mindegree,"   l0n0         p
+0  True  0.000625",566,406,2,0.11850976943969727
+0,No,54,25,12,1,mindegree,"   l0n2         p
+0  True  0.000163",318,156,2,0.08734703063964844
+0,No,61,25,12,1,mindegree,"   l3n4         p
+0  True  0.011885",222,194,2,0.0891420841217041
+0,No,60,25,12,1,mindegree,"    l1n0         p
+0  False  0.000121",252,176,2,0.10824322700500488
+0,No,57,25,12,1,mindegree,"   l3n1         p
+0  True  0.002348",164,104,2,0.09536504745483398
+0,No,55,25,12,1,mindegree,"          p
+0  0.019458",166,130,0,0.09408688545227051
+0,No,66,25,12,1,mindegree,"    l4n2        p
+0  False  0.00127",492,362,2,0.12402606010437012
+0,No,63,25,12,1,mindegree,"          p
+0  0.001641",208,146,0,0.10651588439941406
+0,No,57,25,12,1,mindegree,"    l0n3         p
+0  False  0.000131",90,60,2,0.09263277053833008
+0,No,61,25,12,1,mindegree,"    l3n0         p
+0  False  0.004221",340,228,2,0.10531497001647949
+0,No,56,25,12,1,mindegree,"          p
+0  0.003815",236,162,0,0.09649419784545898
+0,No,57,25,12,1,mindegree,"   l2n0         p
+0  True  0.001834",268,138,2,0.09919500350952148
+0,No,53,25,12,1,mindegree,"    l0n1         p
+0  False  0.048462",184,132,2,0.10049772262573242
+0,No,65,25,12,1,mindegree,"   l2n0         p
+0  True  0.001379",214,170,2,0.10542798042297363
+0,No,67,25,12,1,mindegree,"    l3n0         p
+0  False  0.002042",154,80,2,0.10074090957641602
+0,No,47,25,12,1,mindegree,"   l4n2         p
+0  True  0.009559",150,102,2,0.09635400772094727
+0,No,54,25,12,1,mindegree,"          p
+0  0.000166",92,66,0,0.08515620231628418
+0,No,59,25,12,1,mindegree,"    l0n0         p
+0  False  0.008474",196,170,2,0.10442686080932617
+0,No,70,25,12,1,mindegree,"    l0n0         p
+0  False  0.002885",206,144,2,0.11737394332885742
+0,No,61,25,12,1,mindegree,"    l4n4         p
+0  False  0.026343",144,106,2,0.09846711158752441
+0,No,55,25,12,1,random,"   l3n2         p
+0  True  0.002775",86,70,2,0.07398819923400879
+0,No,67,25,12,1,random,"   l0n0         p
+0  True  0.001304",108,74,2,0.08411335945129395
+0,No,64,25,12,1,random,"   l0n2         p
+0  True  0.003421",250,200,2,0.09747099876403809
+0,No,59,25,12,1,random,"          p
+0  0.001161",252,206,0,0.10327410697937012
+0,No,61,25,12,1,random,"   l2n0         p
+0  True  0.000229",762,520,2,0.11496400833129883
+0,No,66,25,12,1,random,"          p
+0  0.000375",94,72,0,0.09445977210998535
+0,No,58,25,12,1,random,"    l2n0         p
+0  False  0.067038",690,606,2,0.11963319778442383
+0,No,74,25,12,1,random,"   l4n4         p
+0  True  0.000082",108,84,2,0.10603117942810059
+0,No,74,25,12,1,random,"    l0n2         p
+0  False  0.000727",356,328,2,0.10981512069702148
+0,No,63,25,12,1,random,"          p
+0  0.000909",312,220,0,0.10390782356262207
+0,No,61,25,12,1,random,"    l0n4         p
+0  False  0.000304",588,534,2,0.11240887641906738
+0,No,58,25,12,1,random,"          p
+0  0.024345",1034,820,0,0.11147856712341309
+0,No,56,25,12,1,random,"          p
+0  0.004063",418,352,0,0.10421395301818848
+0,No,60,25,12,1,random,"          p
+0  0.008815",284,204,0,0.09627699851989746
+0,No,61,25,12,1,random,"          p
+0  0.000391",854,452,0,0.1091151237487793
+0,No,58,25,12,1,random,"          p
+0  0.002268",156,78,0,0.0835728645324707
+0,No,59,25,12,1,random,"   l4n2         p
+0  True  0.002057",464,386,2,0.12335205078125
+0,No,55,25,12,1,random,"          p
+0  0.000606",374,246,0,0.10194706916809082
+0,No,66,25,12,1,random,"   l1n2         p
+0  True  0.006407",456,416,2,0.1172170639038086
+0,No,56,25,12,1,random,"    l0n4         p
+0  False  0.015909",530,466,2,0.11767888069152832
+0,No,48,25,12,1,random,"    l1n2         p
+0  False  0.000577",2116,1800,2,0.12047004699707031
+0,No,46,25,12,1,random,"   l1n4        p
+0  True  0.00235",216,188,2,0.0918569564819336
+0,No,60,25,12,1,random,"   l4n2         p
+0  True  0.013688",4236,3906,2,0.15185999870300293
+0,No,47,25,12,1,random,"   l1n3         p
+0  True  0.070789",3224,3532,2,0.13698601722717285
+0,No,60,25,12,1,random,"   l0n3         p
+0  True  0.007162",2138,1922,2,0.12114310264587402
+0,No,55,25,12,1,random,"    l3n3         p
+0  False  0.006726",1914,2116,2,0.12430381774902344
+0,No,50,25,12,1,random,"    l3n0         p
+0  False  0.000107",544,310,2,0.10617303848266602
+0,No,60,25,12,1,random,"   l3n1         p
+0  True  0.004901",630,448,2,0.10619115829467773
+0,No,53,25,12,1,random,"    l0n3         p
+0  False  0.002871",572,538,2,0.10468602180480957
+0,No,57,25,12,1,random,"    l0n0         p
+0  False  0.002569",302,180,2,0.10211801528930664
+0,No,66,25,12,13,minfill,"    l0n0  l1n0   l3n4   l0n4  l1n2   l2n1   l2n3         p
+0  False  True  False  False  True  False  False  0.000065",1099,726,136,0.284379243850708
+0,No,47,25,12,13,minfill,"    l0n2  l1n0  l3n3  l4n4   l3n4   l4n1  l2n3         p
+0  False  True  True  True  False  False  True  0.000063",222,100,81,0.2686467170715332
+0,No,62,25,12,13,minfill,"    l0n2   l1n3   l0n3   l0n4  l4n2         p
+0  False  False  False  False  True  0.000008",412,226,76,0.2846860885620117
+0,No,60,25,12,13,minfill,"   l0n2   l0n0  l1n1   l0n1   l3n4   l4n0   l2n4  l0n4   l1n2         p
+0  True  False  True  False  False  False  False  True  False  0.000483",730,336,283,0.26326680183410645
+0,No,56,25,12,13,minfill,"    l4n1   l4n4   l0n1   l1n1   l2n2         p
+0  False  False  False  False  False  0.000158",160,106,14,0.23290705680847168
+0,No,54,25,12,13,minfill,"    l0n3   l3n2   l2n4  l4n0  l2n2  l4n4   l0n1  l1n4         p
+0  False  False  False  True  True  True  False  True  0.000037",1308,972,320,0.3299729824066162
+0,No,54,25,12,13,minfill,"   l3n0  l1n1  l2n1   l0n2   l4n2  l2n4   l1n0   l0n3  l3n2   l3n1         p
+0  True  True  True  False  False  True  False  False  True  False  0.002418",3954,3870,1486,0.4407517910003662
+0,No,56,25,12,13,minfill,"    l0n3  l4n4  l4n2   l0n1   l2n3   l2n1   l4n3  l4n0   l3n3        p
+0  False  True  True  False  False  False  False  True  False  0.00001",228,108,80,0.2819488048553467
+0,No,60,25,12,13,minfill,"    l4n2   l0n0  l3n1   l3n0  l4n0  l2n3  l2n1   l0n4   l2n2   l2n4         p
+0  False  False  True  False  True  True  True  False  False  False  0.000182",608,268,170,0.284621000289917
+0,No,68,25,12,13,minfill,"   l4n2  l2n4  l2n2  l1n3  l4n1         p
+0  True  True  True  True  True  0.000921",558,376,80,0.29509520530700684
+0,No,61,25,12,13,minfill,"   l2n0  l1n1   l1n0  l1n3  l4n4   l0n4         p
+0  True  True  False  True  True  False  0.000016",488,298,37,0.2926750183105469
+0,No,66,25,12,13,minfill,"    l4n4  l2n2   l0n3   l2n1   l1n1   l2n3         p
+0  False  True  False  False  False  False  0.000317",1864,1218,71,0.2925910949707031
+0,No,56,25,12,13,minfill,"    l4n3  l0n1   l0n0   l4n0  l3n2   l4n4         p
+0  False  True  False  False  True  False  0.000068",186,104,16,0.2609410285949707
+0,No,59,25,12,13,minfill,"   l0n1  l4n0   l4n4   l3n3   l0n3  l3n0        p
+0  True  True  False  False  False  True  0.00008",502,356,67,0.28450584411621094
+0,No,68,25,12,13,minfill,"    l0n3   l3n3   l2n1   l2n0   l4n0   l1n2  l0n4         p
+0  False  False  False  False  False  False  True  0.000134",194,62,84,0.2499709129333496
+0,No,55,25,12,13,minfill,"   l0n2   l2n1  l1n2  l1n1  l4n1   l3n1   l0n1         p
+0  True  False  True  True  True  False  False  0.000045",850,478,68,0.313403844833374
+0,No,46,25,12,13,minfill,"    l4n1   l2n2   l0n2  l1n0  l1n1  l1n2         p
+0  False  False  False  True  True  True  0.000275",572,434,37,0.2741203308105469
+0,No,53,25,12,13,minfill,"   l1n1  l4n4   l3n1   l3n3  l4n1   l2n4  l4n3             p
+0  True  True  False  False  True  False  True  6.287058e-07",190,124,48,0.2714111804962158
+0,No,63,25,12,13,minfill,"    l0n2   l0n3   l3n4   l4n0  l2n2  l3n1  l2n0   l1n0  l1n4         p
+0  False  False  False  False  True  True  True  False  True  0.002329",600,140,222,0.3198091983795166
+0,No,64,25,12,13,minfill,"    l0n4   l2n2   l3n0  l3n3   l2n4  l3n1   l1n2   l4n1   l0n2         p
+0  False  False  False  True  False  True  False  False  False  0.000225",957,434,298,0.3235757350921631
+0,No,66,25,12,13,minfill,"    l0n4  l4n3   l0n2  l1n1  l2n4  l1n2   l4n0         p
+0  False  True  False  True  True  True  False  0.000191",792,458,128,0.3692958354949951
+0,No,68,25,12,13,minfill,"   l2n3   l0n2   l4n0  l1n3   l4n4  l3n2  l3n0  l0n4         p
+0  True  False  False  True  False  True  True  True  0.000014",547,242,302,0.3143627643585205
+0,No,59,25,12,13,minfill,"    l0n0  l0n2  l1n0  l3n4  l3n3  l4n3   l3n2   l2n1  l3n1         p
+0  False  True  True  True  True  True  False  False  True  0.000161",758,394,201,0.26467299461364746
+0,No,59,25,12,13,minfill,"   l0n4   l2n2  l3n3  l3n0  l3n2   l0n2         p
+0  True  False  True  True  True  False  0.000273",389,172,71,0.2630929946899414
+0,No,57,25,12,13,minfill,"    l0n2   l0n4  l4n0  l0n1   l3n2   l4n1         p
+0  False  False  True  True  False  False  0.000186",254,158,34,0.22725820541381836
+0,No,65,25,12,13,minfill,"    l0n3  l3n1   l2n0   l3n3  l4n3   l3n0  l0n0  l0n2   l3n4         p
+0  False  True  False  False  True  False  True  True  False  0.001103",1118,484,529,0.3238081932067871
+0,No,46,25,12,13,minfill,"   l0n2  l4n2   l3n0  l2n3   l1n3  l1n2  l1n0  l0n1  l3n3  l3n1         p
+0  True  True  False  True  False  True  True  True  True  True  0.000076",1737,1416,577,0.33242297172546387
+0,No,63,25,12,13,minfill,"   l4n3  l0n0  l1n0   l1n3   l2n0  l0n2         p
+0  True  True  True  False  False  True  0.000165",218,142,34,0.23096203804016113
+0,No,58,25,12,13,minfill,"   l0n1  l1n2   l0n4   l3n0   l1n4  l3n3  l4n0  l4n2   l2n2         p
+0  True  True  False  False  False  True  True  True  False  0.003462",562,414,130,0.3087797164916992
+0,No,55,25,12,13,minfill,"   l4n1   l0n1  l0n4  l1n1   l0n3   l3n1  l1n0  l2n4         p
+0  True  False  True  True  False  False  True  True  0.000079",849,282,315,0.33735179901123047
+0,No,55,25,12,13,mindegree,"   l0n0   l1n1  l3n2  l4n0  l2n2   l2n0         p
+0  True  False  True  True  True  False  0.000111",160,66,38,0.12058377265930176
+0,No,67,25,12,13,mindegree,"   l0n2   l4n3   l4n4  l3n3   l1n1   l4n2  l0n1   l1n0         p
+0  True  False  False  True  False  False  True  False  0.000426",1034,690,312,0.18241167068481445
+0,No,53,25,12,13,mindegree,"    l4n2  l3n1  l2n2  l4n3  l4n0  l1n1         p
+0  False  True  True  True  True  True  0.000586",214,126,50,0.12789607048034668
+0,No,62,25,12,13,mindegree,"   l1n3  l1n0   l3n1   l2n1   l2n4         p
+0  True  True  False  False  False  0.000121",204,108,28,0.11793708801269531
+0,No,57,25,12,13,mindegree,"    l4n2  l1n1  l4n1  l4n4  l2n0  l1n0  l0n2         p
+0  False  True  True  True  True  True  True  0.001208",954,576,128,0.15489697456359863
+0,No,59,25,12,13,mindegree,"    l0n4  l0n0  l4n1   l3n3  l1n3   l2n3   l4n3        p
+0  False  True  True  False  True  False  False  0.00805",732,606,130,0.1483020782470703
+0,No,60,25,12,13,mindegree,"    l0n0   l0n3  l4n3  l4n4   l1n1  l2n0  l1n4         p
+0  False  False  True  True  False  True  True  0.000014",191,132,36,0.12498688697814941
+0,No,52,25,12,13,mindegree,"   l4n3  l1n2   l2n2   l3n3  l1n1  l2n1   l0n0  l0n2         p
+0  True  True  False  False  True  True  False  True  0.001326",460,314,156,0.15265202522277832
+0,No,55,25,12,13,mindegree,"   l0n1   l4n1  l1n1   l2n3  l1n3  l1n0   l1n2   l0n2  l1n4         p
+0  True  False  True  False  True  True  False  False  True  0.000166",84,42,32,0.11802291870117188
+0,No,47,25,12,13,mindegree,"    l0n0   l1n1  l4n2   l1n2   l4n4   l4n3   l3n0  l3n3  l2n2   l0n2         p
+0  False  False  True  False  False  False  False  True  True  False  0.000207",1547,824,820,0.2142658233642578
+0,No,53,25,12,13,mindegree,"   l3n2   l3n4   l0n2  l3n0  l2n2   l4n4  l1n3         p
+0  True  False  False  True  True  False  True  0.005614",666,444,166,0.15079903602600098
+0,No,60,25,12,13,mindegree,"   l0n4   l3n4  l3n3  l2n1  l1n0   l2n3         p
+0  True  False  True  True  True  False  0.000298",154,68,44,0.1184382438659668
+0,No,64,25,12,13,mindegree,"    l0n0  l3n4  l2n0  l4n1   l3n2  l4n0         p
+0  False  True  True  True  False  True  0.001507",360,242,65,0.14052295684814453
+0,No,51,25,12,13,mindegree,"    l0n4   l0n1  l0n3  l2n2  l3n2   l2n0   l1n4   l4n3  l0n0         p
+0  False  False  True  True  True  False  False  False  True  0.000012",396,294,96,0.1354389190673828
+0,No,59,25,12,13,mindegree,"   l1n2  l3n0   l4n4   l3n1   l4n3   l1n0  l0n0  l3n2   l4n2         p
+0  True  True  False  False  False  False  True  True  False  0.000133",912,412,403,0.17601418495178223
+0,No,64,25,12,13,mindegree,"    l0n1  l0n3  l2n0  l3n0  l2n2  l2n1   l2n3        p
+0  False  True  True  True  True  True  False  0.00011",416,256,42,0.12497687339782715
+0,No,64,25,12,13,mindegree,"    l0n0  l1n3   l0n1   l3n0   l3n4   l1n0   l4n2         p
+0  False  True  False  False  False  False  False  0.000099",284,116,50,0.1331191062927246
+0,No,57,25,12,13,mindegree,"   l0n0   l4n4   l0n2  l0n1   l2n4  l3n0         p
+0  True  False  False  True  False  True  0.000668",130,70,30,0.10504388809204102
+0,No,64,25,12,13,mindegree,"   l3n4   l0n0  l4n4   l4n2   l3n0   l4n3        p
+0  True  False  True  False  False  False  0.00006",457,260,147,0.15091204643249512
+0,No,56,25,12,13,mindegree,"   l0n4   l0n3   l1n2  l0n0   l3n0   l4n1   l4n3   l2n1   l0n1         p
+0  True  False  False  True  False  False  False  False  False  0.002764",312,208,90,0.14741134643554688
+0,No,58,25,12,13,mindegree,"    l4n4  l4n3  l2n1   l1n4   l0n3   l0n0   l0n4         p
+0  False  True  True  False  False  False  False  0.000491",338,174,22,0.11522293090820312
+0,No,65,25,12,13,mindegree,"   l0n2   l0n1  l2n1   l3n1  l4n1   l3n2  l3n3         p
+0  True  False  True  False  True  False  True  0.000005",272,84,59,0.13428616523742676
+0,No,61,25,12,13,mindegree,"    l3n2  l0n3   l1n1   l4n4  l1n4         p
+0  False  True  False  False  True  0.000065",276,158,41,0.12868881225585938
+0,No,58,25,12,13,mindegree,"   l3n1   l0n4   l4n2  l3n4  l0n2   l0n0         p
+0  True  False  False  True  True  False  0.000197",192,84,16,0.1115870475769043
+0,No,61,25,12,13,mindegree,"    l0n3  l0n0  l2n3   l3n3  l0n1   l1n2   l3n0         p
+3  False  True  True  False  True  False  False  0.000048",582,288,178,0.15960979461669922
+0,No,63,25,12,13,mindegree,"    l3n3  l0n1  l0n2  l2n2  l4n4  l0n0         p
+0  False  True  True  True  True  True  0.000435",810,482,130,0.14212322235107422
+0,No,61,25,12,13,mindegree,"    l4n2   l0n1  l1n4  l1n0  l2n4   l3n0         p
+0  False  False  True  True  True  False  0.000295",474,344,66,0.13128280639648438
+0,No,54,25,12,13,mindegree,"   l0n4   l2n2  l1n2  l1n0         p
+0  True  False  True  True  0.000064",192,90,16,0.09983301162719727
+0,No,63,25,12,13,mindegree,"    l0n3  l0n0   l4n3   l2n3  l1n0  l2n1  l2n0        p
+0  False  True  False  False  True  True  True  0.00037",1435,892,146,0.15750694274902344
+0,No,79,25,12,13,mindegree,"    l0n2  l2n1  l1n3   l2n4   l1n0   l4n2   l0n4         p
+0  False  True  True  False  False  False  False  0.000176
+0   True  True  True  False  False  False  False  0.000176",1164,834,79,0.18255615234375
+0,No,61,25,12,13,random,"   l4n1  l0n3   l0n4  l0n0  l2n2   l0n2   l1n2  l3n4         p
+0  True  True  False  True  True  False  False  True  0.000045",376,172,96,0.1418781280517578
+0,No,61,25,12,13,random,"    l0n3   l3n2   l1n0   l2n1   l4n0  l3n4  l3n3   l2n3  l1n1         p
+0  False  False  False  False  False  True  True  False  True  0.000154",716,410,154,0.1551952362060547
+0,No,59,25,12,13,random,"   l0n4   l0n1   l0n3   l2n4   l0n0   l1n3   l2n2   l4n4  l0n2   l2n0  \
+0  True  False  False  False  False  False  False  False  True  False   
+
+          p  
+0  0.000127  ",408,96,233,0.1482529640197754
+0,No,69,25,12,13,random,"   l2n2  l0n4   l2n1   l2n3   l3n0   l1n4  l3n4   l0n2   l0n1         p
+0  True  True  False  False  False  False  True  False  False  0.000296",573,146,305,0.17928099632263184
+0,No,60,25,12,13,random,"   l0n3  l4n1   l2n1   l3n0   l1n1   l1n3   l4n3  l0n4         p
+0  True  True  False  False  False  False  False  True  0.000525",1490,1142,73,0.15645885467529297
+0,No,69,25,12,13,random,"   l0n1  l0n0   l1n2   l1n4  l3n1  l0n4         p
+0  True  True  False  False  True  True  0.000289",528,322,64,0.13490891456604004
+0,No,65,25,12,13,random,"    l0n0   l4n2   l3n1  l3n0   l0n2   l1n3  l1n1  l4n1  l3n2  l4n4  l4n3  \
+0  False  False  False  True  False  False  True  True  True  True  True   
+
+          p  
+0  0.000032  ",1058,548,595,0.2142200469970703
+0,No,63,25,12,13,random,"   l1n4   l1n2   l0n4  l3n4         p
+0  True  False  False  True  0.000009",188,98,20,0.11732077598571777
+0,No,51,25,12,13,random,"    l0n0  l3n4  l2n0   l3n0   l1n1   l1n4  l1n3  l2n2  l4n4         p
+0  False  True  True  False  False  False  True  True  True  0.000182",602,176,340,0.15620994567871094
+0,No,69,25,12,13,random,"    l3n1  l2n3  l2n4  l0n4   l2n0   l0n1             p
+0  False  True  True  True  False  False  6.031947e-07",132,78,22,0.11770820617675781
+0,No,66,25,12,13,random,"   l0n1  l0n0  l3n0   l3n3  l3n2  l3n4   l2n3        p
+0  True  True  True  False  True  True  False  0.00071",764,506,66,0.13483905792236328
+0,No,46,25,12,13,random,"   l4n3  l4n1   l2n3  l3n4  l0n4   l0n3  l2n4         p
+0  True  True  False  True  True  False  True  0.000376",380,216,82,0.11934399604797363
+0,No,57,25,12,13,random,"    l2n4  l2n3   l3n2   l2n0   l3n3  l0n3   l4n4   l4n3         p
+0  False  True  False  False  False  True  False  False  0.000511",1032,792,184,0.1685171127319336
+0,No,61,25,12,13,random,"   l0n2   l0n1   l3n0   l4n2   l2n1  l0n0   l0n3  l1n3        p
+0  True  False  False  False  False  True  False  True  0.00021",598,554,56,0.14672017097473145
+0,No,49,25,12,13,random,"    l0n4  l0n0   l0n1  l2n1  l3n3   l3n1   l4n1         p
+0  False  True  False  True  True  False  False  0.000025",296,156,36,0.11339807510375977
+0,No,70,25,12,13,random,"    l0n4   l1n4   l2n2   l0n2         p
+0  False  False  False  False  0.000949",692,634,10,0.11634564399719238
+0,No,61,25,12,13,random,"    l2n0   l3n2  l3n0   l2n1  l0n4  l1n4   l2n3         p
+0  False  False  True  False  True  True  False  0.000048",1080,620,328,0.16356301307678223
+0,No,60,25,12,13,random,"    l1n2  l4n2  l3n1  l4n0   l4n1  l0n0         p
+0  False  True  True  True  False  True  0.000032",648,504,24,0.12717509269714355
+0,No,67,25,12,13,random,"   l0n1  l0n4   l1n0   l1n2  l3n2  l2n4   l0n0  l1n3         p
+0  True  True  False  False  True  True  False  True  0.000046",311,144,109,0.14204692840576172
+0,No,57,25,12,13,random,"   l0n1  l3n1  l4n4   l0n3   l2n0   l3n4   l2n1   l1n0         p
+0  True  True  True  False  False  False  False  False  0.001753",594,390,60,0.13584280014038086
+0,No,63,25,12,13,random,"   l4n3  l1n2  l1n3   l0n2   l0n4         p
+0  True  True  True  False  False  0.000489",284,204,24,0.12117409706115723
+0,No,61,25,12,13,random,"    l3n4   l4n4  l4n2  l2n2   l1n4  l1n2   l3n3  l2n4  l3n2   l3n0         p
+0  False  False  True  True  False  True  False  True  True  False  0.000117",630,300,357,0.1791529655456543
+0,No,62,25,12,13,random,"   l1n1   l0n4   l2n3  l2n2   l4n1   l0n2         p
+0  True  False  False  True  False  False  0.000196",320,122,68,0.13553500175476074
+0,No,56,25,12,13,random,"   l4n2   l0n3  l0n2   l1n0  l1n3   l0n0   l4n1         p
+0  True  False  True  False  True  False  False  0.000015",172,60,23,0.11356067657470703
+0,No,67,25,12,13,random,"    l0n1  l0n0   l4n2   l4n0  l3n2   l0n2  l4n4  l0n3         p
+0  False  True  False  False  True  False  True  True  0.000034",972,738,68,0.15222883224487305
+0,No,50,25,12,13,random,"    l0n4  l0n2   l3n2   l1n4  l2n1   l2n4         p
+0  False  True  False  False  True  False  0.000313",652,580,34,0.10441398620605469
+0,No,72,25,12,13,random,"   l1n4   l0n4   l1n3   l4n2  l3n4   l2n2         p
+0  True  False  False  False  True  False  0.000042",426,196,52,0.13753008842468262
+0,No,57,25,12,13,random,"    l0n0  l4n1  l4n3   l4n4   l1n3  l2n2   l1n2  l2n1        p
+0  False  True  True  False  False  True  False  True  0.00006",624,508,157,0.14711904525756836
+0,No,54,25,12,13,random,"    l3n1  l4n3   l4n2  l3n3  l0n3  l1n1         p
+0  False  True  False  True  True  True  0.001715",238,132,18,0.1101081371307373
+0,No,58,25,12,13,random,"   l0n3  l0n2   l3n4   l4n4  l3n0   l1n2  l1n4         p
+0  True  True  False  False  True  False  True  0.000145",166,100,38,0.12327718734741211
