@@ -282,60 +282,6 @@ class BNReasoner:
     def create_truth_table(self, num_vars):
         return pd.DataFrame(list(itertools.product([False, True], repeat=num_vars)))
 
-    def multiply(self, factor1: pd.DataFrame, factor2: pd.DataFrame):
-        """
-        takes 2 cpt(factors)
-        returns cpt(factor1) multiplied by cpt(factor2)
-        """
-
-        vars1 = list(factor1.columns)
-        vars1.remove("p")
-        vars2 = list(factor2.columns)
-        vars2.remove("p")
-
-        multiplied = copy.deepcopy(factor1)
-        new_in_vars2 = set(vars2).difference(set(vars1))
-
-        # if there is a variable in factor2 that is not in factor1 then factor1 has to be extended by those variable(s)
-        if len(new_in_vars2) > 0:
-            for var in new_in_vars2:
-                if True in factor2[var] and False in factor2[var]:
-                    multiplied_copy = copy.deepcopy(multiplied)
-                    multiplied.insert(len(factor1.columns) - 1, var, True)
-                    multiplied = pd.concat([multiplied, multiplied_copy])
-                    multiplied = multiplied.fillna(False)
-                else:
-                    if True in factor2[var]:
-                        multiplied.insert(len(factor1.columns) - 1, var, True)
-                    if False in factor2[var]:
-                        multiplied.insert(len(factor1.columns) - 1, var, False)
-
-            cols = list(multiplied.columns)
-            multiplied = multiplied.sort_values(by=cols, ascending=False)
-            multiplied = multiplied.reset_index(drop=True)
-
-        # compare the columns included in factor2 (vars2) row by row between factor1 and factor2
-        # if they are the same then the 2 probabilities can be multiplied
-        for r1, row1 in multiplied.iterrows():
-            for r2, row2 in factor2.iterrows():
-                if list(row1[list(vars2)]) == list(row2[list(vars2)]):
-                    multiplied.at[r1, "p"] *= row2["p"]
-                    break
-
-        return multiplied
-
-    def multiply_multi(self, *args):
-        """
-        multiplies >2 factors 
-        """
-
-        multiplied = list(args)[0]
-
-        for factor in list(args)[1:]:
-            multiplied = self.multiply(multiplied, factor)
-
-        return multiplied
-
     def get_marginal_distribution(
         self,
         heuristic: str = "random",
@@ -397,52 +343,10 @@ class BNReasoner:
         result, rowsmult = self.mult(list(cpts.values()))
 
         # normalise results
-        sum = result["p"].sum()
-        result['p'] = result.apply(lambda row: row['p']/sum, axis=1)
+        summ = result["p"].sum()
+        result['p'] = result.apply(lambda row: row['p']/summ, axis=1)
 
         return result
-
-    def get_marginal(self, q_vars: list, e_vars: pd.DataFrame):
-        cpts = self.bn.get_all_cpts()
-
-        # make cpts consistent with evidence (delete inconsistent rows)
-        for key in cpts:
-            relevant_evidence = []
-            for var in e_vars:
-                if var in cpts[key]:
-                    relevant_evidence.append(var)
-            to_delete = []
-            if relevant_evidence != []:
-                for r, row in cpts[key].iterrows():
-                    if list(row[relevant_evidence]) != list(
-                        e_vars[relevant_evidence].iloc[0]
-                    ):
-                        to_delete.append(r)
-                cpts[key] = cpts[key].drop(to_delete, axis=0)
-
-        for key1 in cpts:
-            if key1 not in q_vars:
-                for key2 in cpts:
-                    if key2 != key1 and key1 in cpts[key2]:
-                        cpts[key2] = self.multiply(cpts[key2], cpts[key1])
-                        cpts[key2] = self.sum_out(cpts[key2], [key1])
-
-        # delete everything that is not in q_vars
-        to_delete = [key for key in cpts if key not in q_vars]
-        for var in to_delete:
-            cpts.pop(var)
-
-        # normalise results
-        for key in cpts:
-            cpts[key] = cpts[key]["p"] / cpts[key]["p"].sum()
-            # cpts[key] = cpts[key].to_frame()
-            cpts[key][key] = [False, True]
-
-        factors = list(cpts.values())
-
-        marginalpt = self.multiply_multi(*factors)
-
-        return marginalpt
 
     def maxx_out(self, factor: pd.DataFrame, maxoutvariables: list):
         """
@@ -621,8 +525,8 @@ class BNReasoner:
         maxx, rowsmult = self.mult(list(cpts.values()))
 
         # normalize
-        sum = maxx["p"].sum()
-        maxx['p'] = maxx.apply(lambda row: row['p']/sum, axis=1)
+        summ = maxx["p"].sum()
+        maxx['p'] = maxx.apply(lambda row: row['p']/summ, axis=1)
 
         m = maxx["p"].max()
         result = maxx.loc[maxx["p"] == m]
